@@ -672,11 +672,6 @@
                                 style="@style/FormTitleStyle"
                                 android:text="@string/str_input_item12" />
 
-                            <RelativeLayout
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:background="@mipmap/bg_edittext"
-                                android:gravity="left|center">
 
                                 <com.grkj.ytjqy_pad.utils.view.AddNumberView
                                     android:id="@+id/add_view"
@@ -686,7 +681,6 @@
                                     android:layout_gravity="center"
                                     android:gravity="center" />
 
-                            </RelativeLayout>
 
                         </LinearLayout>
 

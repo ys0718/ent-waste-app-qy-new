@@ -1045,11 +1045,6 @@
                                 android:text="@string/str_zxly_item12" />
 
 
-                            <RelativeLayout
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:background="@drawable/bg_edittext"
-                                android:gravity="left|center">
 
 
                                 <com.grkj.ytjqy_pad.utils.view.AddNumberView
@@ -1061,7 +1056,6 @@
                                     android:gravity="center" />
 
 
-                            </RelativeLayout>
 
 
                         </LinearLayout>
