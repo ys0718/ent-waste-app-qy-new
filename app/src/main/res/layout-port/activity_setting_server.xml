@@ -1,0 +1,362 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@mipmap/bg_login_port"
+    android:gravity="center_horizontal"
+    android:orientation="vertical">
+
+    <include
+        layout="@layout/view_toolbar_new"
+        android:visibility="gone" />
+
+    <include layout="@layout/view_toolbar" />
+
+
+    <!--    <RelativeLayout-->
+    <!--        android:id="@+id/toolbar"-->
+    <!--        android:layout_width="match_parent"-->
+    <!--        android:layout_height="@dimen/x50"-->
+    <!--        android:background="@drawable/toolbar_bg"-->
+    <!--        android:minHeight="@dimen/x60">-->
+
+
+    <!--        <TextView-->
+    <!--            android:id="@+id/tv_title"-->
+    <!--            style="@style/Size18TitleTextStyle"-->
+    <!--            android:layout_width="wrap_content"-->
+    <!--            android:layout_height="wrap_content"-->
+    <!--            android:layout_centerInParent="true"-->
+    <!--            android:layout_marginLeft="@dimen/x10"-->
+    <!--            android:layout_marginRight="@dimen/x10"-->
+    <!--            android:ellipsize="end"-->
+    <!--            android:gravity="center"-->
+    <!--            android:maxLines="1"-->
+    <!--            android:text="配置服务器信息"-->
+    <!--            android:textColor="@color/white"-->
+    <!--            android:textSize="@dimen/x20"-->
+    <!--            android:textStyle="bold" />-->
+
+
+    <!--    </RelativeLayout>-->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:paddingHorizontal="@dimen/x20"
+            android:visibility="gone">
+
+            <View
+                android:layout_width="@dimen/x5"
+                android:layout_height="match_parent"
+                android:layout_marginRight="@dimen/x10"
+                android:background="@drawable/button_style_primary" />
+
+
+        </LinearLayout>
+
+        <FrameLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="@dimen/x40"
+            android:layout_weight="2"
+            android:padding="@dimen/x20"
+            app:cardCornerRadius="@dimen/x5">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:paddingHorizontal="@dimen/x80">
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginVertical="@dimen/x20"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="@dimen/x10"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="@dimen/x10"
+                            android:orientation="vertical">
+
+                            <EditText
+                                android:id="@+id/et_ip"
+                                android:imeOptions="actionNext"
+                                style="@style/loginInputStyle"
+                                android:layout_marginBottom="@dimen/x10"
+                                android:hint="请输入IP地址" />
+
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="@dimen/x2"
+                                android:background="@color/color_font_blue" />
+
+                        </LinearLayout>
+
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginVertical="@dimen/x10"
+                            android:orientation="vertical">
+
+                            <EditText
+                                android:id="@+id/et_port"
+                                style="@style/loginInputStyle"
+                                android:imeOptions="actionDone"
+                                android:layout_marginBottom="@dimen/x10"
+                                android:hint="请输入端口号" />
+
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="@dimen/x2"
+                                android:background="@color/color_font_blue" />
+
+                        </LinearLayout>
+
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="left|center"
+                            android:layout_marginTop="@dimen/x10"
+                            android:gravity="left"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                style="@style/Font15Style"
+                                android:layout_width="wrap_content"
+                                android:text="传输协议："
+                                android:textColor="@color/white" />
+
+
+                            <LinearLayout
+                                android:orientation="vertical"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content">
+
+                                <LinearLayout
+                                    android:id="@+id/ll_htttp"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginHorizontal="@dimen/x5"
+                                    android:gravity="center"
+                                    android:orientation="horizontal">
+
+                                    <ImageView
+                                        android:id="@+id/iv_http"
+                                        android:layout_width="@dimen/x24"
+                                        android:layout_height="@dimen/x24"
+                                        android:src="@mipmap/ic_selected" />
+
+                                    <TextView
+                                        style="@style/Font15Style"
+                                        android:text="HTTP"
+                                        android:textColor="@color/white" />
+
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:id="@+id/ll_htttps"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginHorizontal="@dimen/x5"
+                                    android:gravity="center"
+                                    android:orientation="horizontal">
+
+                                    <ImageView
+                                        android:id="@+id/iv_https"
+                                        android:layout_width="@dimen/x24"
+                                        android:layout_height="@dimen/x24"
+                                        android:src="@mipmap/ic_unselected" />
+
+                                    <TextView
+                                        style="@style/Font15Style"
+                                        android:text="HTTPS"
+                                        android:textColor="@color/white" />
+
+                                </LinearLayout>
+
+                            </LinearLayout>
+
+
+
+                        </LinearLayout>
+
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/x20"
+                    android:gravity="center|center_horizontal"
+                    android:orientation="horizontal">
+
+                    <RelativeLayout
+                        android:layout_width="@dimen/x40"
+                        android:layout_height="@dimen/x40"
+                        android:layout_gravity="center_horizontal">
+
+
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:padding="@dimen/x5"
+                            android:src="@mipmap/ic_network_check" />
+
+                        <ImageView
+                            android:id="@+id/iv_server_loading"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:src="@mipmap/ic_network_check3" />
+
+
+                    </RelativeLayout>
+
+                    <!--<com.grkj.ytjqy_pad.utils.view.BoldTextView
+                        android:id="@+id/tv_server_info"
+                        style="@style/Font12BlueStyle"
+                        android:layout_marginTop="@dimen/x10"
+                        android:text="服务器检测"
+                        android:textSize="@dimen/x15" />-->
+
+                    <LinearLayout
+                        android:id="@+id/ll_server_result"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/x1"
+                        android:gravity="center"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/tv_server_info"
+                            style="@style/Font12Style"
+                            android:textColor="@color/white"
+                            android:layout_marginLeft="@dimen/x20"
+                            android:layout_marginRight="@dimen/x40" />
+
+                        <ImageView
+                            android:id="@+id/iv_ser"
+                            android:layout_width="@dimen/x20"
+                            android:layout_height="@dimen/x20"
+                            android:layout_marginLeft="@dimen/x1" />
+
+
+                        <TextView
+                            android:id="@+id/tv_ser"
+                            style="@style/Font12Style"
+                            android:layout_marginHorizontal="@dimen/x5"
+                            android:textColor="@color/color_yellow" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:orientation="vertical">
+
+                    <Button
+                        android:id="@+id/btn_test"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/x40"
+                        android:layout_weight="1"
+                        android:background="@drawable/button_style1"
+                        android:text="测试连接"
+                        android:textStyle="bold"
+                        android:textColor="@android:color/white"
+                        android:textSize="@dimen/x15" />
+
+                    <Button
+                        android:id="@+id/btn_save"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/x40"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginTop="@dimen/x16"
+                        android:background="@drawable/button_style2"
+                        android:text="保存并登录"
+                        android:textStyle="bold"
+                        android:textColor="@android:color/white"
+                        android:textSize="@dimen/x15" />
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+
+        </FrameLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:focusable="true"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/tv_company"
+            style="@style/Font12Style"
+            android:layout_marginBottom="@dimen/x3"
+            android:text="@string/str_support"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/mVersion"
+            style="@style/Font12Style"
+            android:layout_marginLeft="@dimen/x10"
+            android:layout_marginBottom="@dimen/x3"
+            android:text="当前版本:V1.0.0" />
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/x60"
+        android:background="@mipmap/bg_logo_bottom"
+        android:visibility="gone">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="@dimen/x30"
+            android:focusable="true"
+            android:gravity="center|bottom"
+            android:orientation="horizontal">
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+
+</LinearLayout>
+

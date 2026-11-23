@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="@dimen/x10"
+    android:background="@mipmap/bg_list_item"
+    android:layout_marginBottom="@dimen/x10"
+    android:paddingHorizontal="@dimen/x10"
+    android:id="@+id/item_layout"
+    android:paddingBottom="@dimen/x10"
+    android:gravity="center"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:layout_height="wrap_content">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/iv_current"
+                android:visibility="gone"
+                android:layout_width="@dimen/x50"
+                android:layout_height="@dimen/x25"
+                android:src="@mipmap/ic_current" />
+
+            <com.grkj.ytjqy_pad.utils.view.QCTJTextView
+                android:id="@+id/tv_item1"
+                style="@style/Font15Style"
+                android:layout_weight="1"
+                android:layout_marginLeft="@dimen/x10"
+                android:layout_gravity="left|center"
+                android:text="PCB胶料" />
+
+            <ImageView
+                android:visibility="gone"
+                android:id="@+id/btn_select"
+                android:layout_marginLeft="@dimen/x10"
+                android:src="@mipmap/ic_unselected"
+                android:layout_width="@dimen/x20"
+                android:layout_height="@dimen/x20"/>
+
+
+        </LinearLayout>
+
+
+
+    </LinearLayout>
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:paddingHorizontal="@dimen/x5">
+
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:padding="@dimen/x5">
+
+
+            <TextView
+                android:id="@+id/tv_item2"
+                style="@style/Font10Style"
+                android:maxLines="1"
+                android:ellipsize="end"
+                android:text="废物类别：污泥" />
+
+
+            <TextView
+                android:id="@+id/tv_item3"
+                style="@style/Font10Style"
+                android:maxLines="1"
+                android:ellipsize="end"
+                android:text="废物代码：001-119-111" />
+
+            <TextView
+                android:id="@+id/tv_item4"
+                style="@style/Font10Style"
+                android:maxLines="1"
+                android:visibility="gone"
+                android:ellipsize="end"
+                android:text="产生时间：2022-03-16" />
+
+            <TextView
+                android:id="@+id/tv_item5"
+                style="@style/Font10Style"
+                android:maxLines="1"
+                android:ellipsize="end"
+                android:text="废物类别名称：干垃圾"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/tv_item8"
+                style="@style/Font10Style"
+                android:maxLines="1"
+                android:ellipsize="end"
+                android:text="废物类别名称：干垃圾"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/tv_item9"
+                style="@style/Font10Style"
+                android:maxLines="1"
+                android:ellipsize="end"
+                android:text="废物类别名称：干垃圾"
+                android:visibility="gone" />
+
+
+
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="@dimen/x80"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:id="@+id/rl_weight"
+            android:orientation="vertical">
+
+            <com.grkj.ytjqy_pad.utils.view.BoldTextView
+                android:id="@+id/tv_item6"
+                style="@style/Font20Style"
+                android:layout_centerHorizontal="true"
+                android:ellipsize="end"
+                android:maxWidth="@dimen/x100"
+                android:maxLines="1"
+                android:text="0.000" />
+
+            <ImageView
+                android:id="@+id/iv_cup"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:src="@mipmap/bg_csl" />
+
+            <TextView
+                android:id="@+id/tv_item7"
+                style="@style/Font10Style"
+                android:layout_below="@id/iv_cup"
+                android:layout_centerHorizontal="true"
+                android:gravity="center"
+                android:text="产生量(吨)" />
+
+
+
+
+        </RelativeLayout>
+
+        <CheckBox
+            android:id="@+id/mIsRemember"
+            android:layout_width="@dimen/x20"
+            android:layout_height="@dimen/x20"
+            android:layout_gravity="top"
+            android:layout_margin="@dimen/x5"
+            android:background="@drawable/checkbox_style_0"
+            android:button="@null"
+            android:padding="@dimen/x5"
+            android:textColor="@color/colorFontA"
+            android:visibility="gone" />
+
+        <ImageView
+            android:id="@+id/iv_delete"
+            android:src="@mipmap/ic_delete_colorful"
+            android:layout_width="@dimen/x30"
+            android:visibility="gone"
+            android:padding="@dimen/x5"
+            android:layout_marginLeft="@dimen/x10"
+            android:layout_height="@dimen/x30"/>
+
+
+    </LinearLayout>
+
+
+
+
+</LinearLayout>
+

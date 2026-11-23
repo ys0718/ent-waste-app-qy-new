@@ -1,0 +1,1069 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tool="http://schemas.android.com/tools"
+    package="com.grkj.ytjqy_pad">
+
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.CAMERA" />
+
+    <uses-feature android:name="android.hardware.camera" />
+    <uses-feature android:name="android.hardware.camera.autofocus" />
+    <uses-feature android:name="android.hardware.camera.flash" />
+
+    <uses-permission android:name="android.permission.FLASHLIGHT" />
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
+    <uses-permission android:name="com.android.browser.permission.READ_HISTORY_BOOKMARKS" />
+    <!-- 用于进行网络定位 -->
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <!-- 用于访问GPS定位 -->
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <!-- 用于获取运营商信息，用于支持提供运营商信息相关的接口 -->
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <!-- 用于访问wifi网络信息，wifi信息会用于进行网络定位 -->
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <!-- 用于获取wifi的获取权限，wifi信息会用来进行网络定位 -->
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <!-- 用于访问网络，网络定位需要上网 -->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <!-- 用于读取手机当前的状态 -->
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <!-- 用于写入缓存数据到扩展存储卡 -->
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <!-- 用于读取扩展存储卡缓存数据 -->
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.READ_MEDIA_IMAGES" />
+    <uses-permission android:name="android.permission.READ_MEDIA_AUDIO" />
+    <!-- 用于申请调用A-GPS模块 -->
+    <uses-permission android:name="android.permission.ACCESS_LOCATION_EXTRA_COMMANDS" />
+    <!-- 用于申请获取蓝牙信息进行室内定位 -->
+    <uses-permission android:name="android.permission.BLUETOOTH" />
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
+    <uses-permission android:name="android.permission.REQUEST_INSTALL_PACKAGES" />
+    <uses-permission
+        android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS"
+        tool:ignore="ProtectedPermissions" />
+
+    <uses-feature
+        android:name="android.hardware.usb.host"
+        android:required="true" />
+
+    <uses-permission android:name="android.hardware.usb.UsbAccessory" />
+    <uses-permission
+        android:name="android.permission.BLUETOOTH_PRIVILEGED"
+        tool:ignore="ProtectedPermissions" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+
+    <uses-feature android:name="android.hardware.camera" />
+    <uses-feature android:name="android.hardware.camera.autofocus" />
+
+    <uses-permission android:name="android.permission.RESTART_PACKAGES" />
+    <uses-permission
+        android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS"
+        tool:ignore="ProtectedPermissions" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission
+        android:name="android.permission.READ_LOGS"
+        tool:ignore="ProtectedPermissions" />
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+
+
+    <!-- Request legacy Bluetooth permissions on older devices. -->
+    <!--    <uses-permission android:name="android.permission.BLUETOOTH_SCAN" />-->
+    <uses-permission android:name="android.permission.BLUETOOTH_CONNECT" />
+    <uses-permission android:name="android.permission.BLUETOOTH_CONNECT" />
+
+
+    <!-- 传统权限 -->
+    <uses-permission android:name="android.permission.BLUETOOTH" />
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
+    <!-- 位置权限（蓝牙扫描所需） -->
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <!-- Android 12+ 新权限 -->
+    <uses-permission android:name="android.permission.BLUETOOTH_SCAN" />
+    <uses-permission android:name="android.permission.BLUETOOTH_CONNECT" />
+    <uses-permission android:name="android.permission.BLUETOOTH_ADVERTISE" />
+
+
+    <application
+        android:name=".gather.App"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_logo"
+        android:label="@string/app_name_2"
+        android:roundIcon="@mipmap/ic_logo"
+        android:supportsRtl="true"
+        android:networkSecurityConfig="@xml/network_security_config"
+        android:theme="@style/AppTheme"
+        tool:ignore="LockedOrientationActivity">
+        <!-- 启动页 -->
+        <activity
+            android:name=".mvp.view.activity.WelcomeActivity"
+            android:configChanges="keyboardHidden"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:exported="true"
+            android:windowSoftInputMode="stateHidden|stateAlwaysHidden|stateVisible|adjustPan">
+
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+
+        </activity>
+
+
+        <!-- 组件测试页 -->
+        <activity
+            android:name=".mvp.view.activity.ViewTestActivity"
+            android:configChanges="keyboardHidden"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:exported="false"
+            android:windowSoftInputMode="stateHidden|stateAlwaysHidden|stateVisible|adjustPan">
+
+            <!--                        <intent-filter>-->
+            <!--                            <action android:name="android.intent.action.MAIN" />-->
+
+            <!--                            <category android:name="android.intent.category.LAUNCHER" />-->
+            <!--                        </intent-filter>-->
+
+        </activity>
+
+
+        <!-- 登录页 -->
+        <activity
+            android:name=".mvp.view.activity.LoginActivity"
+            android:configChanges="keyboardHidden"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:exported="false"
+            android:windowSoftInputMode="stateHidden|stateAlwaysHidden|stateVisible|adjustPan" />
+        <!-- 配置服务器页面 -->
+        <activity
+            android:name=".mvp.view.activity.SettingServerActivity"
+            android:configChanges="keyboardHidden"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:exported="false"
+            android:windowSoftInputMode="stateHidden|stateAlwaysHidden|stateVisible|adjustPan" />
+        <!-- 主页 -->
+        <activity
+            android:name=".mvp.view.activity.HomeActivity"
+            android:configChanges="keyboardHidden"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:exported="false"
+            android:windowSoftInputMode="stateHidden|stateAlwaysHidden|stateVisible|adjustPan" />
+        <!-- 旧usb打印 -->
+        <!-- 旧版打印页 -->
+        <!-- 新版打印页 -->
+        <activity
+            android:name=".mvp.view.activity.printer2.NewPrintLabelActivity"
+            android:configChanges="keyboardHidden"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:exported="false"
+            android:windowSoftInputMode="stateHidden|stateAlwaysHidden|stateVisible|adjustPan" />
+
+        <activity
+            android:name=".mvp.view.activity.printer2.BasePrintLabelActivity"
+            android:configChanges="keyboardHidden"
+            android:hardwareAccelerated="false"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:exported="false"
+            android:windowSoftInputMode="stateHidden|stateAlwaysHidden|stateVisible|adjustPan" />
+        <!-- 蓝牙打印 -->
+        <!-- 设置 -->
+        <activity
+            android:name=".mvp.view.activity.SettingActivity"
+            android:configChanges="keyboardHidden"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:exported="false"
+            android:windowSoftInputMode="stateHidden|stateAlwaysHidden|stateVisible|adjustPan" />
+        <!-- 修改密码 -->
+        <activity
+            android:name=".mvp.view.activity.ChangePswActivity"
+            android:configChanges="keyboardHidden"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:exported="false"
+            android:windowSoftInputMode="stateHidden|stateAlwaysHidden|stateVisible|adjustPan" />
+        <!-- 关于 -->
+        <activity
+            android:name=".mvp.view.activity.SettingAboutActivity"
+            android:configChanges="keyboardHidden"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:exported="false"
+            android:windowSoftInputMode="stateHidden|stateAlwaysHidden|stateVisible|adjustPan" />
+        <!-- 视频监控 -->
+        <activity
+            android:name=".mvp.view.activity.VideoActivity"
+            android:configChanges="keyboardHidden"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:exported="false"
+            android:windowSoftInputMode="stateHidden|stateAlwaysHidden|stateVisible|adjustPan" />
+        <!-- 产废登记列表 -->
+        <activity
+            android:name=".mvp.view.activity.ProductRecordListActivity"
+            android:configChanges="keyboardHidden"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:exported="false"
+            android:windowSoftInputMode="stateHidden|stateAlwaysHidden|stateVisible|adjustPan" />
+        <!-- 产废登记信息 -->
+        <activity
+            android:name=".mvp.view.activity.ProductRecordInfoActivity"
+            android:configChanges="keyboardHidden"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:exported="false"
+            android:windowSoftInputMode="stateHidden|stateAlwaysHidden|stateVisible|adjustPan" />
+        <!-- 一般固废列表(美的) -->
+        <activity
+            android:name=".mvp.view.activity.ybgf.YbgfListActivity"
+            android:configChanges="keyboardHidden"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:exported="false"
+            android:windowSoftInputMode="stateHidden|stateAlwaysHidden|stateVisible|adjustPan" />
+        <!-- 一般固废信息(美的) -->
+        <activity
+            android:name=".mvp.view.activity.ybgf.YbgfInfoActivity"
+            android:configChanges="keyboardHidden"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:exported="false"
+            android:windowSoftInputMode="stateHidden|stateAlwaysHidden|stateVisible|adjustPan" />
+        <!-- 通过贮存设施获取废物列表 -->
+        <activity
+            android:name=".mvp.view.activity.SelectWasteByZcssListActivity"
+            android:configChanges="keyboardHidden"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:exported="false"
+            android:windowSoftInputMode="stateHidden|stateAlwaysHidden|stateVisible|adjustPan" />
+        <!-- 选择产生环节废物列表 -->
+        <activity
+            android:name=".mvp.view.activity.xnbq.SelectCshjWasteListActivity"
+            android:configChanges="keyboardHidden"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:exported="false"
+            android:windowSoftInputMode="stateHidden|stateAlwaysHidden|stateVisible|adjustPan" />
+        <!-- 产废并入库列表 -->
+        <activity
+            android:name=".mvp.view.activity.sc.ProductAndInputListActivity"
+            android:configChanges="keyboardHidden"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:exported="false"
+            android:windowSoftInputMode="stateHidden|stateAlwaysHidden|stateVisible|adjustPan" />
+
+        <!-- 产废并入库信息 -->
+        <activity
+            android:name=".mvp.view.activity.sc.ProductAndInputInfoActivity"
+            android:configChanges="keyboardHidden"
+            android:launchMode="standard"
+            android:screenOrientation="portrait"
+            android:exported="false"
+            android:windowSoftInputMode="stateHidden|stateAlwaysHidden|stateVisible|adjustPan" />
+
+        <!-- 产废并入库列表 -->
+        <activity
+            android:name=".mvp.view.activity.hn.ProductAndInputListActivity"
+            android:configChanges="keyboardHidden"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:exported="false"
+            android:windowSoftInputMode="stateHidden|stateAlwaysHidden|stateVisible|adjustPan" />
+
+        <!-- 产废并入库信息 -->
+        <activity
+            android:name=".mvp.view.activity.hn.ProductAndInputInfoActivity"
+            android:configChanges="keyboardHidden"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:exported="false"
+            android:windowSoftInputMode="stateHidden|stateAlwaysHidden|stateVisible|adjustPan" />
+
+        <!-- 入库列表 -->
+        <activity
+            android:name=".mvp.view.activity.ProductInputListActivity"
+            android:configChanges="keyboardHidden"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:exported="false"
+            android:windowSoftInputMode="stateHidden|stateAlwaysHidden|stateVisible|adjustPan" />
+        <!-- 处置单位入库列表 -->
+        <activity
+            android:name=".mvp.view.activity.czdw.ProductInputListActivity"
+            android:configChanges="keyboardHidden"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:exported="false"
+            android:windowSoftInputMode="stateHidden|stateAlwaysHidden|stateVisible|adjustPan" />
+        <!-- 处置单位扫码入库 -->
+        <activity
+            android:name=".mvp.view.activity.czdw.InputScanActivity"
+            android:configChanges="keyboardHidden"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:exported="false"
+            android:windowSoftInputMode="stateHidden|stateAlwaysHidden|stateVisible|adjustPan" />
+        <!-- 处置单位出库列表 -->
+        <activity
+            android:name=".mvp.view.activity.czdw.ProductOutputListActivity"
+            android:configChanges="keyboardHidden"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:exported="false"
+            android:windowSoftInputMode="stateHidden|stateAlwaysHidden|stateVisible|adjustPan" />
+        <!-- 处置单位出库列表 -->
+        <activity
+            android:name=".mvp.view.activity.hn.ProductOutputListActivity"
+            android:configChanges="keyboardHidden"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:exported="false"
+            android:windowSoftInputMode="stateHidden|stateAlwaysHidden|stateVisible|adjustPan" />
+        <!-- 处置单位批量出库 -->
+        <activity
+            android:name=".mvp.view.activity.czdw.OutputLargeScanActivity"
+            android:configChanges="keyboardHidden"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:exported="false"
+            android:windowSoftInputMode="stateHidden|stateAlwaysHidden|stateVisible|adjustPan" />
+        <!-- 处置单位扫码出库 -->
+        <activity
+            android:name=".mvp.view.activity.czdw.OutputScanActivity"
+            android:configChanges="keyboardHidden"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:exported="false"
+            android:windowSoftInputMode="stateHidden|stateAlwaysHidden|stateVisible|adjustPan" />
+        <!-- 处置单位出库信息 -->
+        <!-- 选择产废信息列表 -->
+        <activity
+            android:name=".mvp.view.activity.SelectWasteListActivity"
+            android:configChanges="keyboardHidden"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:exported="false"
+            android:windowSoftInputMode="stateHidden|stateAlwaysHidden|stateVisible|adjustPan" />
+        <!-- 经营台账-选择转移联单列表 -->
+        <activity
+            android:name=".mvp.view.activity.jytz.SelectZyldListActivity"
+            android:configChanges="keyboardHidden"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:exported="false"
+            android:windowSoftInputMode="stateHidden|stateAlwaysHidden|stateVisible|adjustPan" />
+        <!-- 经营台账-数字识别码多选列表 -->
+        <activity
+            android:name=".mvp.view.activity.jytz.SelectMultiNumListActivity"
+            android:configChanges="keyboardHidden"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:exported="false"
+            android:windowSoftInputMode="stateHidden|stateAlwaysHidden|stateVisible|adjustPan" />
+        <!--  经营台账-利用处置废物多选列表 -->
+        <activity
+            android:name=".mvp.view.activity.jytz.SelectMultiLyczfwListActivity"
+            android:configChanges="keyboardHidden"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:exported="false"
+            android:windowSoftInputMode="stateHidden|stateAlwaysHidden|stateVisible|adjustPan" />
+        <!-- 多选选择产废/出库信息列表 -->
+        <activity
+            android:name=".mvp.view.activity.SelectMultiWasteListActivity"
+            android:configChanges="keyboardHidden"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:exported="false"
+            android:windowSoftInputMode="stateHidden|stateAlwaysHidden|stateVisible|adjustPan" />
+        <!-- 入库信息 -->
+        <activity
+            android:name=".mvp.view.activity.ProductInputInfoActivity"
+            android:configChanges="keyboardHidden"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:exported="false"
+            android:windowSoftInputMode="stateHidden|stateAlwaysHidden|stateVisible|adjustPan" />
+        <!-- 入库、出库校准信息 -->
+        <activity
+            android:name=".mvp.view.activity.CheckInfoActivity"
+            android:configChanges="keyboardHidden"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:exported="false"
+            android:windowSoftInputMode="stateHidden|stateAlwaysHidden|stateVisible|adjustPan" />
+        <!-- 处置单位批量入库 -->
+        <activity
+            android:name=".mvp.view.activity.czdw.InputLargeScanActivity"
+            android:configChanges="keyboardHidden"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:exported="false"
+            android:windowSoftInputMode="stateHidden|stateAlwaysHidden|stateVisible|adjustPan" />
+        <!-- 去皮列表 -->
+        <activity
+            android:name=".mvp.view.activity.TareListActivity"
+            android:configChanges="keyboardHidden"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:exported="false"
+            android:windowSoftInputMode="stateHidden|stateAlwaysHidden|stateVisible|adjustPan" />
+        <!-- 去皮信息 -->
+        <activity
+            android:name=".mvp.view.activity.TareInfoActivity"
+            android:configChanges="keyboardHidden"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:exported="false"
+            android:windowSoftInputMode="stateHidden|stateAlwaysHidden|stateVisible|adjustPan" />
+        <!-- 出库列表 -->
+        <activity
+            android:name=".mvp.view.activity.ProductOutputListActivity"
+            android:configChanges="keyboardHidden"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:exported="false"
+            android:windowSoftInputMode="stateHidden|stateAlwaysHidden|stateVisible|adjustPan" />
+        <!-- 出库信息 -->
+        <activity
+            android:name=".mvp.view.activity.ProductOutputInfoActivity"
+            android:configChanges="keyboardHidden"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:exported="false"
+            android:windowSoftInputMode="stateHidden|stateAlwaysHidden|stateVisible|adjustPan" />
+        <!-- 出库信息 -->
+        <activity
+            android:name=".mvp.view.activity.hn.ProductOutputInfoActivity"
+            android:configChanges="keyboardHidden"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:exported="false"
+            android:windowSoftInputMode="stateHidden|stateAlwaysHidden|stateVisible|adjustPan" />
+        <!-- 自行利用列表 -->
+        <activity
+            android:name=".mvp.view.activity.ProductZxlyListActivity"
+            android:configChanges="keyboardHidden"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:exported="false"
+            android:windowSoftInputMode="stateHidden|stateAlwaysHidden|stateVisible|adjustPan" />
+        <!-- 自行处置列表 -->
+        <activity
+            android:name=".mvp.view.activity.ProductZxczListActivity"
+            android:configChanges="keyboardHidden"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:exported="false"
+            android:windowSoftInputMode="stateHidden|stateAlwaysHidden|stateVisible|adjustPan" />
+        <!-- 自行利用信息 -->
+        <activity
+            android:name=".mvp.view.activity.ProductZxlyInfoActivity"
+            android:configChanges="keyboardHidden"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:exported="false"
+            android:windowSoftInputMode="stateHidden|stateAlwaysHidden|stateVisible|adjustPan" />
+        <!-- 自行利用扫码登记 -->
+        <activity
+            android:name=".mvp.view.activity.ZxlyLargeScanActivity"
+            android:configChanges="keyboardHidden"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:exported="false"
+            android:windowSoftInputMode="stateHidden|stateAlwaysHidden|stateVisible|adjustPan" />
+        <!-- 委外利用扫码登记 -->
+        <activity
+            android:name=".mvp.view.activity.WwlyLargeScanActivity"
+            android:configChanges="keyboardHidden"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:exported="false"
+            android:windowSoftInputMode="stateHidden|stateAlwaysHidden|stateVisible|adjustPan" />
+        <!-- 委外利用列表 -->
+        <activity
+            android:name=".mvp.view.activity.ProductWwlyListActivity"
+            android:configChanges="keyboardHidden"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:exported="false"
+            android:windowSoftInputMode="stateHidden|stateAlwaysHidden|stateVisible|adjustPan" />
+        <!-- 委外处置列表 -->
+        <activity
+            android:name=".mvp.view.activity.ProductWwczListActivity"
+            android:configChanges="keyboardHidden"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:exported="false"
+            android:windowSoftInputMode="stateHidden|stateAlwaysHidden|stateVisible|adjustPan" />
+        <!-- 委外利用信息 -->
+        <activity
+            android:name=".mvp.view.activity.ProductWwlyInfoActivity"
+            android:configChanges="keyboardHidden"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:exported="false"
+            android:windowSoftInputMode="stateHidden|stateAlwaysHidden|stateVisible|adjustPan" />
+        <!-- 数据上报列表 -->
+        <activity
+            android:name=".mvp.view.activity.DataUploadListActivity"
+            android:configChanges="keyboardHidden"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:exported="false"
+            android:windowSoftInputMode="stateHidden|stateAlwaysHidden|stateVisible|adjustPan" />
+        <!-- 数据上报信息 -->
+        <activity
+            android:name=".mvp.view.activity.DataUploadInfoActivity"
+            android:configChanges="keyboardHidden"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:exported="false"
+            android:windowSoftInputMode="stateHidden|stateAlwaysHidden|stateVisible|adjustPan" />
+        <!-- 打印列表 -->
+        <activity
+            android:name=".mvp.view.activity.PrintListActivity"
+            android:configChanges="keyboardHidden"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:exported="false"
+            android:windowSoftInputMode="stateHidden|stateAlwaysHidden|stateVisible|adjustPan" />
+        <!-- 经营打印列表 -->
+        <activity
+            android:name=".mvp.view.activity.JydwPrintListActivity"
+            android:configChanges="keyboardHidden"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:exported="false"
+            android:windowSoftInputMode="stateHidden|stateAlwaysHidden|stateVisible|adjustPan" />
+        <!-- 批量打印列表 -->
+        <activity
+            android:name=".mvp.view.activity.MulPrintListActivity"
+            android:configChanges="keyboardHidden"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:exported="false"
+            android:windowSoftInputMode="stateHidden|stateAlwaysHidden|stateVisible|adjustPan" />
+        <!-- 企业台账列表 -->
+        <activity
+            android:name=".mvp.view.activity.CompanyAccountListActivity"
+            android:configChanges="keyboardHidden"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:exported="false"
+            android:windowSoftInputMode="stateHidden|stateAlwaysHidden|stateVisible|adjustPan" />
+        <!-- 库存列表 -->
+        <activity
+            android:name=".mvp.view.activity.StockListActivity"
+            android:configChanges="keyboardHidden"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:exported="false"
+            android:windowSoftInputMode="stateHidden|stateAlwaysHidden|stateVisible|adjustPan" />
+        <!-- 库存明细列表 -->
+        <activity
+            android:name=".mvp.view.activity.StockDetailListActivity"
+            android:configChanges="keyboardHidden"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:exported="false"
+            android:windowSoftInputMode="stateHidden|stateAlwaysHidden|stateVisible|adjustPan" />
+
+
+        <!-- 扫码页 -->
+        <activity
+            android:name=".utils.scancode.CommonScanActivity"
+            android:configChanges="keyboardHidden"
+            android:screenOrientation="portrait"
+            android:exported="false"
+            android:windowSoftInputMode="stateHidden|stateAlwaysHidden" />
+        <!--  社会源收集列表  -->
+        <activity
+            android:name=".mvp.view.activity.hn.CollectListActivity"
+            android:configChanges="keyboardHidden"
+            android:screenOrientation="portrait"
+            android:exported="false"
+            android:windowSoftInputMode="stateHidden|stateAlwaysHidden" />
+        <!--  社会源收集信息  -->
+        <activity
+            android:name=".mvp.view.activity.hn.CollectInfoActivity"
+            android:configChanges="keyboardHidden"
+            android:screenOrientation="portrait"
+            android:exported="false"
+            android:windowSoftInputMode="stateHidden|stateAlwaysHidden" />
+        <!--  社会源收集信息子表  -->
+        <activity
+            android:name=".mvp.view.activity.hn.CollectInfoChildActivity"
+            android:configChanges="keyboardHidden"
+            android:screenOrientation="portrait"
+            android:exported="false"
+            android:windowSoftInputMode="stateHidden|stateAlwaysHidden" />
+        <!--  代产入出登记  -->
+        <activity
+            android:name=".mvp.view.activity.hn.CRCInfoActivity"
+            android:configChanges="keyboardHidden"
+            android:screenOrientation="portrait"
+            android:exported="false"
+            android:windowSoftInputMode="stateHidden|stateAlwaysHidden" />
+        <!--  代产入出登记2  -->
+        <activity
+            android:name=".mvp.view.activity.hn.NewCRCInfoActivity"
+            android:configChanges="keyboardHidden"
+            android:screenOrientation="portrait"
+            android:exported="false"
+            android:windowSoftInputMode="stateHidden|stateAlwaysHidden">
+            <!--            <intent-filter>-->
+            <!--                <action android:name="android.intent.action.MAIN" />-->
+
+            <!--                <category android:name="android.intent.category.LAUNCHER" />-->
+            <!--            </intent-filter>-->
+        </activity>
+        <!-- 经营单位菜单相关页面-->
+        <!-- 收集入库列表 -->
+        <activity
+            android:name=".mvp.view.activity.jydw.SjInputListActivity"
+            android:configChanges="keyboardHidden"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:exported="false"
+            android:windowSoftInputMode="stateHidden|stateAlwaysHidden|stateVisible|adjustPan" />
+        <!-- 收集入库信息 -->
+        <activity
+            android:name=".mvp.view.activity.jydw.SjInputInfoActivity"
+            android:configChanges="keyboardHidden"
+            android:launchMode="standard"
+            android:screenOrientation="portrait"
+            android:exported="false"
+            android:windowSoftInputMode="stateHidden|stateAlwaysHidden|stateVisible|adjustPan" />
+        <!-- 危废入库列表 -->
+        <activity
+            android:name=".mvp.view.activity.jydw.WasteInputListActivity"
+            android:configChanges="keyboardHidden"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:exported="false"
+            android:windowSoftInputMode="stateHidden|stateAlwaysHidden|stateVisible|adjustPan" />
+        <!-- 危废入库信息 -->
+        <activity
+            android:name=".mvp.view.activity.jydw.WasteInputInfoActivity"
+            android:configChanges="keyboardHidden"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:exported="false"
+            android:windowSoftInputMode="stateHidden|stateAlwaysHidden|stateVisible|adjustPan" />
+        <!-- 危废入库同步数据列表 -->
+        <activity
+            android:name=".mvp.view.activity.jydw.WasteInputSyncActivity"
+            android:configChanges="keyboardHidden"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:exported="false"
+            android:windowSoftInputMode="stateHidden|stateAlwaysHidden|stateVisible|adjustPan" />
+        <!-- 危废出库列表 -->
+        <activity
+            android:name=".mvp.view.activity.jydw.WasteOutputListActivity"
+            android:configChanges="keyboardHidden"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:exported="false"
+            android:windowSoftInputMode="stateHidden|stateAlwaysHidden|stateVisible|adjustPan" />
+        <!-- 危废出库信息 -->
+        <activity
+            android:name=".mvp.view.activity.jydw.WasteOutputInfoActivity"
+            android:configChanges="keyboardHidden"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:exported="false"
+            android:windowSoftInputMode="stateHidden|stateAlwaysHidden|stateVisible|adjustPan" />
+        <!-- 选择废物信息 -->
+        <activity
+            android:name=".mvp.view.activity.jydw.SelectWasteActivity"
+            android:configChanges="keyboardHidden"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:exported="false"
+            android:windowSoftInputMode="stateHidden|stateAlwaysHidden|stateVisible|adjustPan" />
+
+        <!-- 湖南经营单位菜单相关页面-->
+        <!-- 危废入库列表 -->
+        <activity
+            android:name=".mvp.view.activity.hn.jydw.WasteInputListActivity"
+            android:configChanges="keyboardHidden"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:exported="false"
+            android:windowSoftInputMode="stateHidden|stateAlwaysHidden|stateVisible|adjustPan" />
+        <!-- 危废入库信息 -->
+        <activity
+            android:name=".mvp.view.activity.hn.jydw.WasteInputInfoActivity"
+            android:configChanges="keyboardHidden"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:exported="false"
+            android:windowSoftInputMode="stateHidden|stateAlwaysHidden|stateVisible|adjustPan" />
+        <!-- 小微企业待入库信息 -->
+        <activity
+            android:name=".mvp.view.activity.hn.jydw.SelectXwqyWasteAcitivity"
+            android:configChanges="keyboardHidden"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:exported="false"
+            android:windowSoftInputMode="stateHidden|stateAlwaysHidden|stateVisible|adjustPan" />
+        <!-- 危废出库列表 -->
+        <activity
+            android:name=".mvp.view.activity.hn.jydw.WasteOutputListActivity"
+            android:configChanges="keyboardHidden"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:exported="false"
+            android:windowSoftInputMode="stateHidden|stateAlwaysHidden|stateVisible|adjustPan" />
+        <!-- 危废出库信息 -->
+        <activity
+            android:name=".mvp.view.activity.hn.jydw.WasteOutputInfoActivity"
+            android:configChanges="keyboardHidden"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:exported="false"
+            android:windowSoftInputMode="stateHidden|stateAlwaysHidden|stateVisible|adjustPan" />
+
+        <!-- 经营台账列表 -->
+        <activity
+            android:name=".mvp.view.activity.jydw.JyAccountListActivity"
+            android:configChanges="keyboardHidden"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:exported="false"
+            android:windowSoftInputMode="stateHidden|stateAlwaysHidden|stateVisible|adjustPan" />
+
+        <!-- 经营台账入库列表（新） -->
+        <activity
+            android:name=".mvp.view.activity.jytz.JytzInputListActivity"
+            android:configChanges="keyboardHidden"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:exported="false"
+            android:windowSoftInputMode="stateHidden|stateAlwaysHidden|stateVisible|adjustPan" />
+
+        <!-- 经营台账入库信息（新） -->
+        <activity
+            android:name=".mvp.view.activity.jytz.JytzInputInfoActivity"
+            android:configChanges="keyboardHidden"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:exported="false"
+            android:windowSoftInputMode="stateHidden|stateAlwaysHidden|stateVisible|adjustPan" />
+
+        <!-- 经营台账出库列表（新） -->
+        <activity
+            android:name=".mvp.view.activity.jytz.JytzOutputListActivity"
+            android:configChanges="keyboardHidden"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:exported="false"
+            android:windowSoftInputMode="stateHidden|stateAlwaysHidden|stateVisible|adjustPan" />
+
+        <!-- 经营台账出库信息（新） -->
+        <activity
+            android:name=".mvp.view.activity.jytz.JytzOutputInfoActivity"
+            android:configChanges="keyboardHidden"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:exported="false"
+            android:windowSoftInputMode="stateHidden|stateAlwaysHidden|stateVisible|adjustPan" />
+
+        <!-- 经营台账利用处置信息（新） -->
+        <activity
+            android:name=".mvp.view.activity.jytz.JytzLyczInfoActivity"
+            android:configChanges="keyboardHidden"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:exported="false"
+            android:windowSoftInputMode="stateHidden|stateAlwaysHidden|stateVisible|adjustPan" />
+
+        <!-- 经营台账利用处置列表（新） -->
+        <activity
+            android:name=".mvp.view.activity.jytz.JytzLyczListActivity"
+            android:configChanges="keyboardHidden"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:exported="false"
+            android:windowSoftInputMode="stateHidden|stateAlwaysHidden|stateVisible|adjustPan" />
+
+        <!-- 库存统计(经营)列表 -->
+        <activity
+            android:name=".mvp.view.activity.jydw.JyStockListActivity"
+            android:configChanges="keyboardHidden"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:exported="false"
+            android:windowSoftInputMode="stateHidden|stateAlwaysHidden|stateVisible|adjustPan" />
+
+        <!-- 库存统计(经营)详情列表 -->
+        <activity
+            android:name=".mvp.view.activity.jydw.JyStockDetailListActivity"
+            android:configChanges="keyboardHidden"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:exported="false"
+            android:windowSoftInputMode="stateHidden|stateAlwaysHidden|stateVisible|adjustPan" />
+
+
+        <!-- 选择转移联单编号 -->
+        <activity
+            android:name=".mvp.view.activity.hn.SelectFormCodeActivity"
+            android:configChanges="keyboardHidden"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:exported="false"
+            android:windowSoftInputMode="stateHidden|stateAlwaysHidden|stateVisible|adjustPan" />
+        <activity android:name=".mvp.view.activity.printer.DsTestPrinterActivity">
+
+
+        </activity>
+
+        <!-- 选择转移联单列表 -->
+        <activity
+            android:name=".mvp.view.activity.SelectZyldListActivity"
+            android:configChanges="keyboardHidden"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:exported="false"
+            android:windowSoftInputMode="stateHidden|stateAlwaysHidden|stateVisible|adjustPan" />
+
+        <!-- 收集出库登记列表 -->
+        <activity
+            android:name=".mvp.view.activity.jydw.SjOutputListActivity"
+            android:configChanges="keyboardHidden"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:exported="false"
+            android:windowSoftInputMode="stateHidden|stateAlwaysHidden|stateVisible|adjustPan" />
+
+
+        <!-- 收集出库登记信息 -->
+        <activity
+            android:name=".mvp.view.activity.jydw.SjOutputInfoActivity"
+            android:configChanges="keyboardHidden"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:exported="false"
+            android:windowSoftInputMode="stateHidden|stateAlwaysHidden|stateVisible|adjustPan" />
+
+        <!-- 选择合同列表 -->
+        <activity
+            android:name=".mvp.view.activity.SelectHtbhListActivity"
+            android:configChanges="keyboardHidden"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:exported="false"
+            android:windowSoftInputMode="stateHidden|stateAlwaysHidden|stateVisible|adjustPan" />
+
+        <!-- 收集批量出库 -->
+        <activity
+            android:name=".mvp.view.activity.czdw.SjOutputLargeScanActivity"
+            android:configChanges="keyboardHidden"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:exported="false"
+            android:windowSoftInputMode="stateHidden|stateAlwaysHidden|stateVisible|adjustPan" />
+
+        <!-- 收集批量出库 -->
+        <activity
+            android:name=".test.MainActivity"
+            android:configChanges="keyboardHidden"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:exported="false"
+            android:windowSoftInputMode="stateHidden|stateAlwaysHidden|stateVisible|adjustPan" >
+
+<!--            <intent-filter>-->
+<!--                <action android:name="android.intent.action.MAIN" />-->
+
+<!--                <category android:name="android.intent.category.LAUNCHER" />-->
+<!--            </intent-filter>-->
+
+        </activity>
+
+        <!-- 虚拟标签-产废入库列表 -->
+        <activity
+            android:name=".mvp.view.activity.xnbq.XnbqProductAndInputListActivity"
+            android:configChanges="keyboardHidden"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:exported="false"
+            android:windowSoftInputMode="stateHidden|stateAlwaysHidden|stateVisible|adjustPan" />
+
+        <!-- 虚拟标签-产废入库信息 -->
+        <activity
+            android:name=".mvp.view.activity.xnbq.XnbqProductAndInputInfoActivity"
+            android:configChanges="keyboardHidden"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:exported="false"
+            android:windowSoftInputMode="stateHidden|stateAlwaysHidden|stateVisible|adjustPan" />
+
+        <!-- 转移联单列表 -->
+        <activity
+            android:name=".mvp.view.activity.zyld.ZyldListActivity"
+            android:configChanges="keyboardHidden"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:exported="false"
+            android:windowSoftInputMode="stateHidden|stateAlwaysHidden|stateVisible|adjustPan" />
+
+        <!-- 待办转移联单列表 -->
+        <activity
+            android:name=".mvp.view.activity.zyld.TodoZyldListActivity"
+            android:configChanges="keyboardHidden"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:exported="false"
+            android:windowSoftInputMode="stateHidden|stateAlwaysHidden|stateVisible|adjustPan" />
+
+        <!-- 转移批次号信息编辑 -->
+        <activity
+            android:name=".mvp.view.activity.zyld.ZyldZypchInfoActivity"
+            android:configChanges="keyboardHidden"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:exported="false"
+            android:windowSoftInputMode="stateHidden|stateAlwaysHidden|stateVisible|adjustPan" />
+
+        <!-- 转移联单信息 -->
+        <activity
+            android:name=".mvp.view.activity.zyld.ZyldInfoActivity"
+            android:configChanges="keyboardHidden"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:exported="false"
+            android:windowSoftInputMode="stateHidden|stateAlwaysHidden|stateVisible|adjustPan" />
+
+        <!-- 添加运输单位信息 -->
+        <activity
+            android:name=".mvp.view.activity.zyld.YsdwAddActivity"
+            android:configChanges="keyboardHidden"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:exported="false"
+            android:windowSoftInputMode="stateHidden|stateAlwaysHidden|stateVisible|adjustPan" />
+
+        <!-- 选择接收单位列表 -->
+        <activity
+            android:name=".mvp.view.activity.zyld.SelectJsdwListActivity"
+            android:configChanges="keyboardHidden"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:exported="false"
+            android:windowSoftInputMode="stateHidden|stateAlwaysHidden|stateVisible|adjustPan" />
+
+        <!-- 添加转移联单废物信息 -->
+        <activity
+            android:name=".mvp.view.activity.zyld.ZyldFwxxAddActivity"
+            android:configChanges="keyboardHidden"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:exported="false"
+            android:windowSoftInputMode="stateHidden|stateAlwaysHidden|stateVisible|adjustPan" />
+
+        <!-- 转移批次号多选列表 -->
+        <activity
+            android:name=".mvp.view.activity.zyld.SelectMultiZypchListActivity"
+            android:configChanges="keyboardHidden"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:exported="false"
+            android:windowSoftInputMode="stateHidden|stateAlwaysHidden|stateVisible|adjustPan" />
+
+        <!-- 虚拟标签-立产立清-产生申报信息 -->
+        <activity
+            android:name=".mvp.view.activity.xnbq.XnbqCssbInfoActivity"
+            android:configChanges="keyboardHidden"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:exported="false"
+            android:windowSoftInputMode="stateHidden|stateAlwaysHidden|stateVisible|adjustPan" />
+
+        <!-- 虚拟标签-立产立清-产生申报列表 -->
+        <activity
+            android:name=".mvp.view.activity.xnbq.XnbqCssbListActivity"
+            android:configChanges="keyboardHidden"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:exported="false"
+            android:windowSoftInputMode="stateHidden|stateAlwaysHidden|stateVisible|adjustPan" />
+
+        <!-- 虚拟标签-立产立清-立产立处理信息 -->
+        <activity
+            android:name=".mvp.view.activity.xnbq.XnbqLclclInfoActivity"
+            android:configChanges="keyboardHidden"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:exported="false"
+            android:windowSoftInputMode="stateHidden|stateAlwaysHidden|stateVisible|adjustPan" />
+
+        <!-- 虚拟标签-立产立清-立产立处理列表 -->
+        <activity
+            android:name=".mvp.view.activity.xnbq.XnbqLclclListActivity"
+            android:configChanges="keyboardHidden"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:exported="false"
+            android:windowSoftInputMode="stateHidden|stateAlwaysHidden|stateVisible|adjustPan" />
+
+        <!-- 虚拟标签-立产立清-出库自行利用处置信息 -->
+        <activity
+            android:name=".mvp.view.activity.xnbq.XnbqCkzxlyczInfoActivity"
+            android:configChanges="keyboardHidden"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:exported="false"
+            android:windowSoftInputMode="stateHidden|stateAlwaysHidden|stateVisible|adjustPan" />
+
+        <!-- 虚拟标签-立产立清-出库自行利用处置列表 -->
+        <activity
+            android:name=".mvp.view.activity.xnbq.XnbqCkzxlyczListActivity"
+            android:configChanges="keyboardHidden"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:exported="false"
+            android:windowSoftInputMode="stateHidden|stateAlwaysHidden|stateVisible|adjustPan" />
+
+
+        <provider
+            android:name="android.support.v4.content.FileProvider"
+            android:authorities="com.grkj.ytjqy_pad"
+            android:exported="false"
+            android:grantUriPermissions="true">
+
+            <!-- 元数据 -->
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_paths" />
+        </provider>
+
+        <service android:name="net.posprinter.service.PosprinterService" />
+
+        <service android:name=".mvp.sevice.Dp385Service" />
+    </application>
+
+</manifest>

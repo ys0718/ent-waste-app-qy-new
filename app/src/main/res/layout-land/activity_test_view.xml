@@ -1,0 +1,101 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@mipmap/bg_login"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical">
+
+
+    <LinearLayout
+        android:visibility="gone"
+        style="@style/FormLayoutStyle_P">
+
+        <com.grkj.ytjqy_pad.utils.view.InputSelectView
+            android:id="@+id/isv_fwxxmc"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            app:hint="废物详细名称"
+            android:layout_height="wrap_content"/>
+
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:visibility="gone"
+        style="@style/FormLayoutStyle_P">
+
+        <com.grkj.ytjqy_pad.utils.view.GrInputView
+            android:id="@+id/giv_1"
+            android:layout_width="0dp"
+            android:layout_marginRight="@dimen/x10"
+            android:layout_weight="1"
+            app:required="true"
+            app:key="start"
+            android:layout_height="wrap_content"/>
+
+
+        <com.grkj.ytjqy_pad.utils.view.GrInputView
+            android:layout_width="0dp"
+            android:id="@+id/giv_2"
+            android:layout_marginLeft="@dimen/x10"
+            app:key="end"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"/>
+
+
+    </LinearLayout>
+
+
+    <com.grkj.ytjqy_pad.utils.view.GrRecyclerView
+        android:id="@+id/mRecyclerView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+
+    <com.grkj.ytjqy_pad.utils.view.GrScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1">
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:padding="@dimen/x10"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:id="@+id/ll_left"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="match_parent"/>
+
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:id="@+id/ll_right"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="match_parent"/>
+
+
+        </LinearLayout>
+
+
+    </com.grkj.ytjqy_pad.utils.view.GrScrollView>
+
+
+
+
+    <Button
+        android:text="保存"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:id="@+id/btn_save"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+
+
+</LinearLayout>

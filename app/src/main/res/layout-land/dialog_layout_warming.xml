@@ -1,0 +1,93 @@
+<android.support.v7.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="@dimen/x30"
+    app:cardCornerRadius="@dimen/x10">
+
+    <LinearLayout
+        android:padding="@dimen/x20"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_dialog"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/x48"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/tv_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:padding="@dimen/x10"
+                android:text="请选择"
+                android:textColor="@color/color_font_dialog"
+                android:textSize="@dimen/x18" />
+
+
+            <View
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"/>
+
+            <LinearLayout
+                android:id="@+id/ll_cancel"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/x30"
+                android:background="@drawable/button_style1"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/tv_cancel"
+                    style="@style/BtnFontStyle"
+                    android:layout_marginLeft="@dimen/x5"
+                    android:padding="0dp"
+                    android:text="取消" />
+
+
+            </LinearLayout>
+
+            <View
+                android:id="@+id/view_margin"
+                android:layout_width="@dimen/x20"
+                android:layout_height="0dp"/>
+
+
+            <LinearLayout
+                android:id="@+id/ll_confirm"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/x30"
+                android:background="@drawable/button_style2"
+                android:gravity="center">
+
+
+                <TextView
+                    android:id="@+id/tv_confirm"
+                    style="@style/BtnFontStyle"
+                    android:layout_marginLeft="@dimen/x5"
+                    android:padding="0dp"
+                    android:text="确定" />
+
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+
+        <com.grkj.ytjqy_pad.utils.view.GrRecyclerView
+            android:id="@+id/mRecyclerView"
+            android:layout_width="match_parent"
+            android:minHeight="@dimen/x100"
+            android:layout_height="wrap_content"/>
+
+
+    </LinearLayout>
+
+</android.support.v7.widget.CardView>

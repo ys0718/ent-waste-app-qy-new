@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingHorizontal="@dimen/x20"
+    android:id="@+id/item_layout"
+    android:gravity="start|center"
+    android:orientation="horizontal">
+
+    <ImageView
+        android:id="@+id/btn_select"
+        android:layout_marginLeft="@dimen/x10"
+        android:src="@mipmap/ic_unselected"
+        android:layout_width="@dimen/x20"
+        android:layout_height="@dimen/x20"/>
+
+    <TextView
+        android:id="@+id/tv_item1"
+        style="@style/Font10Style"
+        android:maxLines="1"
+        android:layout_weight="1"
+        android:layout_marginLeft="@dimen/x10"
+        android:ellipsize="end"
+        android:text="条目1" />
+
+</LinearLayout>
+

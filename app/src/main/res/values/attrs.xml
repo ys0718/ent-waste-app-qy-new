@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <declare-styleable name="TasksCompletedView">
+        <attr name="radius" format="dimension" />
+        <attr name="strokeWidth" format="dimension" />
+        <attr name="circleColor" format="color" />
+        <attr name="ringColor" format="color" />
+    </declare-styleable>
+
+<!--    <declare-styleable name="EditSpinner">-->
+<!--        <attr name="hint" format="string" />-->
+<!--        <attr name="rightImage" format="reference" />-->
+<!--        <attr name="Background" format="reference" />-->
+<!--    </declare-styleable>-->
+
+    <declare-styleable name="CommonAttrs">
+        <attr name="enabled" format="boolean" />
+        <attr name="required" format="boolean" />
+        <attr name="hint" format="string" />
+        <attr name="key" format="string" />
+        <attr name="value" format="string" />
+        <attr name="itemName" format="string" />
+        <attr name="rightImage" format="reference" />
+        <attr name="Background" format="reference" />
+    </declare-styleable>
+
+
+    <declare-styleable name="MyLinearLayoutAttrs">
+        <attr name="isEnable" format="boolean" />
+        <attr name="backgroundColor" format="reference" />
+    </declare-styleable>
+
+
+    <declare-styleable name="AdjustableViewAttrs">
+        <attr name="isOpen" format="boolean" />
+    </declare-styleable>
+
+
+</resources>

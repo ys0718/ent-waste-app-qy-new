@@ -1,0 +1,32 @@
+// local-aar-module/build.gradle
+
+
+// 必需插件
+apply plugin: 'com.android.library'
+
+android {
+    compileSdkVersion 33
+    namespace 'com.example.localaar'  // 添加命名空间
+
+    defaultConfig {
+        minSdk 21
+        targetSdk 33
+        // 关键：声明 AAR 包为模块输出
+        consumerProguardFiles "consumer-rules.pro"
+    }
+
+    // 关键配置：声明 AAR 为依赖
+    configurations {
+        apiElements {
+            canBeResolved = false
+            canBeConsumed = true
+            attributes {
+                attribute(Attribute.of("com.android.build.api.attributes.BuildTypeAttr", String), "release")
+            }
+            // 指向您的 AAR 文件
+            artifacts {
+                api(file("libs/jx_sdk_max_release_2.1.2_202503250938.aar"))
+            }
+        }
+    }
+}

@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:id="@+id/mLayout"
+    android:layout_height="wrap_content"
+    android:gravity="center"
+    android:orientation="horizontal">
+
+    <LinearLayout
+        android:id="@+id/ll_start_time"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingVertical="@dimen/x5"
+        android:layout_weight="1"
+        android:background="@drawable/bg_edittext"
+        android:gravity="left|center">
+
+        <TextView
+            android:id="@+id/tv_start_time"
+            style="@style/EditTextStyle"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:padding="@dimen/x1"
+            android:layout_marginHorizontal="@dimen/x1"
+            android:background="@null"
+            android:duplicateParentState="true"
+            android:hint="开始时间" />
+
+        <ImageView
+            android:id="@+id/iv_start_clear"
+            android:layout_width="@dimen/x20"
+            android:padding="@dimen/x3"
+            android:layout_height="@dimen/x20"
+            android:clickable="true"
+            android:src="@mipmap/ic_clear"
+            android:visibility="gone" />
+
+        <ImageView
+            android:layout_width="@dimen/x18"
+            android:layout_height="@dimen/x18"
+            android:layout_marginHorizontal="@dimen/x5"
+            android:duplicateParentState="true"
+            android:src="@mipmap/ic_date" />
+
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/x5"
+        android:text="-"
+        android:textColor="@color/colorFontA" />
+
+    <LinearLayout
+        android:id="@+id/ll_end_time"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingVertical="@dimen/x5"
+        android:layout_weight="1"
+        android:background="@drawable/bg_edittext"
+        android:gravity="left|center">
+
+        <TextView
+            android:id="@+id/tv_end_time"
+            style="@style/EditTextStyle"
+            android:layout_marginHorizontal="@dimen/x1"
+            android:layout_gravity="center"
+            android:padding="@dimen/x1"
+            android:gravity="center"
+            android:background="@null"
+            android:duplicateParentState="true"
+            android:hint="结束时间" />
+
+        <ImageView
+            android:layout_width="@dimen/x20"
+            android:padding="@dimen/x3"
+            android:layout_height="@dimen/x20"
+            android:visibility="gone"
+            android:clickable="true"
+            android:id="@+id/iv_end_clear"
+            android:src="@mipmap/ic_clear" />
+
+        <ImageView
+            android:layout_width="@dimen/x18"
+            android:layout_height="@dimen/x18"
+            android:layout_marginHorizontal="@dimen/x5"
+            android:duplicateParentState="true"
+            android:src="@mipmap/ic_date" />
+
+    </LinearLayout>
+
+
+</LinearLayout>

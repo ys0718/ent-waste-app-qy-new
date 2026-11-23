@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--<color name="colorPrimary">#1487d7</color>-->
+    <!--<color name="colorPrimaryDark">#1487d7</color>-->
+    <!--<color name="colorAccent">#0064d4</color>-->
+
+    <color name="colorPrimary">#1974FD</color>
+    <color name="colorPrimaryDark">#1974FD</color>
+    <color name="colorAccent">#1974FD</color>
+    <!--    <color name="colorAccent">#1B8BF3</color>-->
+
+    <color name="colorTextBlack">#323232</color>
+    <color name="white">#FFF</color>
+    <color name="colorFontA">#333435</color>
+    <color name="colorFontB">#999999</color>
+    <color name="colorFontOrange">#FFB444</color>
+    <color name="colorFontBlue">#3F7FFC</color>
+    <color name="colorFontGreen">#18BF98</color>
+    <color name="colorFontPurple">#8886F4</color>
+    <color name="color_label_bg">#FFD001</color>
+    <color name="color_label_text">#1B1C1E</color>
+    <color name="bg_gray">#F7F7FA</color>
+    <color name="color_bg_cancel">#E5E8ED</color>
+
+    <color name="line_color">#f5f6f6</color>
+
+    <color name="line_color2">#dbdbdb</color>
+
+    <color name="color_red_top">#faa4a0</color>
+    <color name="color_red_bottom">#db736e</color>
+
+    <color name="color_dark_blue_top">#7ab8f5</color>
+    <color name="color_dark_blue_bottom">#3581cc</color>
+
+    <color name="color_blue_top">#71cee4</color>
+    <color name="color_blue_bottom">#2e9bb2</color>
+
+    <color name="color_green_top">#8ede93</color>
+    <color name="color_green_bottom">#43a84a</color>
+    <color name="color_green_scan">#2FBBA1</color>
+
+    <color name="color_yellow">#FE9D2E</color>
+    <color name="color_yellow_label">#FFD001</color>
+    <color name="color_young_blue">#04FFFF</color>
+    <color name="color_young_green">#18DD7F</color>
+
+    <color name="color_success_green">#32DD75</color>
+
+
+    <color name="color_dialog_start">#6091E9</color>
+    <color name="color_dialog_end">#501EC3</color>
+
+    <color name="color_button1_start">#100975</color>
+    <color name="color_button1_end">#0E1F74</color>
+
+    <color name="color_button2_start">#0D3699</color>
+    <color name="color_button2_end">#0082FC</color>
+
+
+    <color name="color_title_bg">#e5ebf1</color>
+
+    <color name="color_font_red">#F5803D</color>
+
+    <color name="color_font_blue">#82AADF</color>
+
+    <color name="color_font_dialog">#A4C2FF</color>
+
+
+    <!-- 打印机测试 -->
+    <color name="background_titlebar">#ff26587d</color>
+    <color name="background_light">#ffffffff</color>
+    <color name="foreground_on_dark">#ffffffff</color>
+    <color name="border_color_on_light">#ff3bb3c3</color>
+    <color name="black">#ff000000</color>
+
+
+
+</resources>

@@ -1,0 +1,438 @@
+<resources>
+
+    <!-- 内容字体样式 -->
+    <style name="ContentFontStyle20x20">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">24dp</item>
+        <item name="android:textColor">#000</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:layout_marginLeft">172dp</item>
+        <item name="android:layout_marginTop">17dp</item>
+        <item name="android:layout_marginRight">5dp</item>
+        <item name="android:gravity">left</item>
+        <item name="android:ellipsize">end</item>
+        <item name="android:maxLines">1</item>
+    </style>
+
+
+    <!-- 内容字体样式 -->
+    <style name="MulContentFontStyle20x20">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">24dp</item>
+        <item name="android:textColor">#000</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:layout_marginLeft">172dp</item>
+        <item name="android:layout_marginTop">17dp</item>
+<!--        <item name="android:layout_marginBottom">10dp</item>-->
+        <item name="android:layout_marginRight">15dp</item>
+        <item name="android:maxLines">2</item>
+        <item name="android:gravity">top|left</item>
+        <item name="android:layout_gravity">top</item>
+        <item name="android:ellipsize">end</item>
+
+    </style>
+
+
+    <!-- 内容字体样式 -->
+    <style name="RightContentFontStyle20x20">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">24dp</item>
+        <item name="android:textColor">#000</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:layout_marginLeft">160dp</item>
+        <item name="android:layout_marginTop">18dp</item>
+        <item name="android:gravity">left</item>
+        <item name="android:ellipsize">end</item>
+        <item name="android:maxLines">1</item>
+    </style>
+
+
+    <!-- 内容字体样式 -->
+    <style name="ContentFontStyle15x15Dp12370">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">17dp</item>
+        <item name="android:textColor">#000</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:gravity">left|top</item>
+        <item name="android:ellipsize">end</item>
+        <item name="android:maxLines">1</item>
+    </style>
+
+    <!-- 内容字体样式 -->
+    <style name="RightContentFontStyle15x15Dp12370">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">17dp</item>
+        <item name="android:textColor">#000</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:layout_marginLeft">100dp</item>
+        <item name="android:gravity">left|top</item>
+        <item name="android:ellipsize">end</item>
+        <item name="android:maxLines">1</item>
+    </style>
+
+
+    <!-- 内容字体样式 -->
+    <style name="MulContentFontStyle15x15Dp12370">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">17dp</item>
+        <item name="android:textColor">#000</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:layout_marginTop">5dp</item>
+        <!--        <item name="android:layout_marginBottom">10dp</item>-->
+        <item name="android:layout_marginRight">10dp</item>
+        <item name="android:maxLines">2</item>
+        <item name="android:ellipsize">end</item>
+        <item name="android:gravity">top|left</item>
+        <item name="android:layout_gravity">top</item>
+
+    </style>
+
+
+    <!-- 内容字体样式 -->
+    <style name="ContentFontStyle10x10Dp12370">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">12dp</item>
+        <item name="android:textColor">#000</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:layout_marginLeft">80dp</item>
+        <item name="android:layout_marginTop">8dp</item>
+        <item name="android:gravity">left|top</item>
+        <item name="android:layout_gravity">left|top</item>
+        <item name="android:ellipsize">end</item>
+        <item name="android:maxLines">1</item>
+    </style>
+
+
+    <!-- 内容字体样式 -->
+    <style name="MulContentFontStyle10x10Dp12370">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">12dp</item>
+        <item name="android:textColor">#000</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:layout_marginLeft">80dp</item>
+        <item name="android:layout_marginRight">10dp</item>
+        <item name="android:layout_marginTop">10dp</item>
+        <item name="android:maxLines">2</item>
+        <item name="android:gravity">top|left</item>
+        <item name="android:ellipsize">end</item>
+        <item name="android:layout_gravity">top</item>
+
+    </style>
+
+
+
+
+
+    <!-- 内容字体样式 -->
+    <style name="ContentFontStyle15x15">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">17dp</item>
+        <item name="android:textColor">#000</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:layout_marginLeft">146dp</item>
+        <item name="android:layout_marginTop">17dp</item>
+        <item name="android:gravity">left|bottom</item>
+        <item name="android:ellipsize">end</item>
+        <item name="android:maxLines">1</item>
+    </style>
+
+
+    <!-- 内容字体样式 -->
+    <style name="RightContentFontStyle15x15">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">17dp</item>
+        <item name="android:textColor">#000</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:layout_marginLeft">116dp</item>
+        <item name="android:layout_marginTop">17dp</item>
+        <item name="android:gravity">left|bottom</item>
+        <item name="android:ellipsize">end</item>
+        <item name="android:maxLines">1</item>
+    </style>
+
+
+    <!-- 内容字体样式 -->
+    <style name="MulContentFontStyle15x15">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">17dp</item>
+        <item name="android:textColor">#000</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:layout_marginLeft">146dp</item>
+        <item name="android:layout_marginTop">17dp</item>
+<!--        <item name="android:layout_marginBottom">10dp</item>-->
+        <item name="android:layout_marginRight">10dp</item>
+        <item name="android:maxLines">2</item>
+        <item name="android:ellipsize">end</item>
+        <item name="android:gravity">top|left</item>
+        <item name="android:layout_gravity">top</item>
+
+    </style>
+
+
+
+
+
+
+
+    <!-- 内容字体样式 -->
+    <style name="ContentFontStyle10x10">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">12dp</item>
+        <item name="android:textColor">#000</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:layout_marginLeft">80dp</item>
+        <item name="android:layout_marginTop">8dp</item>
+        <item name="android:gravity">left</item>
+        <item name="android:ellipsize">end</item>
+        <item name="android:maxLines">1</item>
+    </style>
+
+
+    <!-- 内容字体样式 -->
+    <style name="MulContentFontStyle10x10">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">12dp</item>
+        <item name="android:textColor">#000</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:layout_marginLeft">80dp</item>
+        <item name="android:layout_marginTop">8dp</item>
+        <item name="android:layout_marginBottom">8dp</item>
+        <item name="android:layout_marginRight">10dp</item>
+        <item name="android:maxLines">2</item>
+        <item name="android:gravity">top|left</item>
+        <item name="android:ellipsize">end</item>
+        <item name="android:layout_gravity">top</item>
+
+    </style>
+
+
+    <!-- 内容字体样式 -->
+    <style name="RightContentFontStyle10x10">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">12dp</item>
+        <item name="android:textColor">#000</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:layout_marginLeft">56dp</item>
+        <item name="android:layout_marginTop">8dp</item>
+        <item name="android:gravity">left</item>
+        <item name="android:ellipsize">end</item>
+        <item name="android:maxLines">1</item>
+    </style>
+
+
+
+
+
+    <!-- 内容字体样式 -->
+    <style name="ContentFontStyle20x20v2">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">24dp</item>
+        <item name="android:textColor">#000</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:layout_marginLeft">180dp</item>
+        <item name="android:layout_marginTop">17dp</item>
+        <item name="android:layout_marginRight">5dp</item>
+        <item name="android:gravity">left</item>
+        <item name="android:ellipsize">end</item>
+        <item name="android:maxLines">1</item>
+    </style>
+
+
+    <!-- 内容字体样式 -->
+    <style name="MulContentFontStyle20x20v2">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">24dp</item>
+        <item name="android:textColor">#000</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:layout_marginLeft">180dp</item>
+        <item name="android:layout_marginTop">17dp</item>
+        <!--        <item name="android:layout_marginBottom">10dp</item>-->
+        <item name="android:layout_marginRight">15dp</item>
+        <item name="android:maxLines">2</item>
+        <item name="android:gravity">top|left</item>
+        <item name="android:layout_gravity">top</item>
+        <item name="android:ellipsize">end</item>
+
+    </style>
+
+
+    <!-- 内容字体样式 -->
+    <style name="RightContentFontStyle20x20v2">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">24dp</item>
+        <item name="android:textColor">#000</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:layout_marginLeft">120dp</item>
+        <item name="android:layout_marginTop">18dp</item>
+        <item name="android:gravity">left</item>
+        <item name="android:ellipsize">end</item>
+        <item name="android:maxLines">1</item>
+    </style>
+
+
+
+    <!-- 内容字体样式 -->
+    <style name="ContentFontStyle10x10v3">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">@dimen/x12</item>
+        <item name="android:textColor">#000</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:layout_marginLeft">@dimen/x78</item>
+        <item name="android:layout_marginTop">@dimen/x8</item>
+        <item name="android:gravity">left</item>
+        <item name="android:ellipsize">end</item>
+        <item name="android:maxLines">1</item>
+    </style>
+
+
+    <!-- 内容字体样式 -->
+    <style name="MulContentFontStyle10x10v3">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">@dimen/x12</item>
+        <item name="android:textColor">#000</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:layout_marginLeft">@dimen/x78</item>
+        <item name="android:layout_marginTop">@dimen/x8</item>
+        <item name="android:layout_marginBottom">@dimen/x8</item>
+        <item name="android:layout_marginRight">@dimen/x10</item>
+        <item name="android:maxLines">2</item>
+        <item name="android:gravity">top|left</item>
+        <item name="android:ellipsize">end</item>
+        <item name="android:layout_gravity">top</item>
+
+    </style>
+
+
+    <!-- 内容字体样式 -->
+    <style name="RightContentFontStyle10x10v3">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">@dimen/x12</item>
+        <item name="android:textColor">#000</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:layout_marginLeft">@dimen/x63</item>
+        <item name="android:layout_marginTop">@dimen/x8</item>
+        <item name="android:gravity">left</item>
+        <item name="android:ellipsize">end</item>
+        <item name="android:maxLines">1</item>
+    </style>
+
+
+    <!-- 内容字体样式 -->
+    <style name="ContentFontStyle15x15v3">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">@dimen/x17</item>
+        <item name="android:textColor">#000</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:layout_marginLeft">@dimen/x144</item>
+        <item name="android:layout_marginTop">@dimen/x17</item>
+        <item name="android:gravity">left|bottom</item>
+        <item name="android:ellipsize">end</item>
+        <item name="android:maxLines">1</item>
+    </style>
+
+
+    <!-- 内容字体样式 -->
+    <style name="RightContentFontStyle15x15v3">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">@dimen/x17</item>
+        <item name="android:textColor">#000</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:layout_marginLeft">@dimen/x114</item>
+        <item name="android:layout_marginTop">@dimen/x17</item>
+        <item name="android:gravity">left|bottom</item>
+        <item name="android:ellipsize">end</item>
+        <item name="android:maxLines">1</item>
+    </style>
+
+
+    <!-- 内容字体样式 -->
+    <style name="MulContentFontStyle15x15v3">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">@dimen/x17</item>
+        <item name="android:textColor">#000</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:layout_marginLeft">@dimen/x148</item>
+        <item name="android:layout_marginTop">@dimen/x17</item>
+        <!--        <item name="android:layout_marginBottom">@dimen/x10</item>-->
+        <item name="android:layout_marginRight">@dimen/x10</item>
+        <item name="android:maxLines">2</item>
+        <item name="android:ellipsize">end</item>
+        <item name="android:gravity">top|left</item>
+        <item name="android:layout_gravity">top</item>
+
+    </style>
+
+    <!-- 内容字体样式 -->
+    <style name="ContentFontStyle20x20v3">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">@dimen/x24</item>
+        <item name="android:textColor">#000</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:layout_marginLeft">@dimen/x166</item>
+        <item name="android:layout_marginTop">@dimen/x17</item>
+        <item name="android:layout_marginRight">@dimen/x5</item>
+        <item name="android:gravity">left</item>
+        <item name="android:ellipsize">end</item>
+        <item name="android:maxLines">1</item>
+    </style>
+
+
+    <!-- 内容字体样式 -->
+    <style name="MulContentFontStyle20x20v3">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">@dimen/x24</item>
+        <item name="android:textColor">#000</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:layout_marginLeft">@dimen/x166</item>
+        <item name="android:layout_marginTop">@dimen/x17</item>
+        <!--        <item name="android:layout_marginBottom">10dp</item>-->
+        <item name="android:layout_marginRight">@dimen/x15</item>
+        <item name="android:maxLines">2</item>
+        <item name="android:gravity">top|left</item>
+        <item name="android:layout_gravity">top</item>
+        <item name="android:ellipsize">end</item>
+
+    </style>
+
+
+    <!-- 内容字体样式 -->
+    <style name="RightContentFontStyle20x20v3">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">@dimen/x24</item>
+        <item name="android:textColor">#000</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:layout_marginLeft">@dimen/x130</item>
+        <item name="android:layout_marginTop">@dimen/x18</item>
+        <item name="android:gravity">left</item>
+        <item name="android:ellipsize">end</item>
+        <item name="android:maxLines">1</item>
+    </style>
+
+
+</resources>

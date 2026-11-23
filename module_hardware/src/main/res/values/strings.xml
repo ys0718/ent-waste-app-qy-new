@@ -1,0 +1,340 @@
+<resources>
+    <string name="app_name">危废精细化管理手机端</string>
+    <string name="app_name_2">固废管家</string>
+
+    <string name="common_empty">-</string>
+    <string name="common_zero">0.000</string>
+
+    <!-- App更新 -->
+    <string name="app_file">app-%1$s.apk</string>
+    <string name="downloading">下载中，请等待 (%1$sM)</string>
+    <string name="uploading">正在上传第%1$d个文件（剩余%2$d个）</string>
+    <string name="downloading2">文件下载中，请等待</string>
+
+    <string name="selected_total">已选中（%1$d个）：%2$s</string>
+
+    <string name="print_status_str">共%1$d张，正在打印第%2$d张，还剩%3$d张</string>
+
+    <string name="common_welcome">您好！%1$s</string>
+    <string name="web_view_url">欢迎您！%1$s</string>
+    <string name="str_device">当前设备号：%1$s</string>
+
+    <string name="empty_company">处置单位</string>
+
+    <string name="selected_number">（已选中%1$d个）</string>
+
+    <string name="empty_replace">%1$s</string>
+    <string name="common_empty_text">-</string>
+    <string name="common_str_ssq">%1$s/%2$s/%3$s</string>
+    <string name="common_input_tips">请输入</string>
+    <string name="common_input_tips_fwmc">请输入废物名称</string>
+    <string name="common_select_tips">请选择</string>
+    <string name="common_input_select_tips">请选择/输入</string>
+    <string name="common_select_scan_tips">请选择</string>
+    <string name="app_title">危废精细化管理终端</string>
+    <string name="str_page_total">共%1$d页，共%2$d条</string>
+    <string name="str_page_current">当前第%1$d页</string>
+    <string name="str_auto_get">保存数据后自动生成。</string>
+
+
+<!--  板块动态计量单位  -->
+    <string name="str_jldw_input">入库量(%1$s)</string>
+    <string name="str_jldw_record">产生量(%1$s)</string>
+    <string name="str_jldw_output">出库量(%1$s)</string>
+    <string name="str_jldw_zxww">%1$s量(%2$s)</string>
+    <string name="str_jldw_zcl">当前贮存量(%1$s)</string>
+    <string name="str_jldw_kcl">当前库存量(%1$s)</string>
+    <string name="str_jldw_pz">皮重(%1$s)</string>
+
+    <string name="str_current_tips">(今年)截至时间：%1$s,数据已更新</string>
+
+    <string name="str_orientation">portrait</string>
+
+    <!--  数据上报  -->
+    <string name="str_data_upload_item1">数据类型：%1$s</string>
+    <string name="str_data_upload_item2">状态：%1$s</string>
+    <string name="str_data_upload_item3">登记时间：%1$s</string>
+    <string name="str_data_upload_item4">数据上报时间：%1$s</string>
+
+
+    <string-array name="geology_factor">
+        <item>al</item>
+        <item>al+pl</item>
+        <item>h</item>
+        <item>自定义</item>
+        <item>al</item>
+        <item>al+pl</item>
+        <item>h</item>
+        <item>自定义</item>
+        <item>al</item>
+        <item>al+pl</item>
+        <item>h</item>
+        <item>自定义</item>
+        <item>al</item>
+        <item>al+pl</item>
+        <item>h</item>
+        <item>自定义</item>
+        <item>al</item>
+        <item>al+pl</item>
+        <item>h</item>
+        <item>自定义</item>
+    </string-array>
+
+
+    <!--  社会源收集  -->
+    <string name="str_collect_item1">收集日期：%1$s</string>
+    <string name="str_collect_item2">收集地点：%1$s</string>
+    <string name="str_collect_item3">产生责任人：%1$s</string>
+    <string name="str_collect_item4">联系电话：%1$s</string>
+    <string name="str_collect_item5">贮存仓库：%1$s</string>
+
+
+    <string name="str_collect_info_item1"><font color="#e51e5f">*</font>收集日期：</string>
+    <string name="str_collect_info_item2"><font color="#e51e5f">*</font>许可证编号：</string>
+    <string name="str_collect_info_item3"><font color="#e51e5f">*</font>收集对象：</string>
+    <string name="str_collect_info_item4"><font color="#e51e5f">*</font>贮存仓库：</string>
+    <string name="str_collect_info_item5">自定义流水号：</string>
+    <string name="str_collect_info_item6">驾驶员：</string>
+    <string name="str_collect_info_item7">车牌号：</string>
+    <string name="str_collect_info_item8"><font color="#e51e5f">*</font>产生单位：</string>
+    <string name="str_collect_info_item9"><font color="#e51e5f">*</font>行政区域：</string>
+    <string name="str_collect_info_item10"><font color="#e51e5f">*</font>产生责任人：</string>
+    <string name="str_collect_info_item11"><font color="#e51e5f">*</font>联系电话：</string>
+    <string name="str_collect_info_item12"><font color="#e51e5f">*</font>产生责任人证件类型：</string>
+    <string name="str_collect_info_item13"><font color="#e51e5f">*</font>产生责任人证件号：</string>
+    <string name="str_collect_info_item14"><font color="#e51e5f">*</font>产生单位地址：</string>
+    <string name="str_collect_info_item15"><font color="#e51e5f">*</font>收集单位责任人：</string>
+    <string name="str_collect_info_item16"><font color="#e51e5f">*</font>收集单位责任人证件类型：</string>
+    <string name="str_collect_info_item17"><font color="#e51e5f">*</font>收集单位责任人证件号：</string>
+
+
+    <string name="str_collect_info_child_item1"><font color="#e51e5f">*</font>利用/处置方式：</string>
+    <string name="str_collect_info_child_item2"><font color="#e51e5f">*</font>危废类别：</string>
+    <string name="str_collect_info_child_item3">危废代码：</string>
+    <string name="str_collect_info_child_item4">危废名称：</string>
+    <string name="str_collect_info_child_item5">容器/包装类型：</string>
+    <string name="str_collect_info_child_item6">容器/包装材质：</string>
+    <string name="str_collect_info_child_item7">容器/包装规格：</string>
+    <string name="str_collect_info_child_item8"><font color="#e51e5f">*</font>入库量：</string>
+    <string name="str_collect_info_child_item9">备注：</string>
+
+
+    <!--  产废登记  -->
+    <string name="str_record_item1">产废批次编码：</string>
+    <string name="str_record_item2">产生时间：</string>
+    <string name="str_record_item3"><font color="#e51e5f">*</font>废物类别：</string>
+    <string name="str_record_item4">废物代码：</string>
+    <string name="str_record_item5">废物名称：</string>
+    <string name="str_record_item6">废物形态：</string>
+    <string name="str_record_item7">危险特性：</string>
+    <string name="str_record_item8"><font color="#e51e5f">*</font>产生量：</string>
+    <string name="str_record_item9">容器/包装编码：</string>
+    <string name="str_record_item10"><font color="#e51e5f">*</font>去向：</string>
+    <string name="str_record_item11">容器/包装类型：</string>
+    <string name="str_record_item12"><font color="#e51e5f">*</font>容器/包装数量：</string>
+    <string name="str_record_item13"><font color="#e51e5f">*</font>产生危险废物设施编码：</string>
+    <string name="str_record_item14">产生部门经办人：</string>
+    <string name="str_record_item15"><font color="#e51e5f">*</font>容器/包装材质：</string>
+    <string name="str_record_item16"><font color="#e51e5f">*</font>容器/包装规格：</string>
+
+    <string name="str_record_fwlb">[%1$s]-[%2$s-%3$s]-[%4$s]</string>
+    <string name="str_record_fwlb2">%1$s-%2$s</string>
+    <string name="str_record_fwlb3">[%1$s]-[%2$s-%3$s]-[%4$s]-[%5$s]</string>
+    <string name="str_record_list1">废物类别：%1$s</string>
+    <string name="str_record_list1_2">废物类别名称：%1$s</string>
+    <string name="str_record_list2">废物代码：%1$s</string>
+    <string name="str_record_list3">产生时间：%1$s</string>
+    <string name="str_record_list4">入库时间：%1$s</string>
+    <string name="str_record_list13">入库量：%1$s</string>
+    <string name="str_record_list5">出库时间：%1$s</string>
+    <string name="str_record_list12">出厂时间：%1$s</string>
+    <!--    <string name="str_record_list11">产生单位出库时间：%1$s</string>-->
+    <string name="str_record_list11">交接时间：%1$s</string>
+    <string name="str_record_list6">入库批次编码：%1$s</string>
+    <string name="str_record_list7">容器/包装类型：%1$s</string>
+    <string name="str_record_list8">容器/包装材质：%1$s</string>
+    <string name="str_record_list9">容器/包装规格：%1$s</string>
+    <string name="str_record_list10">批次编码：%1$s</string>
+
+
+<!--    <string name="str_loading">正在加载数据...</string>-->
+    <string name="str_loading">请选择/输入</string>
+
+
+    <!--  入库信息  -->
+    <string name="str_input_item1">入库批次编码：</string>
+    <string name="str_input_item2">入库时间：</string>
+    <string name="str_input_item3"><font color="#e51e5f">*</font>废物类别：</string>
+    <string name="str_input_item4">废物代码：</string>
+    <string name="str_input_item5">废物名称：</string>
+    <string name="str_input_item6">废物类别名称：</string>
+    <string name="str_input_item7">危险特性：</string>
+    <string name="str_input_item8"><font color="#e51e5f">*</font>入库量：</string>
+    <string name="str_input_item9"><font color="#e51e5f">*</font>容器/包装编码：</string>
+    <string name="str_input_item10">产生批次编码：</string>
+    <string name="str_input_item11"><font color="#e51e5f">*</font>容器/包装类型：</string>
+    <string name="str_input_item12"><font color="#e51e5f">*</font>容器/包装数量：</string>
+    <string name="str_input_item13"><font color="#e51e5f">*</font>贮存设施编码： </string>
+    <string name="str_input_item14">贮存设施类型：</string>
+    <string name="str_input_item15"><font color="#e51e5f">*</font>容器/包装材质：</string>
+    <string name="str_input_item16"><font color="#e51e5f">*</font>容器/包装规格：</string>
+    <string name="str_input_item17"><font color="#e51e5f">*</font>运送部门经办人：</string>
+    <string name="str_input_item20"><font color="#e51e5f">*</font>合同编号：</string>
+    <string name="str_input_item21"><font color="#e51e5f">*</font>转移联单：</string>
+    <string name="str_input_item22"><font color="#e51e5f">*</font>来源单位：</string>
+    <string name="str_input_item18">贮存部门经办人：</string>
+    <string name="str_input_item24">是否批量入库：</string>
+    <string name="str_input_item25">批量入库数量：</string>
+    <string name="str_input_item28">同一批次号：</string>
+
+    <string name="str_input_zcbm">%1$s-%2$s-%3$s</string>
+
+    <!--  标签信息  -->
+    <string name="str_label_item1">废物名称：</string>
+    <string name="str_label_item2">废物类别：</string>
+    <string name="str_label_item3">废物代码：</string>
+    <string name="str_label_item4">产生时间：</string>
+    <string name="str_label_item5">入库量：</string>
+    <string name="str_label_item6">废物形态：</string>
+    <string name="str_label_item7">危险特性：</string>
+    <string name="str_label_item8">主要成分：</string>
+    <string name="str_label_item9">危害成分：</string>
+    <string name="str_label_item10">注意事项：</string>
+    <string name="str_label_item11">数字识别码：</string>
+    <string name="str_label_item12">产生(收集)单位：</string>
+    <string name="str_label_item13">地址：</string>
+    <string name="str_label_item14">联系人：</string>
+    <string name="str_label_item15">联系方式：</string>
+    <string name="str_label_item16">备注：</string>
+    <string name="str_label_item17">有害成分：</string>
+    <string name="str_label_item18">产生/收集单位：</string>
+    <string name="str_label_item19">联系人和联系方式：</string>
+    <string name="str_label_item20">产生日期：</string>
+    <string name="str_label_item21">废物重量：</string>
+
+    <!--数据上报-->
+    <string name="str_upload_item1">数据类型：</string>
+    <string name="str_upload_item3">数据上报时间：</string>
+    <string name="str_upload_item4">废物类型：</string>
+    <string name="str_upload_item5">废物代码：</string>
+    <string name="str_upload_item6">废物名称：</string>
+    <string name="str_upload_item7">废物形态：</string>
+
+    <!--  出库信息  -->
+    <string name="str_output_item1">出库批次编码：</string>
+    <string name="str_output_item2">出库时间：</string>
+    <string name="str_output_item3"><font color="#e51e5f">*</font>废物类别：</string>
+    <string name="str_output_item4">废物类别名称：</string>
+    <string name="str_output_item5">废物名称：</string>
+    <string name="str_output_item6">废物代码：</string>
+    <string name="str_output_item7">危险特性：</string>
+    <string name="str_output_item8"><font color="#e51e5f">*</font>出库量：</string>
+    <string name="str_output_item9">容器/包装编码：</string>
+    <string name="str_output_item10">入库批次编码：</string>
+    <string name="str_output_item11"><font color="#e51e5f">*</font>容器/包装类型：</string>
+    <string name="str_output_item12"><font color="#e51e5f">*</font>容器/包装数量：</string>
+    <string name="str_output_item13"><font color="#e51e5f">*</font>贮存设施编码：</string>
+    <string name="str_output_item14">贮存设施类型：</string>
+    <string name="str_output_item15"><font color="#e51e5f">*</font>容器/包装材质：</string>
+    <string name="str_output_item16"><font color="#e51e5f">*</font>容器/包装规格：</string>
+    <string name="str_output_item17"><font color="#e51e5f">*</font>运送部门经办人：</string>
+    <string name="str_output_item18">出库部门经办人：</string>
+    <string name="str_output_item19"><font color="#e51e5f">*</font>转移联单编号：</string>
+    <string name="str_output_item20"><font color="#e51e5f">*</font>接收单位名称：</string>
+    <string name="str_output_item21"><font color="#e51e5f">*</font>去向：</string>
+    <string name="str_output_item22"><font color="#e51e5f">*</font>容器/包装重量(kg)：</string>
+    <string name="str_output_item23"><font color="#e51e5f">*</font>其他重量(kg)：</string>
+    <string name="str_output_item24"><font color="#e51e5f">*</font>贮存设施名称：</string>
+    <string name="str_output_item25"><font color="#e51e5f">*</font>皮重(kg)：</string>
+
+
+    <!--  校正信息  -->
+    <string name="str_check_item1">废物类别：</string>
+    <string name="str_check_item2">废物类别名称：</string>
+    <string name="str_check_item3">废物代码：</string>
+    <string name="str_check_item4">废物名称：</string>
+    <string name="str_check_item5">产废量：</string>
+    <string name="str_check_item5_2">入库量：</string>
+    <string name="str_check_item6"><font color="#e51e5f">*</font>当前重量：</string>
+    <string name="str_check_item7"><font color="#e51e5f">*</font>校正时间：</string>
+    <string name="str_check_item8"><font color="#e51e5f">*</font>校正人员：</string>
+    <string name="str_check_item9"><font color="#e51e5f">*</font>情况说明：</string>
+
+
+    <!--  自行利用信息  -->
+    <string name="str_zxly_item1">%1$s批次编码：</string>
+    <string name="str_zxly_item2">%1$s时间：</string>
+    <string name="str_zxly_item3"><font color="#e51e5f">*</font>废物类别：</string>
+    <string name="str_zxly_item4">废物类别名称：</string>
+    <string name="str_zxly_item5">废物名称：</string>
+    <string name="str_zxly_item6">废物代码：</string>
+    <string name="str_zxly_item7">危险特性：</string>
+    <string name="str_zxly_item8">%1$s量：</string>
+    <string name="str_zxly_item9">容器/包装编码：</string>
+    <string name="str_zxly_item10">产废/出库批次编码：</string>
+    <string name="str_zxly_item11"><font color="#e51e5f">*</font>容器/包装类型：</string>
+    <string name="str_zxly_item12"><font color="#e51e5f">*</font>容器/包装数量：</string>
+    <string name="str_zxly_item13">%1$s设施：</string>
+    <string name="str_zxly_item14">%1$s设施名称：</string>
+    <string name="str_zxly_item15"><font color="#e51e5f">*</font>容器/包装材质：</string>
+    <string name="str_zxly_item16"><font color="#e51e5f">*</font>容器/包装规格：</string>
+    <string name="str_zxly_item17"><font color="#e51e5f">*</font>利用处置方式大类：</string>
+    <string name="str_zxly_item18"><font color="#e51e5f">*</font>利用处置方式小类：</string>
+    <string name="str_zxly_item19"><font color="#e51e5f">*</font>转移联单编号：</string>
+    <string name="str_zxly_item20">%1$s部门经办人：</string>
+    <string name="str_zxly_item21">%1$s完毕时间：</string>
+    <string name="str_zxly_item22"><font color="#e51e5f">*</font>容器/包装重量(kg)：</string>
+    <string name="str_zxly_item23"><font color="#e51e5f">*</font>其他重量(kg)：</string>
+    <string name="str_zxly_item24"><font color="#e51e5f">*</font>贮存设施名称：</string>
+    <string name="str_zxly_item25"><font color="#e51e5f">*</font>皮重(kg)：</string>
+
+
+    <!--  委外利用信息  -->
+    <string name="str_wwly_item1">%1$s批次编码：</string>
+    <string name="str_wwly_item2">出厂时间：</string>
+    <string name="str_wwly_item3"><font color="#e51e5f">*</font>废物类别：</string>
+    <string name="str_wwly_item4">废物类别名称：</string>
+    <string name="str_wwly_item5">废物名称：</string>
+    <string name="str_wwly_item6">废物代码：</string>
+    <string name="str_wwly_item7">危险特性：</string>
+    <string name="str_wwly_item8"><font color="#e51e5f">*</font>%1$s用量：</string>
+    <string name="str_wwly_item9">容器/包装编码：</string>
+    <string name="str_wwly_item10">产废/出库批次编码：</string>
+    <string name="str_wwly_item11"><font color="#e51e5f">*</font>容器/包装类型：</string>
+    <string name="str_wwly_item12"><font color="#e51e5f">*</font>容器/包装数量：</string>
+    <string name="str_wwly_item13"><font color="#e51e5f">*</font>委外处置设施：</string>
+    <string name="str_wwly_item14">委外处置设施名称：</string>
+    <string name="str_wwly_item15"><font color="#e51e5f">*</font>容器/包装材质：</string>
+    <string name="str_wwly_item16"><font color="#e51e5f">*</font>容器/包装规格：</string>
+    <string name="str_wwly_item17"><font color="#e51e5f">*</font>利用处置方式大类：</string>
+    <string name="str_wwly_item18"><font color="#e51e5f">*</font>利用处置方式小类：</string>
+    <string name="str_wwly_item19"><font color="#e51e5f">*</font>转移联单编号：</string>
+    <string name="str_wwly_item20"><font color="#e51e5f">*</font>许可证编号：</string>
+    <string name="str_wwly_item21">废物描述：</string>
+    <string name="str_wwly_item22"><font color="#e51e5f">*</font>容器/包装重量(kg)：</string>
+    <string name="str_wwly_item23"><font color="#e51e5f">*</font>其他重量(kg)：</string>
+    <string name="str_wwly_item24"><font color="#e51e5f">*</font>贮存设施名称：</string>
+    <string name="str_wwly_item25"><font color="#e51e5f">*</font>皮重(kg)：</string>
+    <string name="str_wwly_item26"><font color="#e51e5f">*</font>单位名称：</string>
+    <string name="str_wwly_item27"><font color="#e51e5f">*</font>接收单位类型：</string>
+
+
+    <string name="str_about_contact">李小姐 </string>
+    <string name="str_about_phone">020-31420346</string>
+<!--    <string name="str_support">技术支持：航科广软（广州）数字科技有限公司</string>-->
+<!--    <string name="str_support2">航科广软（广州）数字科技有限公司</string>-->
+    <string name="str_support"> </string>
+    <string name="str_support2"> </string>
+
+    <string name="str_support3">技术支持：%1$s</string>
+
+
+    <string name="str_about_contact_sh">/</string>
+    <string name="str_about_phone_sh">/</string>
+    <string name="str_support_sh"></string>
+    <string name="str_support2_sh">/</string>
+<!--    <string name="str_support_sh">技术支持：上海蓝居智能科技有限公司</string>-->
+<!--    <string name="str_support2_sh">上海蓝居智能科技有限公司</string>-->
+
+
+</resources>

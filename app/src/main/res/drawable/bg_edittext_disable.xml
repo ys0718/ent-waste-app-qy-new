@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 用于设置信息对话框的圆角 -->
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+    <corners android:radius="@dimen/x5"></corners>
+    <solid android:color="@color/line_color"></solid>
+    <padding android:top="@dimen/x5" android:bottom="@dimen/x5" android:left="@dimen/x10" android:right="@dimen/x10"/>
+    <stroke android:color="@color/colorFontB" android:width="@dimen/x1"/>
+</shape>

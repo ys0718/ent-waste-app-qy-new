@@ -1,0 +1,246 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/rl_top"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/x40"
+        android:layout_marginBottom="@dimen/x10"
+        android:gravity="left|center"
+        android:orientation="horizontal"
+        android:paddingHorizontal="@dimen/x20">
+
+        <ImageView
+            android:id="@+id/login_logo_iv"
+            android:layout_width="@dimen/x80"
+            android:layout_height="@dimen/x80"
+            android:layout_centerVertical="true"
+            android:layout_gravity="center"
+            android:src="@mipmap/ic_login_top_logo2" />
+
+        <TextView
+            android:id="@+id/tv_top1"
+            style="@style/Font10Style"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/x20"
+            android:layout_toRightOf="@id/login_logo_iv"
+            android:text="2022年3月15日 星期二" />
+
+        <ImageView
+            android:layout_width="@dimen/x320"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="-10dp"
+            android:src="@mipmap/ic_login_top" />
+
+
+        <com.grkj.ytjqy_pad.utils.view.QCTJTextView
+            style="@style/Font20Style"
+            android:layout_centerInParent="true"
+            android:layout_weight="1"
+            android:text="@string/app_title" />
+
+
+<!--        <LinearLayout-->
+<!--            android:layout_width="@dimen/x280"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_alignParentRight="true"-->
+<!--            android:layout_centerVertical="true"-->
+<!--            android:orientation="horizontal">-->
+
+<!--            <LinearLayout-->
+<!--                android:id="@+id/ll_home"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="@dimen/x28"-->
+<!--                android:layout_gravity="center"-->
+<!--                android:background="@drawable/button_style1"-->
+<!--                android:gravity="center"-->
+<!--                android:orientation="horizontal"-->
+<!--                android:paddingHorizontal="@dimen/x10"-->
+<!--                android:paddingVertical="@dimen/x2">-->
+
+<!--                <ImageView-->
+<!--                    android:layout_width="@dimen/x12"-->
+<!--                    android:layout_height="@dimen/x12"-->
+<!--                    android:src="@mipmap/ic_home_white" />-->
+
+<!--                <TextView-->
+<!--                    style="@style/Font10Style"-->
+<!--                    android:layout_marginLeft="@dimen/x5"-->
+<!--                    android:padding="0dp"-->
+<!--                    android:text="主页" />-->
+
+
+<!--            </LinearLayout>-->
+
+
+<!--            <ImageView-->
+<!--                android:layout_width="@dimen/x18"-->
+<!--                android:layout_height="@dimen/x18"-->
+<!--                android:layout_gravity="center"-->
+<!--                android:layout_marginLeft="@dimen/x20"-->
+<!--                android:layout_marginRight="@dimen/x5"-->
+<!--                android:src="@mipmap/ic_company" />-->
+
+
+<!--            <com.grkj.ytjqy_pad.utils.view.SSZHTextView-->
+<!--                android:id="@+id/tv_top2"-->
+<!--                style="@style/Font12Style"-->
+<!--                android:layout_gravity="center"-->
+<!--                android:layout_weight="1"-->
+<!--                android:ellipsize="end"-->
+<!--                android:maxLines="1"-->
+<!--                android:text="您好，东莞马自达" />-->
+<!--            -->
+<!--            -->
+<!--        </LinearLayout>-->
+
+        <LinearLayout
+            android:layout_width="@dimen/x280"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:gravity="right"
+            android:orientation="horizontal">
+
+
+            <ImageView
+                android:id="@+id/im_top2"
+                android:layout_width="@dimen/x18"
+                android:layout_height="@dimen/x18"
+                android:layout_gravity="center"
+                android:layout_marginLeft="@dimen/x20"
+                android:layout_marginRight="@dimen/x5"
+                android:src="@mipmap/ic_company" />
+
+
+            <com.grkj.ytjqy_pad.utils.view.SSZHTextView
+                android:id="@+id/tv_top2"
+                style="@style/Font12Style"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:text="您好，东莞马自达" />
+
+
+        </LinearLayout>
+
+
+    </RelativeLayout>
+
+<!--    <LinearLayout-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:gravity="center"-->
+<!--        android:paddingHorizontal="@dimen/x20">-->
+
+<!--        <View-->
+<!--            android:layout_width="@dimen/x5"-->
+<!--            android:layout_height="match_parent"-->
+<!--            android:layout_marginRight="@dimen/x10"-->
+<!--            android:background="@drawable/button_style_primary" />-->
+
+<!--        <TextView-->
+<!--            android:id="@+id/tv_title"-->
+<!--            style="@style/Font15Style"-->
+<!--            android:layout_height="match_parent"-->
+<!--            android:padding="0dp"-->
+<!--            android:text="产废登记" />-->
+
+<!--        <TextView-->
+<!--            android:id="@+id/tv_title2"-->
+<!--            android:visibility="invisible"-->
+<!--            style="@style/Font10Style"-->
+<!--            android:layout_marginLeft="@dimen/x10"-->
+<!--            android:layout_weight="1"-->
+<!--            android:text="（只展示当天数据）" />-->
+
+
+<!--        <LinearLayout-->
+<!--            android:id="@+id/ll_add"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="@dimen/x28"-->
+<!--            android:layout_marginRight="@dimen/x15"-->
+<!--            android:background="@drawable/button_style2"-->
+<!--            android:gravity="center"-->
+<!--            android:visibility="gone"-->
+<!--            android:orientation="horizontal">-->
+
+<!--            <ImageView-->
+<!--                android:id="@+id/iv_right1"-->
+<!--                android:layout_width="@dimen/x12"-->
+<!--                android:layout_height="@dimen/x12"-->
+<!--                android:src="@mipmap/ic_add" />-->
+
+<!--            <TextView-->
+<!--                android:id="@+id/tv_right1"-->
+<!--                style="@style/Font10Style"-->
+<!--                android:layout_marginLeft="@dimen/x5"-->
+<!--                android:padding="0dp"-->
+<!--                android:text="新增" />-->
+
+
+<!--        </LinearLayout>-->
+
+
+<!--        <LinearLayout-->
+<!--            android:id="@+id/ll_add2"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="@dimen/x28"-->
+<!--            android:layout_marginRight="@dimen/x15"-->
+<!--            android:background="@drawable/button_style3"-->
+<!--            android:gravity="center"-->
+<!--            android:orientation="horizontal"-->
+<!--            android:visibility="gone">-->
+
+<!--            <ImageView-->
+<!--                android:id="@+id/iv_right2"-->
+<!--                android:layout_width="@dimen/x12"-->
+<!--                android:layout_height="@dimen/x12"-->
+<!--                android:src="@mipmap/ic_weight" />-->
+
+<!--            <TextView-->
+<!--                android:id="@+id/tv_right2"-->
+<!--                style="@style/Font10Style"-->
+<!--                android:layout_marginLeft="@dimen/x5"-->
+<!--                android:padding="0dp"-->
+<!--                android:text="称重入库" />-->
+
+
+<!--        </LinearLayout>-->
+
+
+<!--        <LinearLayout-->
+<!--            android:id="@+id/ll_home"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="@dimen/x28"-->
+<!--            android:layout_gravity="center"-->
+<!--            android:background="@drawable/button_style1"-->
+<!--            android:gravity="center"-->
+<!--            android:orientation="horizontal"-->
+<!--            android:paddingHorizontal="@dimen/x10"-->
+<!--            android:paddingVertical="@dimen/x2">-->
+
+<!--            <ImageView-->
+<!--                android:layout_width="@dimen/x12"-->
+<!--                android:layout_height="@dimen/x12"-->
+<!--                android:src="@mipmap/ic_home_white" />-->
+
+<!--            <TextView-->
+<!--                style="@style/Font10Style"-->
+<!--                android:layout_marginLeft="@dimen/x5"-->
+<!--                android:padding="0dp"-->
+<!--                android:text="主页" />-->
+
+
+<!--        </LinearLayout>-->
+
+
+<!--    </LinearLayout>-->
+
+</LinearLayout>
+
+

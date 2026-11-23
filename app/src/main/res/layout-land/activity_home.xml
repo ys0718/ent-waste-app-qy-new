@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@mipmap/bg_login"
+    android:gravity="center_horizontal"
+    android:orientation="vertical">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginBottom="@dimen/x10"
+        android:gravity="left|center"
+        android:orientation="horizontal"
+        android:paddingVertical="@dimen/x10"
+        android:paddingHorizontal="@dimen/x20">
+
+<!--        <ImageView-->
+<!--            android:id="@+id/login_logo_iv"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_gravity="center"-->
+<!--            android:layout_marginLeft="@dimen/x10"-->
+<!--            android:src="@mipmap/ic_login_top_logo" />-->
+
+        <ImageView
+            android:id="@+id/login_logo_iv"
+            android:layout_width="@dimen/x70"
+            android:layout_height="@dimen/x70"
+            android:src="@mipmap/ic_login_top_logo2" />
+
+        <ImageView
+            android:layout_width="@dimen/x360"
+            android:layout_height="@dimen/x50"
+            android:layout_gravity="center"
+            android:src="@mipmap/bg_right_title" />
+
+        <TextView
+            android:id="@+id/app_name_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/x20"
+            android:text="@string/app_title"
+            android:textColor="@color/white"
+            android:textSize="@dimen/x28"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/tv_right"
+            style="@style/Font15Style"
+            android:layout_weight="1"
+            android:gravity="right"
+            android:text="2022年3月15日 星期二" />
+
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:visibility="gone"
+        android:layout_height="wrap_content">
+
+        <com.grkj.ytjqy_pad.utils.view.MarqueeView
+            android:id="@+id/marqueeView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ellipsize="marquee"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:marqueeRepeatLimit="marquee_forever"
+            android:scrollHorizontally="true"
+            android:singleLine="true"
+            android:text="心中有阳光，脚底有力量！心中有阳光，脚底有力量！心中有阳光，脚底有力量！心中有阳光，脚底有力量！心中有阳光，脚底有力量！心中有阳光，脚底有力量！"
+            android:textSize="@dimen/x20"
+            android:textColor="@color/color_font_red"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"/>
+
+
+    </LinearLayout>
+
+
+
+
+    <RelativeLayout
+        android:gravity="center"
+        android:layout_weight="1"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:orientation="horizontal">
+
+        <com.grkj.ytjqy_pad.utils.view.GrRecyclerView
+            android:id="@+id/btnRv"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/x60"
+            android:layout_centerHorizontal="true"
+            android:layout_marginHorizontal="@dimen/x20"
+            android:layout_marginTop="@dimen/x10"
+            android:layout_marginBottom="@dimen/x10"
+            android:foregroundGravity="center"
+            android:overScrollMode="never"
+            android:scrollbars="none" />
+
+
+        <com.grkj.ytjqy_pad.utils.view.GrRecyclerView
+            android:id="@+id/mRecyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:overScrollMode="never"
+            android:layout_below="@+id/btnRv"
+            android:scrollbars="none"
+            android:layout_centerInParent="true"
+            android:layout_marginHorizontal="100dp" />
+
+
+        <ImageView
+            android:id="@+id/iv_left"
+            android:layout_width="@dimen/x40"
+            android:visibility="gone"
+            android:layout_height="@dimen/x40"
+            android:padding="@dimen/x5"
+            android:layout_centerVertical="true"
+            android:layout_marginHorizontal="@dimen/x10"
+            android:src="@mipmap/ic_menu_left" />
+
+        <ImageView
+            android:id="@+id/iv_right"
+            android:padding="@dimen/x5"
+            android:layout_width="@dimen/x40"
+            android:layout_height="@dimen/x40"
+            android:visibility="gone"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginHorizontal="@dimen/x10"
+            android:src="@mipmap/ic_menu_right" />
+
+
+    </RelativeLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_marginBottom="@dimen/x30"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/tv_company"
+            style="@style/Font10Style"
+            android:text="@string/str_support" />
+
+        <TextView
+            android:id="@+id/mVersion"
+            style="@style/Font10Style"
+            android:layout_marginLeft="@dimen/x10"
+            android:text="当前版本:V1.0.0" />
+
+    </LinearLayout>
+
+
+</LinearLayout>

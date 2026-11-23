@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center"
+    android:id="@+id/mLayout"
+    android:layout_marginLeft="@dimen/x15"
+    android:layout_marginRight="@dimen/x5"
+    style="@style/FormLayoutStyle_C">
+
+    <ImageView
+        android:id="@+id/iv_left"
+        android:src="@mipmap/ic_devide_num"
+        android:layout_gravity="center"
+        android:layout_width="@dimen/x30"
+        android:layout_height="@dimen/x30"/>
+
+
+    <EditText
+        android:text="0"
+        android:id="@+id/tv_num"
+        android:inputType="number"
+        android:hint="请输入"
+        android:textColorHint="@color/colorFontB"
+        style="@style/Font15Style"
+        android:background="@null"
+        android:enabled="true"
+        android:maxLength="3"
+        android:textColor="@color/colorFontA"
+        android:layout_weight="1"
+        android:layout_marginHorizontal="@dimen/x50"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"/>
+
+
+    <ImageView
+        android:id="@+id/iv_right"
+        android:layout_gravity="center"
+        android:src="@mipmap/ic_add_num"
+        android:layout_width="@dimen/x30"
+        android:layout_height="@dimen/x30"/>
+
+</LinearLayout>

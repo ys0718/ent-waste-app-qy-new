@@ -1,0 +1,277 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/mLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:gravity="center_horizontal"
+    android:orientation="vertical">
+
+
+    <include layout="@layout/view_toolbar" />
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:paddingHorizontal="@dimen/x20">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/x20"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/x10"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/bg_edittext"
+                    android:gravity="left|center">
+
+                    <EditText
+                        android:id="@+id/et_ldbh"
+                        style="@style/EditTextStyle3"
+                        android:layout_gravity="center"
+                        android:background="@null"
+                        android:hint="@string/str_input_ldbh"
+                        android:inputType="text" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/ll_search"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="@dimen/x10"
+                    android:background="@drawable/button_style2"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:paddingHorizontal="@dimen/x15"
+                    android:paddingVertical="@dimen/x5">
+
+                    <ImageView
+                        android:layout_width="@dimen/x18"
+                        android:layout_height="@dimen/x18"
+                        android:src="@mipmap/ic_search" />
+
+                    <TextView
+                        style="@style/BtnFontStyle"
+                        android:layout_marginLeft="@dimen/x5"
+                        android:padding="0dp"
+                        android:text="搜索" />
+
+                </LinearLayout>
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/x10"
+                android:background="@drawable/bg_edittext"
+                android:gravity="left|center">
+
+                <EditText
+                    android:id="@+id/et_fwlb"
+                    style="@style/EditTextStyle3"
+                    android:layout_width="match_parent"
+                    android:layout_gravity="center"
+                    android:background="@null"
+                    android:focusableInTouchMode="false"
+                    android:hint="@string/common_select_tips" />
+
+                <ImageView
+                    android:layout_width="@dimen/x18"
+                    android:layout_height="@dimen/x18"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginHorizontal="@dimen/x10"
+                    android:layout_marginTop="@dimen/x10"
+                    android:clickable="false"
+                    android:src="@mipmap/ic_click_down" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/x10"
+                android:background="@drawable/bg_edittext"
+                android:gravity="left|center">
+
+                <EditText
+                    android:id="@+id/et_fwxl"
+                    style="@style/EditTextStyle3"
+                    android:layout_width="match_parent"
+                    android:layout_gravity="center"
+                    android:background="@null"
+                    android:focusableInTouchMode="false"
+                    android:hint="@string/common_select_tips" />
+
+                <ImageView
+                    android:layout_width="@dimen/x18"
+                    android:layout_height="@dimen/x18"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginHorizontal="@dimen/x10"
+                    android:layout_marginTop="@dimen/x10"
+                    android:clickable="false"
+                    android:src="@mipmap/ic_click_down" />
+
+            </RelativeLayout>
+
+            <com.grkj.ytjqy_pad.utils.view.SelectTimeView
+                android:id="@+id/v_select_time"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/x10" />
+
+            <LinearLayout
+                android:id="@+id/ll_home"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/x28"
+                android:layout_marginLeft="@dimen/x15"
+                android:background="@drawable/button_style1"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:visibility="gone">
+
+                <ImageView
+                    android:layout_width="@dimen/x12"
+                    android:layout_height="@dimen/x12"
+                    android:src="@mipmap/ic_home_white" />
+
+                <TextView
+                    style="@style/BtnFontStyle"
+                    android:layout_marginLeft="@dimen/x5"
+                    android:padding="0dp"
+                    android:text="主页" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:paddingHorizontal="@dimen/x10">
+
+            <com.scwang.smartrefresh.layout.SmartRefreshLayout
+                android:id="@+id/refresh_layout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="@dimen/x10">
+
+
+                <com.grkj.ytjqy_pad.utils.view.GrRecyclerView
+                    android:id="@+id/mRecyclerView"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="@dimen/x10" />
+
+            </com.scwang.smartrefresh.layout.SmartRefreshLayout>
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginVertical="@dimen/x10"
+            android:focusable="true"
+            android:gravity="center|bottom"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:id="@+id/ll_save"
+                style="@style/BottomBtnStyle"
+                android:layout_marginHorizontal="@dimen/x20"
+                android:background="@drawable/button_style2">
+
+                <ImageView
+                    style="@style/BtnImgStyle"
+                    android:src="@mipmap/ic_save_white" />
+
+                <TextView
+                    style="@style/BtnFontStyle"
+                    android:text="确定" />
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/x60"
+        android:background="@mipmap/bg_logo_bottom"
+        android:visibility="gone">
+
+        <LinearLayout
+            android:id="@+id/ll_right_bottom"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/x60"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/x30"
+            android:layout_marginBottom="@dimen/x5"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:visibility="visible">
+
+            <TextView
+                android:id="@+id/tv_right_bottom1"
+                style="@style/Font12Style"
+                android:text="当前第一页"
+                android:visibility="gone" />
+
+
+            <TextView
+                android:id="@+id/tv_right_bottom2"
+                style="@style/Font12Style"
+                android:layout_gravity="center"
+                android:text="共1页，共0条" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:focusable="true"
+            android:gravity="center|bottom"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/tv_company"
+                style="@style/Font10Style"
+                android:text="@string/str_support" />
+
+            <TextView
+                android:id="@+id/mVersion"
+                style="@style/Font10Style"
+                android:layout_marginLeft="@dimen/x10"
+                android:text="当前版本:V1.0.0" />
+
+        </LinearLayout>
+
+
+    </RelativeLayout>
+
+
+</LinearLayout>

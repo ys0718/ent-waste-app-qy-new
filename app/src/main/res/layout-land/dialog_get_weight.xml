@@ -1,0 +1,119 @@
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:minWidth="700dp"
+    android:layout_margin="@dimen/x30"
+    app:cardCornerRadius="@dimen/x10">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_dialog"
+        android:orientation="vertical"
+        android:padding="@dimen/x20">
+
+
+        <include layout="@layout/layout_weight"/>
+
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:padding="@dimen/x10"
+            android:text="温馨提示"
+            android:textColor="@color/colorFontA"
+            android:textSize="@dimen/x18"
+            android:visibility="gone" />
+
+
+        <ImageView
+            android:id="@+id/iv_logo"
+            android:layout_width="@dimen/x150"
+            android:layout_height="@dimen/x150"
+            android:layout_gravity="center"
+            android:visibility="gone"
+            android:src="@mipmap/bg_scaning" />
+
+
+        <EditText
+            android:id="@+id/et_scan"
+            style="@style/EditTextStyle3"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/x30"
+            android:layout_marginHorizontal="@dimen/x50"
+            android:visibility="gone"
+            android:background="@mipmap/bg_edittext_disable"
+            android:nextClusterForward="@id/et_scan"
+            android:nextFocusLeft="@id/et_scan"
+            android:nextFocusRight="@id/et_scan"
+            android:nextFocusUp="@id/et_scan"
+            android:nextFocusDown="@id/et_scan"
+            android:nextFocusForward="@id/et_scan" />
+
+        <TextView
+            android:id="@+id/tv_des"
+            style="@style/Font15Style"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:visibility="gone"
+            android:padding="@dimen/x10"
+            android:text="请使用扫码枪并对准二维码"
+            android:textColor="@color/color_font_dialog" />
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/x48"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:id="@+id/ll_cancel"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/x30"
+                android:background="@drawable/button_style1"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/tv_cancel"
+                    style="@style/BtnFontStyle"
+                    android:layout_marginLeft="@dimen/x5"
+                    android:padding="0dp"
+                    android:text="关闭" />
+
+
+            </LinearLayout>
+
+            <View
+                android:id="@+id/view_margin"
+                android:layout_width="@dimen/x20"
+                android:layout_height="0dp" />
+
+
+            <LinearLayout
+                android:id="@+id/ll_confirm"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/x30"
+                android:background="@drawable/button_style2"
+                android:gravity="center">
+
+
+                <TextView
+                    android:id="@+id/tv_confirm"
+                    style="@style/BtnFontStyle"
+                    android:layout_marginLeft="@dimen/x5"
+                    android:padding="0dp"
+                    android:text="确定" />
+
+
+            </LinearLayout>
+
+        </LinearLayout>
+    </LinearLayout>
+
+</android.support.v7.widget.CardView>

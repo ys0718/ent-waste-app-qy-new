@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <LinearLayout
+        android:id="@+id/mLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_edittext"
+        android:gravity="left|center">
+
+
+        <AutoCompleteTextView
+            android:id="@+id/repeateMode"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            style="@style/EditTextStyle"
+            android:background="@null"
+            android:completionThreshold="1"
+            android:ems="10"
+            android:gravity="center_vertical">
+
+        </AutoCompleteTextView>
+
+        <ImageView
+            android:layout_width="@dimen/x12"
+            android:layout_height="@dimen/x12"
+            android:visibility="gone"
+            android:clickable="true"
+            android:id="@+id/iv_clear"
+            android:src="@mipmap/ic_clear" />
+
+        <ImageView
+            android:id="@+id/repeateModeBtn"
+            android:src="@mipmap/ic_click_down"
+            android:layout_marginHorizontal="@dimen/x10"
+            android:duplicateParentState="true"
+            android:layout_width="@dimen/x18"
+            android:layout_height="@dimen/x18"/>
+
+    </LinearLayout>
+
+    <View
+        android:id="@+id/tem_click_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@id/mLayout"
+        android:layout_alignTop="@+id/mLayout"
+        android:layout_alignRight="@id/repeateMode"
+        android:layout_alignBottom="@+id/mLayout"
+        tools:ignore="NotSibling" />
+
+</RelativeLayout>
+

@@ -1,0 +1,1093 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/mLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:gravity="center_horizontal"
+    android:orientation="vertical">
+
+    <include layout="@layout/view_toolbar_new" android:visibility="gone" />
+    <include layout="@layout/view_toolbar"  />
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:visibility="gone"
+            android:paddingHorizontal="@dimen/x20">
+
+            <View
+                android:layout_width="@dimen/x5"
+                android:layout_height="match_parent"
+                android:layout_marginRight="@dimen/x10"
+                android:background="@drawable/button_style_primary" />
+
+            <TextView
+                android:id="@+id/tv_title"
+                style="@style/Font15Style"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:padding="0dp"
+                android:text="生成标签" />
+
+
+            <LinearLayout
+                android:id="@+id/ll_home"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/x28"
+                android:layout_marginLeft="@dimen/x15"
+                android:background="@drawable/button_style1"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="@dimen/x12"
+                    android:layout_height="@dimen/x12"
+                    android:src="@mipmap/ic_home_white" />
+
+                <TextView
+                    style="@style/BtnFontStyle"
+                    android:layout_marginLeft="@dimen/x5"
+                    android:padding="0dp"
+                    android:text="主页" />
+
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:gravity="center"
+            android:visibility="gone"
+            android:layout_height="wrap_content">
+
+
+
+            <LinearLayout
+                android:layout_marginVertical="@dimen/x20"
+                android:layout_marginHorizontal="@dimen/x10"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/bg_label_style_new"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/x20"
+                        android:background="@drawable/button_style_line_black2"
+                        android:orientation="vertical">
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <TextView
+                                style="@style/TitleFontStyle"
+                                android:layout_width="match_parent"
+                                android:layout_gravity="center"
+                                android:gravity="center"
+                                android:layout_centerInParent="true"
+                                android:padding="@dimen/x5"
+                                android:text="危险废物"/>
+
+
+                            <LinearLayout
+                                android:layout_width="@dimen/x100"
+                                android:orientation="horizontal"
+                                android:layout_alignParentRight="true"
+                                android:gravity="center"
+                                android:layout_centerVertical="true"
+                                android:visibility="gone"
+                                android:layout_height="wrap_content">
+
+                                <TextView
+                                    style="@style/ContentFontItemStyle"
+                                    android:layout_gravity="center"
+                                    android:gravity="center"
+                                    android:layout_weight="1"
+                                    android:layout_width="0dp"
+                                    android:layout_marginLeft="0dp"
+                                    android:text="溯源二维码" />
+
+                                <ImageView
+                                    android:id="@+id/iv_history_code"
+                                    android:layout_width="@dimen/x50"
+                                    android:layout_height="@dimen/x50"
+                                    android:layout_margin="@dimen/x5"
+                                    android:src="@mipmap/ic_logo_dx" />
+
+
+                            </LinearLayout>
+
+
+
+                        </RelativeLayout>
+
+
+                        <include layout="@layout/line_black_hor" />
+
+
+                        <LinearLayout
+                            android:orientation="horizontal"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_weight="1"
+                                android:orientation="vertical"
+                                android:layout_height="wrap_content">
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="horizontal">
+
+                                    <LinearLayout
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                        android:layout_weight="1"
+                                        android:orientation="horizontal">
+
+                                        <TextView
+                                            style="@style/ContentFontItemStyle"
+                                            android:layout_gravity="center"
+                                            android:gravity="center"
+                                            android:text="@string/str_label_item1" />
+
+                                        <TextView
+                                            android:id="@+id/tv_item1"
+                                            style="@style/ContentFontStyle"
+                                            android:layout_gravity="center"
+                                            android:gravity="center"
+                                            android:text="@string/common_empty" />
+
+                                    </LinearLayout>
+
+
+                                </LinearLayout>
+
+                                <include layout="@layout/line_black_hor" />
+
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="horizontal">
+
+                                    <LinearLayout
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                        android:layout_weight="1"
+                                        android:orientation="horizontal">
+
+                                        <TextView
+                                            style="@style/ContentFontItemStyle"
+                                            android:layout_gravity="center"
+                                            android:gravity="center"
+                                            android:text="@string/str_label_item2" />
+
+                                        <TextView
+                                            android:id="@+id/tv_item2"
+                                            style="@style/ContentFontStyle"
+                                            android:layout_gravity="center"
+                                            android:gravity="center"
+                                            android:text="@string/common_empty" />
+
+                                    </LinearLayout>
+
+
+
+
+                                </LinearLayout>
+
+                                <include layout="@layout/line_black_hor" />
+
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="center"
+                                    android:orientation="horizontal">
+
+                                    <LinearLayout
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                        android:layout_weight="1"
+                                        android:orientation="horizontal">
+
+                                        <TextView
+                                            style="@style/ContentFontItemStyle"
+                                            android:layout_gravity="center"
+                                            android:gravity="center"
+                                            android:text="@string/str_label_item3" />
+
+                                        <TextView
+                                            android:id="@+id/tv_item3"
+                                            style="@style/ContentFontStyle"
+                                            android:layout_gravity="center"
+                                            android:gravity="center"
+                                            android:text="@string/common_empty" />
+
+                                    </LinearLayout>
+
+                                    <include layout="@layout/line_black_ver" />
+
+                                    <LinearLayout
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                        android:layout_weight="1"
+                                        android:orientation="horizontal">
+
+                                        <TextView
+                                            style="@style/ContentFontItemStyle"
+                                            android:layout_gravity="center"
+                                            android:gravity="center"
+                                            android:text="@string/str_label_item6" />
+
+                                        <TextView
+                                            android:id="@+id/tv_item6"
+                                            style="@style/ContentFontStyle"
+                                            android:layout_gravity="top"
+                                            android:gravity="top"
+                                            android:text="@string/common_empty" />
+
+                                    </LinearLayout>
+
+
+                                </LinearLayout>
+
+
+                                <include layout="@layout/line_black_hor" />
+
+                                <!-- 物理特性 -->
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="horizontal">
+
+                                    <LinearLayout
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                        android:layout_weight="1"
+                                        android:orientation="horizontal">
+
+                                        <TextView
+                                            style="@style/ContentFontItemStyle"
+                                            android:layout_gravity="top"
+                                            android:minLines="2"
+                                            android:gravity="top"
+                                            android:text="@string/str_label_item8" />
+
+
+                                        <TextView
+                                            android:id="@+id/tv_item8"
+                                            style="@style/ContentFontStyle"
+                                            android:minLines="2"
+                                            android:layout_gravity="top"
+                                            android:gravity="top"
+                                            android:text="@string/common_empty" />
+
+
+
+                                    </LinearLayout>
+
+
+                                    <!--                        <LinearLayout-->
+                                    <!--                            android:layout_width="wrap_content"-->
+                                    <!--                            android:layout_height="wrap_content"-->
+                                    <!--                            android:orientation="horizontal">-->
+
+                                    <!--                            <CheckBox-->
+                                    <!--                                android:layout_width="@dimen/x18"-->
+                                    <!--                                android:layout_height="@dimen/x18"-->
+                                    <!--                                android:layout_gravity="center"-->
+                                    <!--                                android:background="@drawable/checkbox_style_0"-->
+                                    <!--                                android:button="@null"-->
+                                    <!--                                android:padding="@dimen/x5"-->
+                                    <!--                                android:textColor="@color/colorFontA" />-->
+
+                                    <!--                            <TextView-->
+                                    <!--                                android:id="@+id/tv_item8"-->
+                                    <!--                                style="@style/ContentFontStyle"-->
+                                    <!--                                android:layout_gravity="center"-->
+                                    <!--                                android:gravity="center"-->
+                                    <!--                                android:text="" />-->
+
+                                    <!--                        </LinearLayout>-->
+
+
+                                </LinearLayout>
+
+
+                                <include layout="@layout/line_black_hor" />
+
+                                <!-- 废物特性 -->
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="horizontal">
+
+                                    <LinearLayout
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                        android:layout_weight="1"
+                                        android:orientation="horizontal">
+
+                                        <TextView
+                                            style="@style/ContentFontItemStyle"
+                                            android:layout_gravity="top"
+                                            android:minLines="2"
+                                            android:gravity="top"
+                                            android:text="@string/str_label_item17" />
+
+                                        <TextView
+                                            android:id="@+id/tv_item9"
+                                            android:minLines="2"
+                                            style="@style/ContentFontStyle"
+                                            android:layout_gravity="top"
+                                            android:gravity="top"
+                                            android:text="@string/common_empty" />
+
+
+
+                                    </LinearLayout>
+
+
+                                    <!--                        <LinearLayout-->
+                                    <!--                            android:layout_width="wrap_content"-->
+                                    <!--                            android:layout_height="wrap_content"-->
+                                    <!--                            android:orientation="horizontal">-->
+
+                                    <!--                            <CheckBox-->
+                                    <!--                                android:id="@+id/mIsRemember"-->
+                                    <!--                                android:layout_width="@dimen/x18"-->
+                                    <!--                                android:layout_height="@dimen/x18"-->
+                                    <!--                                android:layout_gravity="center"-->
+                                    <!--                                android:background="@drawable/checkbox_style_0"-->
+                                    <!--                                android:button="@null"-->
+                                    <!--                                android:padding="@dimen/x5"-->
+                                    <!--                                android:textColor="@color/colorFontA" />-->
+
+                                    <!--                            <TextView-->
+                                    <!--                                android:id="@+id/tv_item7"-->
+                                    <!--                                style="@style/ContentFontStyle"-->
+                                    <!--                                android:layout_gravity="center"-->
+                                    <!--                                android:gravity="center"-->
+                                    <!--                                android:text="@string/common_empty" />-->
+
+                                    <!--                        </LinearLayout>-->
+
+
+                                </LinearLayout>
+
+
+                            </LinearLayout>
+
+
+                            <include layout="@layout/line_black_ver"/>
+
+
+                            <LinearLayout
+                                android:layout_width="@dimen/x100"
+                                android:orientation="vertical"
+                                android:layout_height="wrap_content">
+
+
+                                <TextView
+                                    style="@style/ContentFontItemStyle"
+                                    android:layout_gravity="center"
+                                    android:gravity="center"
+                                    android:layout_marginLeft="0dp"
+                                    android:text="危险特性" />
+
+
+                                <LinearLayout
+                                    android:orientation="horizontal"
+                                    android:layout_width="match_parent"
+                                    android:gravity="center"
+                                    android:layout_height="wrap_content">
+
+
+                                    <RelativeLayout
+                                        android:layout_width="@dimen/x50"
+                                        android:paddingHorizontal="@dimen/x5"
+                                        android:layout_height="@dimen/x50">
+
+                                        <ImageView
+                                            android:layout_width="@dimen/x50"
+                                            android:layout_height="@dimen/x50"
+                                            android:src="@mipmap/ic_logo_dx" />
+
+                                        <CheckBox
+                                            android:id="@+id/cb_dx"
+                                            android:layout_width="@dimen/x10"
+                                            android:layout_height="@dimen/x10"
+                                            android:layout_alignParentRight="true"
+                                            android:layout_alignParentBottom="true"
+                                            android:layout_gravity="center"
+                                            android:background="@mipmap/ic_unchecked_black"
+                                            android:button="@null"
+                                            android:padding="@dimen/x5"
+                                            android:textColor="@color/colorFontA" />
+
+                                    </RelativeLayout>
+
+
+                                    <RelativeLayout
+                                        android:layout_width="@dimen/x50"
+                                        android:paddingHorizontal="@dimen/x5"
+                                        android:layout_height="@dimen/x50">
+
+                                        <ImageView
+                                            android:layout_width="@dimen/x50"
+                                            android:layout_height="@dimen/x50"
+                                            android:src="@mipmap/ic_logo_fyx" />
+
+                                        <CheckBox
+                                            android:id="@+id/cb_fyx"
+                                            android:layout_width="@dimen/x10"
+                                            android:layout_height="@dimen/x10"
+                                            android:layout_alignParentRight="true"
+                                            android:layout_alignParentBottom="true"
+                                            android:layout_gravity="center"
+                                            android:background="@mipmap/ic_unchecked_black"
+                                            android:button="@null"
+                                            android:padding="@dimen/x5"
+                                            android:textColor="@color/colorFontA" />
+
+                                    </RelativeLayout>
+
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:orientation="horizontal"
+                                    android:layout_width="match_parent"
+                                    android:gravity="center"
+                                    android:layout_height="wrap_content">
+
+                                    <RelativeLayout
+                                        android:layout_width="@dimen/x50"
+                                        android:paddingHorizontal="@dimen/x5"
+                                        android:layout_height="@dimen/x50">
+
+                                        <ImageView
+                                            android:layout_width="@dimen/x50"
+                                            android:layout_height="@dimen/x50"
+                                            android:src="@mipmap/ic_logo_yrx" />
+
+                                        <CheckBox
+                                            android:id="@+id/cb_yrx"
+                                            android:layout_width="@dimen/x10"
+                                            android:layout_height="@dimen/x10"
+                                            android:layout_alignParentRight="true"
+                                            android:layout_alignParentBottom="true"
+                                            android:layout_gravity="center"
+                                            android:background="@mipmap/ic_unchecked_black"
+                                            android:button="@null"
+                                            android:padding="@dimen/x5"
+                                            android:textColor="@color/colorFontA" />
+
+                                    </RelativeLayout>
+
+                                    <RelativeLayout
+                                        android:layout_width="@dimen/x50"
+                                        android:paddingHorizontal="@dimen/x5"
+                                        android:layout_height="@dimen/x50">
+
+                                        <ImageView
+                                            android:layout_width="@dimen/x50"
+                                            android:layout_height="@dimen/x50"
+                                            android:src="@mipmap/ic_logo_fsx" />
+
+                                        <CheckBox
+                                            android:id="@+id/cb_fsx"
+                                            android:layout_width="@dimen/x10"
+                                            android:layout_height="@dimen/x10"
+                                            android:layout_alignParentRight="true"
+                                            android:layout_alignParentBottom="true"
+                                            android:layout_gravity="center"
+                                            android:background="@mipmap/ic_unchecked_black"
+                                            android:button="@null"
+                                            android:padding="@dimen/x5"
+                                            android:textColor="@color/colorFontA" />
+
+                                    </RelativeLayout>
+
+                                </LinearLayout>
+
+
+                            </LinearLayout>
+
+
+                        </LinearLayout>
+
+
+
+
+
+                        <include layout="@layout/line_black_hor" />
+
+
+
+                        <!-- 主要成分 -->
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                style="@style/ContentFontItemStyle"
+                                android:layout_gravity="top"
+                                android:gravity="top"
+                                android:minLines="2"
+                                android:text="@string/str_label_item10" />
+
+                            <TextView
+                                android:id="@+id/tv_item10"
+                                style="@style/ContentFontStyle"
+                                android:layout_gravity="top"
+                                android:gravity="top"
+                                android:minLines="2"
+                                android:text="@string/common_empty" />
+
+
+                        </LinearLayout>
+
+                        <include layout="@layout/line_black_hor" />
+
+                        <!-- 主要成分 -->
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                style="@style/ContentFontItemStyle"
+                                android:layout_gravity="center"
+                                android:gravity="center"
+                                android:text="@string/str_label_item11" />
+
+                            <TextView
+                                android:id="@+id/tv_item11"
+                                style="@style/ContentFontStyle"
+                                android:layout_gravity="center"
+                                android:gravity="center"
+                                android:text="@string/common_empty" />
+
+
+
+                        </LinearLayout>
+
+                        <include layout="@layout/line_black_hor" />
+
+
+                        <LinearLayout
+                            android:orientation="horizontal"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <LinearLayout
+                                android:orientation="vertical"
+                                android:layout_weight="1"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content">
+
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="0dp"
+                                    android:layout_weight="1"
+                                    android:orientation="horizontal">
+
+                                    <TextView
+                                        style="@style/ContentFontItemStyle"
+                                        android:layout_gravity="center"
+                                        android:gravity="center"
+                                        android:text="@string/str_label_item18" />
+
+                                    <TextView
+                                        android:id="@+id/tv_item12"
+                                        style="@style/ContentFontStyle"
+                                        android:layout_gravity="center"
+                                        android:gravity="center"
+                                        android:text="@string/common_empty" />
+
+
+                                </LinearLayout>
+
+                                <include layout="@layout/line_black_hor" />
+
+
+
+
+                                <!-- 单位地址 -->
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="0dp"
+                                    android:layout_weight="1"
+                                    android:orientation="horizontal">
+
+                                    <TextView
+                                        style="@style/ContentFontItemStyle"
+                                        android:layout_gravity="center"
+                                        android:gravity="center"
+                                        android:text="@string/str_label_item19" />
+
+                                    <TextView
+                                        android:id="@+id/tv_item14"
+                                        style="@style/ContentFontStyle"
+                                        android:layout_gravity="center"
+                                        android:gravity="center"
+                                        android:text="@string/common_empty" />
+
+
+                                </LinearLayout>
+
+                                <include layout="@layout/line_black_hor" />
+
+
+                                <!-- 联系人、联系方式 -->
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="0dp"
+                                    android:layout_weight="1"
+                                    android:orientation="horizontal">
+
+                                    <LinearLayout
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                        android:layout_weight="1"
+                                        android:orientation="horizontal">
+
+                                        <TextView
+                                            style="@style/ContentFontItemStyle"
+                                            android:layout_gravity="center"
+                                            android:gravity="center"
+                                            android:text="@string/str_label_item20" />
+
+                                        <TextView
+                                            android:id="@+id/tv_item4"
+                                            style="@style/ContentFontStyle"
+                                            android:layout_gravity="center"
+                                            android:gravity="center"
+                                            android:text="@string/common_empty" />
+
+                                    </LinearLayout>
+
+
+                                    <LinearLayout
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                        android:layout_weight="1"
+                                        android:orientation="horizontal">
+
+                                        <TextView
+                                            style="@style/ContentFontItemStyle"
+                                            android:layout_gravity="center"
+                                            android:gravity="center"
+                                            android:text="@string/str_label_item21" />
+
+                                        <TextView
+                                            android:id="@+id/tv_item5"
+                                            style="@style/ContentFontStyle"
+                                            android:layout_gravity="center"
+                                            android:gravity="center"
+                                            android:text="@string/common_empty" />
+
+                                    </LinearLayout>
+
+
+                                </LinearLayout>
+
+                                <include layout="@layout/line_black_hor" />
+
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="0dp"
+                                    android:layout_weight="1"
+                                    android:orientation="horizontal">
+
+                                    <TextView
+                                        style="@style/ContentFontItemStyle"
+                                        android:layout_gravity="center"
+                                        android:gravity="center"
+                                        android:text="@string/str_label_item16" />
+
+                                    <TextView
+                                        android:id="@+id/tv_item16"
+                                        style="@style/ContentFontStyle"
+                                        android:layout_gravity="center"
+                                        android:gravity="center"
+                                        android:text="@string/common_empty" />
+
+
+
+                                </LinearLayout>
+
+
+
+                            </LinearLayout>
+
+                            <include layout="@layout/line_black_ver"/>
+
+
+                            <ImageView
+                                android:id="@+id/iv_code"
+                                android:padding="@dimen/x5"
+                                android:src="@mipmap/ic_logo"
+                                android:layout_width="@dimen/x100"
+                                android:layout_height="match_parent"/>
+
+
+                        </LinearLayout>
+
+                        <TextView
+                            android:id="@+id/tv_item7"
+                            style="@style/ContentFontStyle"
+                            android:visibility="gone" />
+
+                        <TextView
+                            android:id="@+id/tv_item13"
+                            style="@style/ContentFontStyle"
+                            android:visibility="gone" />
+
+                        <TextView
+                            android:id="@+id/tv_item15"
+                            android:visibility="gone"
+                            style="@style/ContentFontStyle" />
+
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+
+
+        </LinearLayout>
+
+
+
+        <LinearLayout
+            android:id="@+id/ll_print_info"
+            android:layout_width="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:visibility="invisible"
+            android:layout_marginVertical="@dimen/x10"
+            android:orientation="vertical"
+            android:layout_height="wrap_content">
+
+            <com.grkj.ytjqy_pad.utils.view.GifView
+                android:id="@+id/iv_print"
+                android:layout_width="@dimen/x200"
+                android:layout_height="@dimen/x200"
+                android:layout_marginBottom="@dimen/x20"
+                android:layout_gravity="center" />
+
+            <TextView
+                style="@style/Font20Style"
+                android:textColor="@color/colorPrimary"
+                android:gravity="center"
+                android:id="@+id/tv_print_status"
+                android:layout_marginVertical="@dimen/x50"
+                android:layout_gravity="center"
+                android:text="正在打印..." />
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/ll_bqgg"
+            android:layout_width="match_parent"
+            android:layout_marginTop="@dimen/x40"
+            android:layout_marginBottom="@dimen/x20"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:text="标签规格："
+                android:padding="@dimen/x10"
+                style="@style/ContentFontItemStyle"/>
+
+
+            <LinearLayout
+                android:id="@+id/ll_10x10"
+                android:layout_width="wrap_content"
+                android:layout_gravity="center"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/iv_10x10"
+                    android:layout_width="@dimen/x24"
+                    android:layout_height="@dimen/x24"
+                    android:src="@mipmap/ic_selected" />
+
+                <TextView
+                    style="@style/ContentFontItemStyle"
+                    android:text="10cm*10cm" />
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:id="@+id/ll_15x15"
+                android:layout_width="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginHorizontal="@dimen/x10"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/iv_15x15"
+                    android:layout_width="@dimen/x24"
+                    android:layout_height="@dimen/x24"
+                    android:src="@mipmap/ic_unselected" />
+
+                <TextView
+                    style="@style/ContentFontItemStyle"
+                    android:text="15cm*15cm" />
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:id="@+id/ll_20x20"
+                android:layout_width="wrap_content"
+                android:layout_gravity="center"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/iv_20x20"
+                    android:layout_width="@dimen/x24"
+                    android:layout_height="@dimen/x24"
+                    android:src="@mipmap/ic_unselected" />
+
+                <TextView
+                    style="@style/ContentFontItemStyle"
+                    android:text="20cm*20cm" />
+
+            </LinearLayout>
+
+
+
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/ll_print"
+            android:layout_width="@dimen/x200"
+            android:layout_height="@dimen/x40"
+            android:background="@drawable/button_style1"
+            android:layout_marginHorizontal="@dimen/x30"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="@dimen/x12"
+                android:layout_height="@dimen/x12"
+                android:src="@mipmap/ic_prin_white" />
+
+            <TextView
+                style="@style/Font10Style"
+                android:layout_marginLeft="@dimen/x5"
+                android:textStyle="bold"
+                android:textColor="@color/white"
+                android:padding="0dp"
+                android:text="打印" />
+
+
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/bitmap_iv"
+            android:visibility="gone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"></ImageView>
+
+
+
+    </LinearLayout>
+
+
+    <RelativeLayout
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/x60"
+        android:background="@mipmap/bg_logo_bottom">
+
+
+        <LinearLayout
+            android:id="@+id/ll_right_bottom"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/x30"
+            android:layout_marginBottom="@dimen/x5"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <TextView
+                android:id="@+id/tv_right_bottom1"
+                style="@style/Font10Style"
+                android:text="当前第一页" />
+
+
+            <TextView
+                android:id="@+id/tv_right_bottom2"
+                style="@style/Font10Style"
+                android:text="共5页，共30条" />
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/ll_left_bottom"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/x30"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <com.grkj.ytjqy_pad.utils.view.BoldTextView
+                android:id="@+id/tv_left_bottom"
+                style="@style/Font24Style"
+                android:text="2.999" />
+
+
+            <TextView
+                style="@style/Font10Style"
+                android:text="合计产生(吨)" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="@dimen/x30"
+            android:focusable="true"
+            android:gravity="center|bottom"
+            android:orientation="horizontal">
+
+
+            <LinearLayout
+                android:id="@+id/ll_back"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/x28"
+                android:background="@drawable/button_style1"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="@dimen/x12"
+                    android:layout_height="@dimen/x12"
+                    android:src="@mipmap/ic_back_white" />
+
+                <TextView
+                    style="@style/BtnFontStyle"
+                    android:layout_marginLeft="@dimen/x5"
+                    android:padding="0dp"
+                    android:text="返回" />
+
+
+            </LinearLayout>
+
+
+
+
+            <LinearLayout
+                android:id="@+id/ll_cancel"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/x28"
+                android:background="@drawable/button_style1"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:visibility="gone">
+
+                <ImageView
+                    android:layout_width="@dimen/x12"
+                    android:layout_height="@dimen/x12"
+                    android:src="@mipmap/ic_cancel_white" />
+
+                <TextView
+                    style="@style/Font10Style"
+                    android:layout_marginLeft="@dimen/x5"
+                    android:padding="0dp"
+                    android:text="取消" />
+
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+
+
+
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:focusable="true"
+        android:gravity="center|bottom"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/tv_company"
+            style="@style/Font10Style"
+            android:visibility="gone"
+            android:text="@string/str_support" />
+
+        <TextView
+            android:id="@+id/mVersion"
+            style="@style/Font10Style"
+            android:layout_marginLeft="@dimen/x10"
+            android:text="" />
+
+    </LinearLayout>
+
+
+
+</LinearLayout>

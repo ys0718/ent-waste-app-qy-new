@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:id="@+id/mLayout"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:padding="@dimen/x5"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/mText"
+            style="@style/Font12Style"
+            android:maxLines="1"
+            android:ellipsize="end"
+            android:layout_width="match_parent"
+            android:text="测试" />
+
+        <ImageView
+            android:id="@+id/img_select"
+            android:visibility="gone"
+            android:layout_width="@dimen/x24"
+            android:layout_height="@dimen/x24"
+            android:paddingHorizontal="@dimen/x3"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="10dp"
+            android:src="@drawable/checkbox_style_2"/>
+
+
+    </RelativeLayout>
+
+</LinearLayout>

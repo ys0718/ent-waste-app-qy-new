@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?><!--<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content">-->
+
+<!--    <EditText-->
+<!--        android:id="@+id/edit_sipnner_edit"-->
+<!--        style="@style/EditTextStyle"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="40dp"-->
+<!--        android:layout_alignParentLeft="true"-->
+<!--        android:textSize="15sp" />-->
+
+<!--    <ImageView-->
+<!--        android:id="@+id/edit_spinner_expand"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_alignBottom="@+id/edit_sipnner_edit"-->
+<!--        android:layout_alignEnd="@+id/edit_sipnner_edit"-->
+<!--        android:layout_alignRight="@+id/edit_sipnner_edit"-->
+<!--        android:layout_alignTop="@+id/edit_sipnner_edit"-->
+<!--        android:padding="8dp"-->
+<!--        android:src="@mipmap/ic_click_down"/>-->
+
+<!--    <View-->
+<!--        android:id="@+id/edit_spinner_expand_above"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_alignBottom="@+id/edit_sipnner_edit"-->
+<!--        android:layout_alignLeft="@id/edit_spinner_expand"-->
+<!--        android:layout_alignRight="@id/edit_spinner_expand"-->
+<!--        android:layout_alignTop="@+id/edit_sipnner_edit"-->
+<!--        android:padding="8dp"/>-->
+<!--</RelativeLayout>-->
+
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:id="@+id/mLayout"
+    android:layout_height="wrap_content"
+    android:layout_margin="0dp"
+    android:gravity="left|center"
+    tools:ignore="MissingDefaultResource">
+
+    <EditText
+        android:id="@+id/edit_sipnner_edit"
+        style="@style/EditTextStyle3"
+        android:layout_width="match_parent"
+        android:padding="0dp"
+        android:gravity="right"
+        android:text="/"
+        android:layout_marginHorizontal="@dimen/x5"
+        android:layout_toLeftOf="@id/ll_right"
+        android:layout_centerInParent="true"
+        android:layout_gravity="center"
+        android:background="@null"
+        android:hint="@string/str_loading" />
+
+    <LinearLayout
+        android:id="@+id/ll_right"
+        android:orientation="horizontal"
+        android:layout_centerVertical="true"
+        android:layout_alignParentRight="true"
+        android:layout_width="wrap_content"
+        android:layout_marginHorizontal="@dimen/x5"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:visibility="gone"
+            android:layout_width="@dimen/x26"
+            android:layout_height="@dimen/x26"
+            android:padding="@dimen/x5"
+            android:layout_gravity="center"
+            android:id="@+id/iv_clear"
+            android:layout_marginRight="@dimen/x5"
+            android:src="@mipmap/ic_clear" />
+
+        <ImageView
+            android:layout_width="@dimen/x22"
+            android:layout_height="@dimen/x22"
+            android:paddingVertical="@dimen/x5"
+            android:paddingLeft="@dimen/x10"
+            android:id="@+id/edit_spinner_expand"
+            android:src="@mipmap/ic_click_down" />
+
+
+    </LinearLayout>
+
+
+    <View
+        android:id="@+id/edit_spinner_expand_above"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@id/edit_spinner_expand"
+        android:layout_alignTop="@+id/edit_sipnner_edit"
+        android:layout_alignRight="@id/edit_spinner_expand"
+        android:layout_alignBottom="@+id/edit_sipnner_edit"
+        tools:ignore="NotSibling" />
+
+</RelativeLayout>

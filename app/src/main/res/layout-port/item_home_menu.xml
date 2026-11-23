@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/mMenu"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:cardCornerRadius="@dimen/x10"
+    app:cardElevation="@dimen/x1"
+    android:layout_margin="@dimen/x5">
+
+
+    <LinearLayout
+        android:padding="@dimen/x5"
+        android:id="@+id/bg_layout"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:background="@color/white"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/iv_logo"
+                android:layout_width="@dimen/x100"
+                android:layout_height="@dimen/x100"
+                android:layout_centerHorizontal="true"
+                android:padding="@dimen/x5"
+                android:src="@mipmap/ic_menu_cfdj" />
+
+            <TextView
+                android:id="@+id/tv_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="@dimen/x70"
+                android:lines="1"
+                android:padding="@dimen/x5"
+                android:text="Item"
+                android:textColor="@color/colorFontB"
+                android:textSize="@dimen/x18"
+                android:textStyle="bold" />
+
+
+        </RelativeLayout>
+
+
+
+    </LinearLayout>
+
+
+
+</android.support.v7.widget.CardView>

@@ -1,0 +1,227 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="@dimen/x10"
+    android:layout_marginBottom="@dimen/x10"
+    android:id="@+id/mLayout"
+    android:background="@mipmap/bg_list_item"
+    android:orientation="vertical"
+    android:paddingBottom="@dimen/x10"
+    android:paddingHorizontal="@dimen/x10">
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+        <com.grkj.ytjqy_pad.utils.view.QCTJTextView
+            android:id="@+id/tv_item1"
+            android:layout_width="wrap_content"
+            style="@style/Font15Style"
+            android:layout_gravity="left|center"
+            android:layout_marginLeft="@dimen/x10"
+            android:text="2023-04-19" />
+
+        <com.grkj.ytjqy_pad.utils.view.QCTJTextView
+            android:id="@+id/tv_item13"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            style="@style/Font15Style"
+            android:gravity="right"
+            android:layout_gravity="right|center"
+            android:layout_marginLeft="@dimen/x10"
+            android:text="PCB胶料" />
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:paddingHorizontal="@dimen/x10"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/tv_item11"
+                style="@style/Font10Style"
+                android:maxLines="1"
+                android:layout_marginTop="@dimen/x5"
+                android:ellipsize="end"
+                android:text="废物类别：污泥" />
+
+
+            <TextView
+                android:id="@+id/tv_item12"
+                style="@style/Font10Style"
+                android:maxLines="1"
+                android:layout_marginTop="@dimen/x5"
+                android:ellipsize="end"
+                android:text="废物代码：001-119-111" />
+
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:layout_marginTop="@dimen/x5"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:paddingHorizontal="@dimen/x5">
+
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="horizontal"
+            android:paddingHorizontal="@dimen/x5">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:id="@+id/ll_cf"
+                android:orientation="vertical">
+
+                <TextView
+                    style="@style/Font10BlueStyle"
+                    android:text="产废量" />
+
+
+                <com.grkj.ytjqy_pad.utils.view.BoldTextView
+                    style="@style/Font15Style"
+                    android:id="@+id/tv_item2"
+                    android:maxLines="1"
+                    android:ellipsize="end"
+                    android:text="0.000"
+                    android:textColor="@color/yellow" />
+
+            </LinearLayout>
+
+            <View
+                android:id="@+id/line1"
+                android:layout_width="@dimen/x1"
+                android:layout_height="@dimen/x30"
+                android:layout_gravity="center"
+                android:background="@color/colorPrimary" />
+
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <TextView
+                    style="@style/Font10BlueStyle"
+                    android:text="入库量" />
+
+
+                <com.grkj.ytjqy_pad.utils.view.BoldTextView
+                    style="@style/Font15Style"
+                    android:text="0.000"
+                    android:maxLines="1"
+                    android:ellipsize="end"
+                    android:id="@+id/tv_item3"
+                    android:textColor="@color/color_young_blue" />
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="@dimen/x1"
+                android:layout_height="@dimen/x30"
+                android:layout_gravity="center"
+                android:background="@color/colorPrimary" />
+
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <TextView
+                    style="@style/Font10BlueStyle"
+                    android:text="出库量" />
+
+
+                <com.grkj.ytjqy_pad.utils.view.BoldTextView
+                    style="@style/Font15Style"
+                    android:text="0.000"
+                    android:id="@+id/tv_item4"
+                    android:maxLines="1"
+                    android:ellipsize="end"
+                    android:textColor="@color/color_young_green" />
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="@dimen/x1"
+                android:layout_height="@dimen/x30"
+                android:layout_gravity="center"
+                android:background="@color/colorPrimary" />
+
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <TextView
+                    style="@style/Font10BlueStyle"
+                    android:text="当前贮存" />
+
+
+                <com.grkj.ytjqy_pad.utils.view.BoldTextView
+                    style="@style/Font15Style"
+                    android:text="0.000"
+                    android:maxLines="1"
+                    android:ellipsize="end"
+                    android:id="@+id/tv_item5"
+                    android:textColor="@color/colorPrimary" />
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+
+        <CheckBox
+            android:id="@+id/mIsRemember"
+            android:layout_width="@dimen/x20"
+            android:layout_height="@dimen/x20"
+            android:layout_gravity="top"
+            android:layout_margin="@dimen/x5"
+            android:background="@drawable/checkbox_style_0"
+            android:button="@null"
+            android:padding="@dimen/x5"
+            android:textColor="@color/colorFontA"
+            android:visibility="gone" />
+
+
+    </LinearLayout>
+
+
+</LinearLayout>
+

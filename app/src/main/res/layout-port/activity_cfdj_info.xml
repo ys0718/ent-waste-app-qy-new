@@ -1,0 +1,316 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/mLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:gravity="center_horizontal"
+    android:orientation="vertical">
+
+    <include layout="@layout/view_toolbar" />
+
+    <include
+        layout="@layout/view_toolbar_new"
+        android:visibility="gone" />
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:paddingHorizontal="@dimen/x20"
+            android:visibility="gone">
+
+            <View
+                android:layout_width="@dimen/x5"
+                android:layout_height="match_parent"
+                android:layout_marginRight="@dimen/x10"
+                android:background="@drawable/button_style_primary" />
+
+            <TextView
+                android:id="@+id/tv_title"
+                style="@style/Font15Style"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:padding="0dp"
+                android:text="新增废物信息" />
+
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/x28"
+                android:layout_marginRight="@dimen/x15"
+                android:background="@drawable/button_style1"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:visibility="gone">
+
+                <ImageView
+                    android:layout_width="@dimen/x12"
+                    android:layout_height="@dimen/x12"
+                    android:src="@mipmap/ic_add" />
+
+                <TextView
+                    style="@style/BtnFontStyle"
+                    android:layout_marginLeft="@dimen/x5"
+                    android:padding="0dp"
+                    android:text="新增" />
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_home"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/x28"
+                android:layout_marginLeft="@dimen/x15"
+                android:background="@drawable/button_style1"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="@dimen/x12"
+                    android:layout_height="@dimen/x12"
+                    android:src="@mipmap/ic_home_white" />
+
+                <TextView
+                    style="@style/BtnFontStyle"
+                    android:layout_marginLeft="@dimen/x5"
+                    android:padding="0dp"
+                    android:text="主页" />
+
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+
+        <com.grkj.ytjqy_pad.utils.view.GrScrollView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:padding="@dimen/x10">
+
+                <LinearLayout
+                    android:id="@+id/ll_scan"
+                    android:layout_width="1dp"
+                    android:orientation="horizontal"
+                    android:layout_height="1dp"/>
+
+                <include layout="@layout/layout_weight"/>
+
+
+                <LinearLayout
+                    android:id="@+id/ll_"
+                    android:layout_width="1dp"
+                    android:orientation="horizontal"
+                    android:layout_height="1dp"/>
+
+
+
+
+            </LinearLayout>
+
+
+        </com.grkj.ytjqy_pad.utils.view.GrScrollView>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginVertical="@dimen/x10"
+            android:focusable="true"
+            android:gravity="center|bottom"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:id="@+id/ll_save"
+                style="@style/BottomBtnStyle"
+                android:layout_marginHorizontal="@dimen/x20"
+                android:background="@drawable/button_style2">
+
+                <ImageView
+                    style="@style/BtnImgStyle"
+                    android:src="@mipmap/ic_save_white" />
+
+                <TextView
+                    style="@style/BtnFontStyle"
+                    android:text="保存" />
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:id="@+id/ll_delete"
+                style="@style/BottomBtnStyle"
+                android:visibility="gone"
+                android:layout_marginHorizontal="@dimen/x20"
+                android:background="@drawable/button_style4">
+
+                <ImageView
+                    style="@style/BtnImgStyle"
+                    android:src="@mipmap/ic_cancel_white" />
+
+                <TextView
+                    style="@style/BtnFontStyle"
+                    android:text="删除" />
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="@dimen/x10"
+            android:focusable="true"
+            android:gravity="center|bottom"
+            android:orientation="horizontal">
+
+
+            <LinearLayout
+                android:id="@+id/ll_print"
+                android:visibility="gone"
+                style="@style/BottomBtnStyle"
+                android:layout_marginHorizontal="@dimen/x20"
+                android:background="@drawable/button_style1">
+
+                <ImageView
+                    style="@style/BtnImgStyle"
+                    android:src="@mipmap/ic_get_label" />
+
+                <TextView
+                    style="@style/BtnFontStyle"
+                    android:text="生成标签" />
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:id="@+id/ll_handle"
+                style="@style/BottomBtnStyle"
+                android:visibility="gone"
+                android:layout_marginHorizontal="@dimen/x20"
+                android:background="@drawable/button_style3">
+
+                <TextView
+                    android:id="@+id/tv_handle"
+                    style="@style/BtnFontStyle"
+                    android:layout_marginLeft="@dimen/x5"
+                    android:padding="0dp"
+                    android:text="委外利用" />
+
+                <ImageView
+                    android:layout_width="@dimen/x12"
+                    android:layout_height="@dimen/x12"
+                    android:src="@mipmap/ic_menu_right" />
+
+            </LinearLayout>
+
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:visibility="gone"
+        android:layout_height="@dimen/x60">
+
+
+        <LinearLayout
+            android:id="@+id/ll_right_bottom"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/x30"
+            android:layout_marginBottom="@dimen/x5"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <TextView
+                android:id="@+id/tv_right_bottom1"
+                style="@style/Font10Style"
+                android:text="当前第一页" />
+
+
+            <TextView
+                android:id="@+id/tv_right_bottom2"
+                style="@style/Font10Style"
+                android:text="共5页，共30条" />
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/ll_left_bottom"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/x30"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <com.grkj.ytjqy_pad.utils.view.BoldTextView
+                android:id="@+id/tv_left_bottom"
+                style="@style/Font24Style"
+                android:text="2.999" />
+
+
+            <TextView
+                style="@style/Font10Style"
+                android:text="合计产生(吨)" />
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:focusable="true"
+            android:gravity="center|bottom"
+            android:orientation="horizontal"
+            android:visibility="gone">
+
+            <TextView
+                android:id="@+id/tv_company"
+                style="@style/Font10Style"
+                android:text="@string/str_support" />
+
+            <TextView
+                android:id="@+id/mVersion"
+                style="@style/Font10Style"
+                android:layout_marginLeft="@dimen/x10"
+                android:text="当前版本:V1.0.0" />
+
+        </LinearLayout>
+
+
+    </RelativeLayout>
+
+
+</LinearLayout>

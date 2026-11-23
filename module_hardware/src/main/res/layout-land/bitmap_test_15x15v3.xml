@@ -1,0 +1,427 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff"
+    android:orientation="vertical"
+    tools:ignore="MissingDefaultResource">
+
+    <!--  @dimen/x26  -->
+
+    <LinearLayout
+        android:layout_weight="3"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"/>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="7"
+        android:orientation="horizontal">
+
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="3"
+            android:orientation="vertical">
+
+
+            <!-- 废物名称 -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="horizontal">
+
+
+                    <TextView
+                        android:id="@+id/tv_item1"
+                        style="@style/ContentFontStyle15x15v3"
+                        android:text="废物名称1废物名称1废物名称1废物名称1废物名称1废物名称1废物名称1废物名称1废物名称1" />
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+
+            <!-- 废物类别 -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="horizontal">
+
+
+                    <TextView
+                        android:id="@+id/tv_item2"
+                        style="@style/ContentFontStyle15x15v3"
+                        android:text="废物类别2废物类别2废物类别2废物类别2废物类别2废物类别2废物类别2废物类别2废物类别2废物类别2废物类别2废物类别2" />
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:gravity="left"
+                android:orientation="horizontal">
+
+                <!-- 废物代码 -->
+                <TextView
+                    android:id="@+id/tv_item3"
+                    style="@style/ContentFontStyle15x15v3"
+                    android:layout_width="0dp"
+                    android:textSize="@dimen/x13"
+                    android:layout_weight="1"
+                    android:text="废物代码3废物代码3废物代码3" />
+
+
+                <!-- 废物形态 -->
+                <TextView
+                    android:id="@+id/tv_item6"
+                    style="@style/RightContentFontStyle15x15v3"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:text="废物形态4废物形态4废物形态4废物形态4" />
+
+
+            </LinearLayout>
+
+
+            <!-- 主要成分 -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1.9"
+                android:orientation="horizontal">
+
+
+                <TextView
+                    android:id="@+id/tv_item8"
+                    style="@style/MulContentFontStyle15x15v3"
+                    android:text="主要成分主要成分主要成分主要成分主要成分主要成分主要成分主要成分主要成分主要成分主要成分主要成分主要成分主要成分主要成分主要成分主要成分主要成分主要成分主要成分主要成分" />
+
+
+            </LinearLayout>
+
+
+            <!-- 有害成分 -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1.9"
+                android:orientation="horizontal">
+
+
+                <TextView
+                    android:id="@+id/tv_item9"
+                    style="@style/MulContentFontStyle15x15v3"
+                    android:minLines="2"
+                    android:text="有害成分有害成分有害成分有害成分有害成分有害成分有害成分有害成分有害成分有害成分有害成分有害成分有害成分有害成分有害成分有害成分有害成分有害成分有害成分有害成分有害成分有害成分有害成分" />
+
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:paddingLeft="@dimen/x10"
+            android:paddingTop="@dimen/x55"
+            android:paddingRight="@dimen/x26">
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_gravity="left"
+                android:layout_weight="1"
+                android:gravity="left"
+                android:orientation="horizontal">
+
+
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_marginTop="@dimen/x6"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:paddingHorizontal="@dimen/x5">
+
+
+                    <CheckBox
+                        android:id="@+id/cb_dx"
+                        android:layout_width="@dimen/x15"
+                        android:layout_height="@dimen/x15"
+                        android:layout_alignParentBottom="true"
+                        android:layout_centerHorizontal="true"
+                        android:background="@mipmap/ic_unchecked_black"
+                        android:button="@null"
+                        android:padding="@dimen/x5"
+                        android:textColor="#333" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:paddingHorizontal="@dimen/x5">
+
+
+                    <CheckBox
+                        android:id="@+id/cb_fyx"
+                        android:layout_width="@dimen/x15"
+                        android:layout_height="@dimen/x15"
+                        android:layout_alignParentBottom="true"
+                        android:layout_centerHorizontal="true"
+                        android:background="@mipmap/ic_unchecked_black"
+                        android:button="@null"
+                        android:padding="@dimen/x5"
+                        android:textColor="#333" />
+                </RelativeLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_marginTop="@dimen/x10"
+                android:layout_weight="1"
+                android:orientation="horizontal">
+
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/x75"
+                    android:layout_weight="1"
+                    android:paddingHorizontal="@dimen/x5">
+
+
+                    <CheckBox
+                        android:id="@+id/cb_yrx"
+                        android:layout_width="@dimen/x15"
+                        android:layout_height="@dimen/x15"
+                        android:layout_alignParentBottom="true"
+                        android:layout_centerHorizontal="true"
+                        android:background="@mipmap/ic_unchecked_black"
+                        android:button="@null"
+                        android:padding="@dimen/x5"
+                        android:textColor="#333" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/x75"
+                    android:layout_weight="1"
+                    android:paddingHorizontal="@dimen/x5">
+
+
+                    <CheckBox
+                        android:id="@+id/cb_fsx"
+                        android:layout_width="@dimen/x15"
+                        android:layout_height="@dimen/x15"
+                        android:layout_alignParentBottom="true"
+                        android:layout_centerHorizontal="true"
+                        android:background="@mipmap/ic_unchecked_black"
+                        android:button="@null"
+                        android:padding="@dimen/x5"
+                        android:textColor="#333" />
+
+                </RelativeLayout>
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+    <!-- 注意事项 -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginRight="@dimen/x20"
+        android:layout_weight="1.9"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/tv_item10"
+            style="@style/MulContentFontStyle15x15v3"
+            android:text="注意事项注意事项注意事项注意事项注意事项注意事项注意事项注意事项注意事项注意事项注意事项注意事项注意事项注意事项注意事项注意事项注意事项注意事项注意事项注意事项注意事项注意事项注意事项注意事项注意事项注意事项注意事项注意事项注意事项注意事项注意事项注意事项注意事项注意事项注意事项注意事项注意事项注意事项注意事项注意事项" />
+
+
+    </LinearLayout>
+
+
+    <!-- 数字识别码 -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginRight="@dimen/x20"
+        android:layout_weight="1"
+        android:orientation="horizontal">
+
+        <View
+            android:layout_width="@dimen/x20"
+            android:layout_height="0dp" />
+
+        <TextView
+            android:id="@+id/tv_item11"
+            android:textSize="@dimen/x15"
+            style="@style/ContentFontStyle15x15v3"
+            android:text="数字识别码8数字识别码8数字识别码8数字识别码8数字识别码8数字识别码8数字识别码8数字识别码8数字识别码8数字识别码8数字识别码8数字识别码8" />
+
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="3.9"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="3.3"
+            android:orientation="vertical">
+
+            <!-- 产生/收集单位 -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:orientation="horizontal">
+
+                <View
+                    android:layout_width="@dimen/x40"
+                    android:layout_height="0dp" />
+
+                <TextView
+                    android:textSize="@dimen/x15"
+                    android:id="@+id/tv_item12"
+                    style="@style/ContentFontStyle15x15v3"
+                    android:text="产生/收集单位9产生/收集单位9产生/收集单位9产生/收集单位9产生/收集单位9产生/收集单位9产生/收集单位9" />
+
+
+            </LinearLayout>
+
+
+            <!-- 联系人和联系方式10 -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:orientation="horizontal">
+
+                <View
+                    android:layout_width="@dimen/x90"
+                    android:layout_height="0dp" />
+
+                <TextView
+                    android:id="@+id/tv_item14"
+                    style="@style/ContentFontStyle15x15v3"
+                    android:text="联系人和联系方式10联系人和联系方式10联系人和联系方式10联系人和联系方式10联系人和联系方式10联系人和联系方式10联系人和联系方式10" />
+
+
+            </LinearLayout>
+
+
+            <!-- 产生日期、产生量 -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:orientation="horizontal">
+
+
+                <TextView
+                    android:id="@+id/tv_item4"
+                    style="@style/ContentFontStyle15x15v3"
+                    android:layout_width="0dp"
+                    android:textSize="@dimen/x13"
+                    android:layout_weight="1"
+                    android:text="2023-06-07" />
+
+
+                <TextView
+                    android:id="@+id/tv_item5"
+                    style="@style/RightContentFontStyle15x15v3"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:gravity="top"
+                    android:text="0.112吨" />
+
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="0.8"
+                android:orientation="horizontal">
+
+
+                <TextView
+                    android:id="@+id/tv_item16"
+                    android:textSize="@dimen/x10"
+                    android:layout_marginTop="@dimen/x14"
+                    android:layout_marginLeft="@dimen/x84"
+                    style="@style/RightContentFontStyle15x15v3"
+                    android:text="备注备注备注备注备注备注备注备注备注备注备注备注备注备注备注备注备注备注备注备注备z注备注备注备注备注备注备注备注备注备注备注备注备注备注备注备注备注备注备注备注备注备注备注备注备注备注备注备注" />
+
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginTop="@dimen/x10"
+            android:layout_marginRight="@dimen/x20"
+            android:layout_weight="1">
+
+            <ImageView
+                android:id="@+id/iv_code"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="left"
+                android:src="@mipmap/ic_code_test" />
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+
+</LinearLayout>

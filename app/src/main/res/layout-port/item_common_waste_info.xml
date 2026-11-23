@@ -1,0 +1,245 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="@dimen/x10"
+    app:cardCornerRadius="@dimen/x10"
+    tools:ignore="MissingDefaultResource">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+        <ImageView
+            android:id="@+id/iv_current"
+            android:visibility="gone"
+            android:layout_width="@dimen/x50"
+            android:layout_height="@dimen/x25"
+            android:layout_gravity="bottom"
+            android:src="@mipmap/ic_current" />
+
+        <LinearLayout
+            android:id="@+id/item_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:descendantFocusability="beforeDescendants"
+            android:orientation="horizontal"
+            android:padding="@dimen/x10">
+
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:paddingHorizontal="@dimen/x10">
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center|left"
+                        android:orientation="horizontal"
+                        android:padding="@dimen/x10">
+
+                        <ImageView
+                            android:layout_width="@dimen/x24"
+                            android:layout_height="@dimen/x24"
+                            android:src="@mipmap/ic_title" />
+
+                        <com.grkj.ytjqy_pad.utils.view.QCTJTextView
+                            android:id="@+id/tv_item1"
+                            style="@style/Font15Style"
+                            android:layout_gravity="left|center"
+                            android:layout_marginLeft="@dimen/x6"
+                            android:layout_weight="1"
+                            android:ellipsize="end"
+                            android:maxLines="3"
+                            android:text="PCB胶料"
+                            android:textColor="@color/colorFontA"
+                            android:textSize="@dimen/x25" />
+
+
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:orientation="horizontal">
+
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:orientation="vertical"
+                            android:padding="@dimen/x5">
+
+
+                            <TextView
+                                android:id="@+id/tv_item2"
+                                style="@style/FontItemStyle"
+                                android:ellipsize="end"
+                                android:maxLines="1"
+                                android:text="废物类别：污泥"
+                                android:textColor="@color/colorFontB" />
+
+
+                            <TextView
+                                android:id="@+id/tv_item3"
+                                style="@style/FontItemStyle"
+                                android:ellipsize="end"
+                                android:maxLines="1"
+                                android:text="废物代码：001-119-111"
+                                android:textColor="@color/colorFontB" />
+
+                            <TextView
+                                android:id="@+id/tv_item4"
+                                style="@style/FontItemStyle"
+                                android:ellipsize="end"
+                                android:maxLines="1"
+                                android:text="产生时间：2022-03-16"
+                                android:textColor="@color/colorFontB"
+                                android:visibility="gone" />
+
+                            <TextView
+                                android:id="@+id/tv_item5"
+                                style="@style/FontItemStyle"
+                                android:ellipsize="end"
+                                android:maxLines="1"
+                                android:text="废物类别名称：干垃圾"
+                                android:textColor="@color/colorFontB"
+                                android:visibility="gone" />
+
+                            <TextView
+                                android:id="@+id/tv_item8"
+                                style="@style/FontItemStyle"
+                                android:ellipsize="end"
+                                android:maxLines="1"
+                                android:text="废物类别名称：干垃圾"
+                                android:textColor="@color/colorFontB"
+                                android:visibility="gone" />
+
+
+                        </LinearLayout>
+
+
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+
+
+                    <RelativeLayout
+                        android:id="@+id/rl_weight"
+                        android:layout_width="@dimen/x80"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+
+                        <FrameLayout
+                            android:id="@+id/iv_cup"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
+                            android:background="@drawable/shape_green_round" />
+
+                        <com.grkj.ytjqy_pad.utils.view.BoldTextView
+                            android:id="@+id/tv_item6"
+                            style="@style/Font20Style"
+                            android:layout_centerInParent="true"
+                            android:layout_centerHorizontal="true"
+                            android:ellipsize="end"
+                            android:maxWidth="@dimen/x120"
+                            android:maxLines="1"
+                            android:text="0.000" />
+
+                        <TextView
+                            android:id="@+id/tv_item7"
+                            style="@style/FontItemStyle"
+                            android:layout_alignParentBottom="true"
+                            android:layout_marginTop="@dimen/x5"
+                            android:gravity="center"
+                            android:text="产生量(吨)"
+                            android:textColor="@color/colorFontB"
+                            android:textSize="@dimen/x15" />
+
+
+                    </RelativeLayout>
+
+
+
+
+            </LinearLayout>
+
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent">
+
+                <ImageView
+                    android:id="@+id/iv_delete"
+                    android:layout_width="@dimen/x30"
+                    android:visibility="gone"
+                    android:layout_height="@dimen/x30"
+                    android:layout_marginLeft="@dimen/x10"
+                    android:padding="@dimen/x5"
+                    android:src="@mipmap/ic_delete_colorful"/>
+
+
+
+                <CheckBox
+                    android:id="@+id/mIsRemember"
+                    android:layout_width="@dimen/x20"
+                    android:layout_height="@dimen/x20"
+                    android:visibility="gone"
+                    android:layout_centerInParent="true"
+                    android:layout_gravity="center"
+                    android:background="@drawable/checkbox_style_0"
+                    android:button="@null"
+                    android:gravity="center"
+                    android:padding="@dimen/x5"
+                    android:textColor="@color/colorFontA" />
+
+
+                <ImageView
+                    android:id="@+id/btn_select"
+                    android:layout_width="@dimen/x20"
+                    android:layout_height="@dimen/x20"
+                    android:visibility="gone"
+                    android:layout_centerInParent="true"
+                    android:layout_gravity="center"
+                    android:focusable="true"
+                    android:focusableInTouchMode="true"
+                    android:src="@mipmap/ic_unselected" />
+
+
+
+            </RelativeLayout>
+
+
+
+
+        </LinearLayout>
+
+
+    </RelativeLayout>
+
+
+</android.support.v7.widget.CardView>
+

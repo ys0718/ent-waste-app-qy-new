@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="@dimen/x10">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/color_title_bg"
+            android:orientation="horizontal"
+            android:padding="@dimen/x5">
+
+            <TextView
+                style="@style/TitleLittleFontStyle"
+                android:layout_weight="0.3" />
+
+            <TextView
+                style="@style/TitleLittleFontStyle"
+                android:layout_weight="1.5"
+                android:text="文件名称" />
+
+            <TextView
+                style="@style/TitleLittleFontStyle"
+                android:layout_weight="1.5"
+                android:text="上传时间" />
+
+
+            <TextView
+                style="@style/TitleLittleFontStyle"
+                android:layout_weight="1"
+                android:text="上传人" />
+
+            <TextView
+                style="@style/TitleLittleFontStyle"
+                android:layout_weight="1"
+                android:text="文件大小" />
+
+            <TextView
+                android:id="@+id/control_tv"
+                style="@style/TitleLittleFontStyle"
+                android:layout_weight="1"
+                android:visibility="gone"
+                android:text="操作" />
+
+        </LinearLayout>
+
+        <com.scwang.smartrefresh.layout.SmartRefreshLayout
+            android:id="@+id/refresh_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="@dimen/x10">
+
+            <com.grkj.ytjqy_pad.utils.view.GrRecyclerView
+                android:id="@+id/mRecyclerView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="@dimen/x10"
+                android:overScrollMode="never" />
+
+        </com.scwang.smartrefresh.layout.SmartRefreshLayout>
+
+    </LinearLayout>
+
+</LinearLayout>
+
+
+

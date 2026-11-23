@@ -1,0 +1,1372 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/mLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:gravity="center_horizontal"
+    android:orientation="vertical">
+
+    <include layout="@layout/view_toolbar" />
+
+    <include
+        layout="@layout/view_toolbar_new"
+        android:visibility="gone" />
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:paddingHorizontal="@dimen/x20"
+            android:visibility="gone">
+
+            <View
+                android:layout_width="@dimen/x5"
+                android:layout_height="match_parent"
+                android:layout_marginRight="@dimen/x10"
+                android:background="@drawable/button_style_primary" />
+
+            <TextView
+                android:id="@+id/tv_title"
+                style="@style/Font15Style"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:padding="0dp"
+                android:text="出库信息" />
+
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/x28"
+                android:layout_marginRight="@dimen/x15"
+                android:background="@drawable/button_style1"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:visibility="gone">
+
+                <ImageView
+                    android:layout_width="@dimen/x18"
+                    android:layout_height="@dimen/x18"
+                    android:src="@mipmap/ic_add" />
+
+                <TextView
+                    style="@style/BtnFontStyle"
+                    android:layout_marginLeft="@dimen/x5"
+                    android:padding="0dp"
+                    android:text="新增" />
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_home"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/x28"
+                android:layout_marginLeft="@dimen/x15"
+                android:background="@drawable/button_style1"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="@dimen/x18"
+                    android:layout_height="@dimen/x18"
+                    android:src="@mipmap/ic_home_white" />
+
+                <TextView
+                    style="@style/BtnFontStyle"
+                    android:layout_marginLeft="@dimen/x5"
+                    android:padding="0dp"
+                    android:text="主页" />
+
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+
+        <com.grkj.ytjqy_pad.utils.view.GrScrollView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:padding="@dimen/x10">
+
+                <include layout="@layout/layout_weight" />
+
+                <LinearLayout
+                    android:visibility="gone"
+                    android:id="@+id/ll_get_card_info"
+                    style="@style/BottomBtnStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_marginHorizontal="@dimen/x20"
+                    android:background="@drawable/button_style3">
+
+                    <ImageView
+                        style="@style/BtnImgStyle"
+                        android:src="@mipmap/ic_card_white" />
+
+                    <TextView
+                        style="@style/BtnFontStyle"
+                        android:text="获取司机信息" />
+
+                </LinearLayout>
+
+
+                <LinearLayout style="@style/FormLayoutStyle_C">
+
+                    <TextView
+                        style="@style/FormTitleStyle"
+                        android:text="@string/str_output_item8" />
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/bg_edittext"
+                        android:gravity="left|center">
+
+                        <EditText
+                            android:id="@+id/et_item8"
+                            style="@style/EditTextStyle3"
+                            android:layout_gravity="center"
+                            android:layout_weight="1.2"
+                            android:background="@null"
+                            android:gravity="center"
+                            android:hint="@string/common_input_tips"
+                            android:inputType="numberDecimal" />
+
+                        <View
+                            android:layout_width="@dimen/x1"
+                            android:layout_height="match_parent"
+                            android:background="@color/colorFontB" />
+
+
+                        <RelativeLayout
+                            android:id="@+id/rl_jldw"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="left|center">
+
+                            <EditText
+                                android:id="@+id/et_item17"
+                                style="@style/EditTextStyle3"
+                                android:layout_width="match_parent"
+                                android:layout_gravity="center"
+                                android:layout_marginRight="@dimen/x20"
+                                android:background="@null"
+                                android:focusableInTouchMode="false"
+                                android:gravity="center"
+                                android:hint="@string/common_input_tips"
+                                android:text="吨" />
+
+                            <ImageView
+                                android:id="@+id/iv_jldw"
+                                android:layout_width="@dimen/x18"
+                                android:layout_height="@dimen/x18"
+                                android:layout_alignParentRight="true"
+                                android:layout_centerVertical="true"
+                                android:layout_marginHorizontal="@dimen/x10"
+                                android:src="@mipmap/ic_click_down" />
+
+                        </RelativeLayout>
+
+                        <FrameLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content">
+
+                            <LinearLayout
+                                android:id="@+id/ll_get_weight"
+                                android:layout_width="wrap_content"
+                                android:layout_height="@dimen/x40"
+                                android:layout_marginLeft="@dimen/x5"
+                                android:background="@drawable/button_style1"
+                                android:gravity="center"
+                                android:orientation="horizontal"
+                                android:paddingHorizontal="@dimen/x8"
+                                android:visibility="gone">
+
+                                <ImageView
+                                    android:layout_width="@dimen/x15"
+                                    android:layout_height="@dimen/x15"
+                                    android:src="@mipmap/ic_fresh" />
+
+                                <TextView
+                                    style="@style/Font10Style"
+                                    android:layout_marginLeft="@dimen/x5"
+                                    android:padding="0dp"
+                                    android:text="重新称重"
+                                    android:textColor="@color/white"
+                                    android:visibility="gone" />
+
+                            </LinearLayout>
+
+
+                        </FrameLayout>
+
+
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+
+                <com.grkj.ytjqy_pad.utils.view.MyLinearLayout
+                    android:id="@+id/ll_clickable"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+
+<!--                    <LinearLayout-->
+<!--                        android:id="@+id/ll_get_card_info"-->
+<!--                        android:layout_width="wrap_content"-->
+<!--                        android:layout_height="@dimen/x28"-->
+<!--                        android:layout_marginRight="@dimen/x15"-->
+<!--                        android:background="@drawable/button_style3"-->
+<!--                        android:gravity="center"-->
+<!--                        android:orientation="horizontal">-->
+
+<!--                        <ImageView-->
+<!--                            android:layout_width="@dimen/x12"-->
+<!--                            android:layout_height="@dimen/x12"-->
+<!--                            android:src="@mipmap/ic_card_white" />-->
+
+<!--                        <TextView-->
+<!--                            style="@style/BtnFontStyle"-->
+<!--                            android:layout_marginLeft="@dimen/x5"-->
+<!--                            android:padding="0dp"-->
+<!--                            android:text="获取司机信息" />-->
+
+
+<!--                    </LinearLayout>-->
+
+
+                    <LinearLayout style="@style/FormLayoutStyle_C">
+
+                        <TextView
+                            style="@style/FormTitleStyle"
+                            android:text="@string/str_output_item2" />
+
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/bg_edittext"
+                            android:gravity="left|center">
+
+                            <EditText
+                                android:id="@+id/et_item2"
+                                style="@style/EditTextStyle3"
+                                android:layout_gravity="center"
+                                android:background="@null"
+                                android:focusableInTouchMode="false" />
+
+                        </LinearLayout>
+
+
+                    </LinearLayout>
+
+
+                    <LinearLayout style="@style/FormLayoutStyle_C">
+
+
+                        <TextView
+                            style="@style/FormTitleStyle"
+                            android:text="@string/str_output_item1" />
+
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/bg_edittext_disable"
+                            android:gravity="left|center">
+
+                            <EditText
+                                android:id="@+id/et_item1"
+                                style="@style/EditTextStyle3"
+                                android:layout_gravity="center"
+                                android:background="@null"
+                                android:ellipsize="end"
+                                android:enabled="false"
+                                android:maxLines="1"
+                                android:singleLine="true"
+                                android:textColorHint="@color/color_font_red" />
+
+                        </LinearLayout>
+
+
+                    </LinearLayout>
+
+
+                    <LinearLayout style="@style/FormLayoutStyle_C">
+
+                        <TextView
+                            style="@style/FormTitleStyle"
+                            android:text="@string/str_output_item10" />
+
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/bg_edittext_disable"
+                            android:gravity="left|center">
+
+                            <EditText
+                                android:id="@+id/et_item10"
+                                style="@style/EditTextStyle3"
+                                android:layout_width="match_parent"
+                                android:layout_gravity="center"
+                                android:background="@null"
+                                android:enabled="false" />
+
+
+                        </RelativeLayout>
+
+
+                    </LinearLayout>
+
+
+                    <LinearLayout style="@style/FormLayoutStyle_C">
+
+
+                        <TextView
+                            style="@style/FormTitleStyle"
+                            android:text="@string/str_output_item13" />
+
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/bg_edittext"
+                            android:gravity="left|center">
+
+                            <EditText
+                                android:id="@+id/et_item13"
+                                style="@style/EditTextStyle3"
+                                android:layout_width="match_parent"
+                                android:layout_gravity="center"
+                                android:background="@null"
+                                android:focusableInTouchMode="false"
+                                android:hint="@string/common_select_tips" />
+
+                            <ImageView
+                                android:layout_width="@dimen/x18"
+                                android:layout_height="@dimen/x18"
+                                android:layout_alignParentRight="true"
+                                android:layout_centerVertical="true"
+                                android:layout_marginHorizontal="@dimen/x10"
+                                android:clickable="false"
+                                android:src="@mipmap/ic_click_down" />
+
+                        </RelativeLayout>
+
+
+                    </LinearLayout>
+
+                    <LinearLayout style="@style/FormLayoutStyle_C">
+
+                        <TextView
+                            style="@style/FormTitleStyle"
+                            android:text="@string/str_output_item14" />
+
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/bg_edittext_disable"
+                            android:gravity="left|center">
+
+                            <EditText
+                                android:id="@+id/et_item14"
+                                style="@style/EditTextStyle3"
+                                android:layout_gravity="left"
+                                android:background="@null"
+                                android:focusableInTouchMode="false" />
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+
+                    <LinearLayout style="@style/FormLayoutStyle_C">
+
+
+                        <TextView
+                            style="@style/FormTitleStyle"
+                            android:text="@string/str_output_item3" />
+
+
+                        <RelativeLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:background="@drawable/bg_edittext"
+                            android:gravity="left|center">
+
+                            <EditText
+                                android:id="@+id/et_item3"
+                                style="@style/EditTextStyle3"
+                                android:layout_width="match_parent"
+                                android:layout_gravity="center"
+                                android:background="@null"
+                                android:focusableInTouchMode="false"
+                                android:hint="@string/common_select_scan_tips" />
+
+                            <ImageView
+                                android:layout_width="@dimen/x18"
+                                android:layout_height="@dimen/x18"
+                                android:layout_alignParentRight="true"
+                                android:layout_centerVertical="true"
+                                android:layout_marginHorizontal="@dimen/x10"
+                                android:clickable="false"
+                                android:src="@mipmap/ic_click_down" />
+
+                        </RelativeLayout>
+
+                        <LinearLayout
+                            android:id="@+id/ll_scan"
+                            android:layout_width="wrap_content"
+                            android:layout_height="@dimen/x40"
+                            android:layout_marginLeft="@dimen/x10"
+                            android:background="@drawable/button_green2"
+                            android:gravity="center">
+
+                            <ImageView
+                                style="@style/BtnImgStyle"
+                                android:layout_marginRight="0dp"
+                                android:src="@mipmap/ic_scan" />
+
+                        </LinearLayout>
+
+
+                    </LinearLayout>
+
+                    <LinearLayout style="@style/FormLayoutStyle_C">
+
+                        <TextView
+                            style="@style/FormTitleStyle"
+                            android:text="@string/str_output_item4" />
+
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/bg_edittext_disable"
+                            android:gravity="left|center">
+
+                            <EditText
+                                android:id="@+id/et_item4"
+                                style="@style/EditTextStyle3"
+                                android:layout_gravity="center"
+                                android:background="@null"
+                                android:enabled="false" />
+
+                        </LinearLayout>
+
+
+                    </LinearLayout>
+
+
+                    <LinearLayout style="@style/FormLayoutStyle_C">
+
+
+                        <TextView
+                            style="@style/FormTitleStyle"
+                            android:text="@string/str_output_item5" />
+
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/bg_edittext_disable"
+                            android:gravity="left|center">
+
+                            <EditText
+                                android:id="@+id/et_item7"
+                                style="@style/EditTextStyle3"
+                                android:layout_gravity="center"
+                                android:background="@null"
+                                android:enabled="false" />
+
+
+                        </LinearLayout>
+
+
+                    </LinearLayout>
+
+
+                    <LinearLayout style="@style/FormLayoutStyle_C">
+
+                        <TextView
+                            style="@style/FormTitleStyle"
+                            android:text="@string/str_output_item6" />
+
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/bg_edittext_disable"
+                            android:gravity="left|center">
+
+                            <EditText
+                                android:id="@+id/et_item6"
+                                style="@style/EditTextStyle3"
+                                android:layout_width="match_parent"
+                                android:layout_gravity="center"
+                                android:background="@null"
+                                android:enabled="false" />
+
+
+                        </RelativeLayout>
+
+
+                    </LinearLayout>
+
+
+                    <LinearLayout style="@style/FormLayoutStyle_C">
+
+
+                        <TextView
+                            style="@style/FormTitleStyle"
+                            android:text="@string/str_output_item21" />
+
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/bg_edittext"
+                            android:gravity="left|center">
+
+                            <EditText
+                                android:id="@+id/et_item5"
+                                style="@style/EditTextStyle3"
+                                android:layout_width="match_parent"
+                                android:layout_gravity="center"
+                                android:background="@null"
+                                android:focusableInTouchMode="false"
+                                android:hint="@string/common_select_tips" />
+
+                            <ImageView
+                                android:layout_width="@dimen/x18"
+                                android:layout_height="@dimen/x18"
+                                android:layout_alignParentRight="true"
+                                android:layout_centerVertical="true"
+                                android:layout_marginHorizontal="@dimen/x10"
+                                android:clickable="false"
+                                android:src="@mipmap/ic_click_down" />
+
+                        </RelativeLayout>
+
+                    </LinearLayout>
+
+
+                    <LinearLayout style="@style/FormLayoutStyle_C">
+
+
+                        <TextView
+                            style="@style/FormTitleStyle"
+                            android:text="@string/str_output_item11" />
+
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/bg_edittext"
+                            android:gravity="left|center">
+
+                            <EditText
+                                android:id="@+id/et_item11"
+                                style="@style/EditTextStyle3"
+                                android:layout_gravity="center"
+                                android:background="@null"
+                                android:enabled="false" />
+
+                        </LinearLayout>
+
+
+                    </LinearLayout>
+
+
+                    <LinearLayout style="@style/FormLayoutStyle_C">
+
+
+                        <TextView
+                            style="@style/FormTitleStyle"
+                            android:text="@string/str_output_item15" />
+
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/bg_edittext"
+                            android:gravity="left|center">
+
+                            <EditText
+                                android:id="@+id/et_item15"
+                                style="@style/EditTextStyle3"
+                                android:layout_width="match_parent"
+                                android:layout_gravity="center"
+                                android:background="@null"
+                                android:focusableInTouchMode="false"
+                                android:hint="@string/common_select_tips" />
+
+                            <ImageView
+                                android:layout_width="@dimen/x18"
+                                android:layout_height="@dimen/x18"
+                                android:layout_alignParentRight="true"
+                                android:layout_centerVertical="true"
+                                android:layout_marginHorizontal="@dimen/x10"
+                                android:clickable="false"
+                                android:src="@mipmap/ic_click_down" />
+
+                        </RelativeLayout>
+
+
+                    </LinearLayout>
+
+                    <LinearLayout style="@style/FormLayoutStyle_C">
+
+                        <TextView
+                            style="@style/FormTitleStyle"
+                            android:text="@string/str_output_item16" />
+
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/bg_edittext"
+                            android:gravity="left|center">
+
+                            <EditText
+                                android:id="@+id/et_item16"
+                                style="@style/EditTextStyle3"
+                                android:layout_width="match_parent"
+                                android:layout_gravity="center"
+                                android:background="@null"
+                                android:focusableInTouchMode="false"
+                                android:hint="@string/common_select_tips" />
+
+                            <ImageView
+                                android:layout_width="@dimen/x18"
+                                android:layout_height="@dimen/x18"
+                                android:layout_alignParentRight="true"
+                                android:layout_centerVertical="true"
+                                android:layout_marginHorizontal="@dimen/x10"
+                                android:clickable="false"
+                                android:src="@mipmap/ic_click_down" />
+
+                        </RelativeLayout>
+
+
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        style="@style/FormLayoutStyle_C"
+                        android:visibility="gone">
+
+
+                        <TextView
+                            style="@style/FormTitleStyle"
+                            android:text="@string/str_output_item9" />
+
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/bg_edittext_disable"
+                            android:gravity="left|center">
+
+                            <EditText
+                                android:id="@+id/et_item9"
+                                style="@style/EditTextStyle3"
+                                android:layout_gravity="center"
+                                android:background="@null"
+                                android:focusableInTouchMode="false" />
+
+                        </LinearLayout>
+
+
+                    </LinearLayout>
+
+
+                    <LinearLayout style="@style/FormLayoutStyle_C">
+
+                        <TextView
+                            style="@style/FormTitleStyle"
+                            android:text="@string/str_output_item12" />
+
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/bg_edittext">
+
+
+                            <com.grkj.ytjqy_pad.utils.view.AddNumberView
+                                android:id="@+id/add_view"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentRight="true"
+                                android:gravity="center" />
+
+
+                        </RelativeLayout>
+
+
+                    </LinearLayout>
+
+
+                    <LinearLayout style="@style/FormLayoutStyle_C">
+
+
+                        <TextView
+                            style="@style/FormTitleStyle"
+                            android:text="@string/str_output_item27" />
+
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/bg_edittext_disable"
+                            android:gravity="left|center">
+
+                            <EditText
+                                android:id="@+id/et_item23"
+                                style="@style/EditTextStyle3"
+                                android:layout_gravity="center"
+                                android:background="@null"
+                                android:focusableInTouchMode="false" />
+
+                        </LinearLayout>
+
+
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:id="@+id/ll_driver_info"
+                        style="@style/FormLayoutStyle_P"
+                        android:visibility="gone">
+
+
+                        <LinearLayout style="@style/FormLayoutStyle_C">
+
+                            <TextView
+                                style="@style/FormTitleStyle"
+                                android:text="@string/str_output_item28" />
+
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:background="@drawable/bg_edittext_disable"
+                                android:gravity="left|center">
+
+                                <EditText
+                                    android:id="@+id/et_item24"
+                                    style="@style/EditTextStyle3"
+                                    android:layout_gravity="center"
+                                    android:background="@null"
+                                    android:focusableInTouchMode="false" />
+
+                            </LinearLayout>
+
+
+                        </LinearLayout>
+
+
+                        <LinearLayout style="@style/FormLayoutStyle_C">
+
+
+                            <TextView
+                                style="@style/FormTitleStyle"
+                                android:text="@string/str_output_item29" />
+
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:background="@drawable/bg_edittext_disable"
+                                android:gravity="left|center">
+
+                                <EditText
+                                    android:id="@+id/et_item25"
+                                    style="@style/EditTextStyle3"
+                                    android:layout_gravity="center"
+                                    android:background="@null"
+                                    android:focusableInTouchMode="false" />
+
+                            </LinearLayout>
+
+
+                        </LinearLayout>
+
+
+                        <LinearLayout
+                            style="@style/FormLayoutStyle_C"
+                            android:visibility="gone">
+
+
+                            <TextView
+                                style="@style/FormTitleStyle"
+                                android:text="@string/str_output_item9" />
+
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:background="@mipmap/bg_edittext_disable"
+                                android:gravity="left|center">
+
+                                <!--  android:id="@+id/et_item9"       -->
+
+                                <EditText
+
+                                    style="@style/EditTextStyle3"
+                                    android:layout_gravity="center"
+                                    android:background="@null"
+                                    android:focusableInTouchMode="false" />
+
+                            </LinearLayout>
+
+
+                        </LinearLayout>
+
+
+                    </LinearLayout>
+
+
+                    <LinearLayout style="@style/FormLayoutStyle_C">
+
+
+                        <TextView
+                            style="@style/FormTitleStyleLong"
+                            android:text="@string/str_output_item17" />
+
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/bg_edittext"
+                            android:gravity="left|center">
+
+                            <com.grkj.ytjqy_pad.utils.popwindow.spinner.HistorySearchSpinner
+                                android:id="@+id/et_item18"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:paddingVertical="@dimen/x5"
+                                app:hint="@string/common_input_select_tips" />
+
+                        </LinearLayout>
+
+
+                    </LinearLayout>
+
+
+                    <LinearLayout style="@style/FormLayoutStyle_C">
+
+                        <TextView
+                            style="@style/FormTitleStyle"
+                            android:text="@string/str_output_item18" />
+
+
+                        <LinearLayout style="@style/SearchSpinnerLayoutStyle">
+
+                            <com.grkj.ytjqy_pad.utils.popwindow.spinner.SearchSpinner
+                                android:id="@+id/editSpinner_19"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="10dp"
+                                app:hint="@string/str_loading" />
+
+
+                        </LinearLayout>
+
+
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:id="@+id/ll_zyld"
+                        style="@style/FormLayoutStyle_C"
+                        android:visibility="gone">
+
+
+                        <TextView
+                            style="@style/FormTitleStyle"
+                            android:text="@string/str_output_item19" />
+
+
+                        <LinearLayout style="@style/SearchSpinnerLayoutStyle">
+
+
+                            <com.grkj.ytjqy_pad.utils.popwindow.spinner.SearchSpinner
+                                android:id="@+id/editSpinner_21"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="10dp"
+                                app:hint="@string/str_loading" />
+
+
+                        </LinearLayout>
+
+
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:id="@+id/ll_item20_21"
+                        style="@style/FormLayoutStyle_P">
+
+
+                        <LinearLayout style="@style/FormLayoutStyle_C">
+
+                            <TextView
+                                style="@style/FormTitleStyle"
+                                android:text="@string/str_output_item20" />
+
+
+                            <LinearLayout style="@style/SearchSpinnerLayoutStyle">
+
+                                <com.grkj.ytjqy_pad.utils.popwindow.spinner.SearchSpinner
+                                    android:id="@+id/editSpinner_22"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_margin="10dp"
+                                    app:hint="@string/str_loading" />
+
+
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/ll_item20"
+                        style="@style/FormLayoutStyle_P"
+                        android:visibility="gone">
+
+                        <LinearLayout style="@style/FormLayoutStyle_C">
+
+
+                            <TextView
+                                style="@style/FormTitleStyle"
+                                android:text="@string/str_input_item20" />
+
+
+                            <LinearLayout style="@style/SearchSpinnerLayoutStyle">
+
+                                <com.grkj.ytjqy_pad.utils.popwindow.spinner.SearchSpinner
+                                    android:id="@+id/editSpinner_20"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_margin="10dp"
+                                    app:hint="@string/str_loading" />
+
+
+                            </LinearLayout>
+
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            style="@style/FormLayoutStyle_C"
+                            android:visibility="invisible">
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+
+                </com.grkj.ytjqy_pad.utils.view.MyLinearLayout>
+
+            </LinearLayout>
+
+
+        </com.grkj.ytjqy_pad.utils.view.GrScrollView>
+
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginVertical="@dimen/x10"
+        android:focusable="true"
+        android:gravity="center|bottom"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:id="@+id/ll_save"
+            style="@style/BottomBtnStyle"
+            android:layout_marginHorizontal="@dimen/x20"
+            android:background="@drawable/button_style2">
+
+            <ImageView
+                style="@style/BtnImgStyle"
+                android:src="@mipmap/ic_save_white" />
+
+            <TextView
+                style="@style/BtnFontStyle"
+                android:text="保存" />
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/ll_delete"
+            style="@style/BottomBtnStyle"
+            android:layout_marginHorizontal="@dimen/x20"
+            android:background="@drawable/button_style4"
+            android:visibility="gone">
+
+            <ImageView
+                style="@style/BtnImgStyle"
+                android:src="@mipmap/ic_cancel_white" />
+
+            <TextView
+                style="@style/BtnFontStyle"
+                android:text="删除" />
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="@dimen/x10"
+        android:focusable="true"
+        android:gravity="center|bottom"
+        android:orientation="horizontal">
+
+
+        <LinearLayout
+            android:id="@+id/ll_print"
+            style="@style/BottomBtnStyle"
+            android:layout_marginHorizontal="@dimen/x20"
+            android:background="@drawable/button_style1"
+            android:visibility="gone">
+
+            <ImageView
+                style="@style/BtnImgStyle"
+                android:src="@mipmap/ic_get_label" />
+
+            <TextView
+                style="@style/BtnFontStyle"
+                android:text="生成标签" />
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone">
+
+            <LinearLayout
+                android:id="@+id/ll_handle"
+                style="@style/BottomBtnStyle"
+                android:layout_marginHorizontal="@dimen/x20"
+                android:background="@drawable/button_style3"
+                android:visibility="gone">
+
+                <TextView
+                    android:id="@+id/tv_handle"
+                    style="@style/BtnFontStyle"
+                    android:layout_marginLeft="@dimen/x5"
+                    android:padding="0dp"
+                    android:text="委外利用" />
+
+                <ImageView
+                    android:layout_width="@dimen/x18"
+                    android:layout_height="@dimen/x18"
+                    android:src="@mipmap/ic_menu_right" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/ll_check"
+            style="@style/BottomBtnStyle"
+            android:layout_marginHorizontal="@dimen/x20"
+            android:background="@drawable/button_style3"
+            android:visibility="gone">
+
+            <ImageView
+                style="@style/BtnImgStyle"
+                android:src="@mipmap/ic_hand_white" />
+
+            <TextView
+                android:id="@+id/tv_check"
+                style="@style/BtnFontStyle"
+                android:layout_marginLeft="@dimen/x5"
+                android:padding="0dp"
+                android:text="校准" />
+
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="@dimen/x10"
+        android:focusable="true"
+        android:gravity="center|bottom"
+        android:orientation="horizontal">
+
+
+        <LinearLayout
+            android:id="@+id/ll_sync"
+            style="@style/BottomBtnStyle"
+            android:layout_marginHorizontal="@dimen/x20"
+            android:background="@drawable/button_style5"
+            android:visibility="gone">
+
+
+            <ImageView
+                android:layout_width="@dimen/x18"
+                android:layout_height="@dimen/x18"
+                android:src="@mipmap/ic_hand_white" />
+
+
+            <TextView
+                android:id="@+id/tv_sync"
+                style="@style/BtnFontStyle"
+                android:layout_marginLeft="@dimen/x5"
+                android:padding="0dp"
+                android:text="同步" />
+
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+
+    <!--    <LinearLayout-->
+    <!--        android:layout_width="match_parent"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        android:layout_alignParentBottom="true"-->
+    <!--        android:layout_marginBottom="@dimen/x10"-->
+    <!--        android:focusable="true"-->
+    <!--        android:gravity="center|bottom"-->
+    <!--        android:orientation="horizontal">-->
+
+
+    <!--        <LinearLayout-->
+    <!--            android:id="@+id/ll_check"-->
+    <!--            style="@style/BottomBtnStyle"-->
+    <!--            android:layout_marginHorizontal="@dimen/x20"-->
+    <!--            android:background="@drawable/button_style2"-->
+    <!--            android:visibility="gone">-->
+
+    <!--            <ImageView-->
+    <!--                style="@style/BtnImgStyle"-->
+    <!--                android:src="@mipmap/ic_hand_white" />-->
+
+    <!--            <TextView-->
+    <!--                android:id="@+id/tv_check"-->
+    <!--                style="@style/BtnFontStyle"-->
+    <!--                android:layout_marginLeft="@dimen/x5"-->
+    <!--                android:padding="0dp"-->
+    <!--                android:text="校准" />-->
+
+
+    <!--        </LinearLayout>-->
+
+
+    <!--    </LinearLayout>-->
+
+    <RelativeLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/x60"
+        android:background="@mipmap/bg_logo_bottom"
+        android:visibility="gone">
+
+
+        <LinearLayout
+            android:id="@+id/ll_right_bottom"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/x30"
+            android:layout_marginBottom="@dimen/x5"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <TextView
+                android:id="@+id/tv_right_bottom1"
+                style="@style/Font10Style"
+                android:text="当前第一页" />
+
+
+            <TextView
+                android:id="@+id/tv_right_bottom2"
+                style="@style/Font10Style"
+                android:text="共5页，共30条" />
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/ll_left_bottom"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/x30"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <com.grkj.ytjqy_pad.utils.view.BoldTextView
+                android:id="@+id/tv_left_bottom"
+                style="@style/Font24Style"
+                android:text="2.999" />
+
+
+            <TextView
+                style="@style/Font10Style"
+                android:text="合计产生(吨)" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="@dimen/x30"
+            android:focusable="true"
+            android:gravity="center|bottom"
+            android:orientation="horizontal">
+
+
+            <LinearLayout
+                android:id="@+id/ll_back"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/x28"
+                android:background="@drawable/button_style1"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="@dimen/x18"
+                    android:layout_height="@dimen/x18"
+                    android:src="@mipmap/ic_back_white" />
+
+                <TextView
+                    style="@style/BtnFontStyle"
+                    android:layout_marginLeft="@dimen/x5"
+                    android:padding="0dp"
+                    android:text="返回" />
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/x28"
+                android:layout_marginHorizontal="@dimen/x30"
+                android:background="@drawable/button_style2"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="@dimen/x18"
+                    android:layout_height="@dimen/x18"
+                    android:src="@mipmap/ic_save_white" />
+
+                <TextView
+                    style="@style/BtnFontStyle"
+                    android:layout_marginLeft="@dimen/x5"
+                    android:padding="0dp"
+                    android:text="保存" />
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/x28"
+                android:background="@drawable/button_style4"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:visibility="gone">
+
+                <ImageView
+                    android:layout_width="@dimen/x18"
+                    android:layout_height="@dimen/x18"
+                    android:src="@mipmap/ic_cancel_white" />
+
+                <TextView
+                    style="@style/BtnFontStyle"
+                    android:layout_marginLeft="@dimen/x5"
+                    android:padding="0dp"
+                    android:text="删除" />
+
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:focusable="true"
+            android:gravity="center|bottom"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/tv_company"
+                style="@style/Font10Style"
+                android:text="@string/str_support" />
+
+            <TextView
+                android:id="@+id/mVersion"
+                style="@style/Font10Style"
+                android:layout_marginLeft="@dimen/x10"
+                android:text="当前版本:V1.0.0" />
+
+        </LinearLayout>
+
+
+    </RelativeLayout>
+
+
+</LinearLayout>

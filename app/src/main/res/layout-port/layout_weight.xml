@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_height="wrap_content"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:id="@+id/ll_weight"
+    android:padding="@dimen/x10">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <TextView
+                    style="@style/FormTitleStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_marginRight="@dimen/x20"
+                    android:text="废物净重(kg)" />
+
+
+                <com.grkj.ytjqy_pad.utils.view.BoldTextView
+                    android:id="@+id/tv_weight1"
+                    style="@style/Font24Style"
+                    android:inputType="numberDecimal"
+                    android:background="@mipmap/bg_edittext"
+                    android:padding="@dimen/x5"
+                    android:text="0.000" />
+
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="@dimen/x10"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <TextView
+                    style="@style/FormTitleStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_marginRight="@dimen/x20"
+                    android:text="废物毛重(kg)" />
+
+
+                <com.grkj.ytjqy_pad.utils.view.BoldTextView
+                    android:id="@+id/tv_weight2"
+                    style="@style/Font24Style"
+                    android:inputType="numberDecimal"
+                    android:background="@mipmap/bg_edittext"
+                    android:padding="@dimen/x5"
+                    android:text="0.000" />
+
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <TextView
+                    style="@style/FormTitleStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_marginRight="@dimen/x20"
+                    android:text="废物皮重(kg)" />
+
+
+                <EditText
+                    android:id="@+id/tv_weight3"
+                    style="@style/Font24Style"
+                    android:inputType="numberDecimal"
+                    android:background="@mipmap/bg_edittext"
+                    android:padding="@dimen/x5"
+                    android:hint="0.000" />
+
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="@dimen/x10"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/ll_select_blt"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:background="@drawable/button_style2"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:padding="@dimen/x5">
+
+                <ImageView
+                    android:layout_width="@dimen/x20"
+                    android:layout_height="@dimen/x20"
+                    android:src="@mipmap/ic_weight" />
+
+                <TextView
+                    style="@style/Font15Style"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/x5"
+                    android:padding="0dp"
+                    android:text="蓝牙称连接"
+                    android:textColor="@color/white" />
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_marginTop="@dimen/x5"
+                android:layout_weight="1.2"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:id="@+id/ll_clear"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:layout_marginRight="@dimen/x2"
+                    android:background="@drawable/button_style3"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:paddingHorizontal="@dimen/x10"
+                    android:paddingVertical="@dimen/x5">
+
+                    <ImageView
+                        android:layout_width="@dimen/x20"
+                        android:layout_height="@dimen/x20"
+                        android:src="@mipmap/ic_clear_white" />
+
+                    <TextView
+                        style="@style/Font15Style"
+                        android:layout_marginLeft="@dimen/x5"
+                        android:padding="0dp"
+                        android:text="清零"
+                        android:textColor="@color/white" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/ll_qp"
+                    android:layout_width="0dp"
+                    android:layout_marginLeft="@dimen/x2"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@drawable/button_style1"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:paddingHorizontal="@dimen/x10"
+                    android:paddingVertical="@dimen/x5">
+
+                    <ImageView
+                        android:layout_width="@dimen/x20"
+                        android:layout_height="@dimen/x20"
+                        android:src="@mipmap/ic_qp_white" />
+
+                    <TextView
+                        style="@style/Font15Style"
+                        android:layout_marginLeft="@dimen/x5"
+                        android:padding="0dp"
+                        android:text="去皮"
+                        android:textColor="@color/white" />
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <View
+        android:layout_marginVertical="@dimen/x5"
+        android:background="@color/line_color"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/x1"/>
+
+
+</LinearLayout>
+
+

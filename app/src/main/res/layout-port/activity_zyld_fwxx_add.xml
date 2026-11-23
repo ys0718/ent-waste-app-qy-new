@@ -1,0 +1,695 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/mLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_horizontal"
+    android:orientation="vertical">
+
+
+    <include layout="@layout/view_toolbar" />
+
+    <include
+        layout="@layout/view_toolbar_new"
+        android:visibility="gone" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            android:layout_marginBottom="@dimen/x20"
+            android:gravity="center"
+            android:paddingHorizontal="@dimen/x20">
+
+            <View
+                android:layout_width="@dimen/x5"
+                android:layout_height="match_parent"
+                android:layout_marginRight="@dimen/x10"
+                android:background="@drawable/button_style_primary" />
+
+            <TextView
+                android:id="@+id/tv_title"
+                style="@style/Font15Style"
+                android:layout_weight="1"
+                android:padding="0dp"
+                android:text="添加废物信息" />
+
+
+            <LinearLayout
+                android:id="@+id/ll_home"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/x28"
+                android:layout_marginLeft="@dimen/x15"
+                android:background="@drawable/button_style1"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="@dimen/x12"
+                    android:layout_height="@dimen/x12"
+                    android:src="@mipmap/ic_home_white" />
+
+                <TextView
+                    style="@style/BtnFontStyle"
+                    android:layout_marginLeft="@dimen/x5"
+                    android:padding="0dp"
+                    android:text="主页" />
+
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+
+        <com.grkj.ytjqy_pad.utils.view.MyScrollView
+            android:layout_width="match_parent"
+            android:layout_weight="1"
+            android:layout_height="0dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="@dimen/x10">
+
+
+                <com.grkj.ytjqy_pad.utils.view.MyLinearLayout
+                    android:id="@+id/ll_fwxx"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                <LinearLayout style="@style/FormLayoutStyle_P">
+
+                    <LinearLayout style="@style/FormLayoutStyle_C">
+
+                        <TextView
+                            style="@style/FormTitleStyle"
+                            android:text="@string/str_fwxx_item0" />
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/bg_edittext"
+                            android:gravity="left|center">
+
+                            <EditText
+                                android:id="@+id/et_item_fwxx"
+                                style="@style/EditTextStyle3"
+                                android:layout_width="match_parent"
+                                android:layout_gravity="center"
+                                android:background="@null"
+                                android:focusableInTouchMode="false"
+                                android:hint="@string/str_fwxx_hint0" />
+
+                            <ImageView
+                                android:layout_width="@dimen/x12"
+                                android:layout_height="@dimen/x12"
+                                android:layout_alignParentRight="true"
+                                android:layout_centerVertical="true"
+                                android:layout_marginHorizontal="@dimen/x10"
+                                android:clickable="false"
+                                android:src="@mipmap/ic_click_down" />
+
+                        </RelativeLayout>
+
+                    </LinearLayout>
+
+                    <LinearLayout style="@style/FormLayoutStyle_C">
+
+                        <TextView
+                            style="@style/FormTitleStyle"
+                            android:text="@string/str_fwxx_item1" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/bg_edittext_disable"
+                            android:gravity="left|center">
+
+                            <EditText
+                                android:id="@+id/et_item_fwdm"
+                                style="@style/EditTextStyle3"
+                                android:layout_width="match_parent"
+                                android:layout_gravity="center"
+                                android:background="@null"
+                                android:enabled="false"
+                                android:hint="自动回填" />
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+
+                <LinearLayout style="@style/FormLayoutStyle_P">
+
+                    <LinearLayout style="@style/FormLayoutStyle_C">
+
+                        <TextView
+                            style="@style/FormTitleStyle"
+                            android:text="@string/str_fwxx_item2" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/bg_edittext_disable"
+                            android:gravity="left|center">
+
+                            <EditText
+                                android:id="@+id/et_item_fwmc"
+                                style="@style/EditTextStyle3"
+                                android:layout_width="match_parent"
+                                android:layout_gravity="center"
+                                android:background="@null"
+                                android:enabled="false"
+                                android:hint="自动回填" />
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <LinearLayout style="@style/FormLayoutStyle_C">
+
+                        <TextView
+                            style="@style/FormTitleStyle"
+                            android:text="@string/str_fwxx_item3" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/bg_edittext_disable"
+                            android:gravity="left|center">
+
+                            <EditText
+                                android:id="@+id/et_item_lyczfs"
+                                style="@style/EditTextStyle3"
+                                android:layout_width="match_parent"
+                                android:layout_gravity="center"
+                                android:background="@null"
+                                android:enabled="false"
+                                android:hint="自动回填" />
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+
+                <LinearLayout style="@style/FormLayoutStyle_P"
+                    android:id="@+id/ll_xnbq"
+                    android:visibility="gone"
+                    >
+
+                    <LinearLayout style="@style/FormLayoutStyle_C">
+
+                        <TextView
+                            style="@style/FormTitleStyle"
+                            android:text="@string/str_fwxx_item8" />
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/bg_edittext"
+                            android:gravity="left|center">
+
+                            <EditText
+                                android:id="@+id/et_item_zcsstybh"
+                                style="@style/EditTextStyle3"
+                                android:layout_width="match_parent"
+                                android:layout_gravity="center"
+                                android:background="@null"
+                                android:focusableInTouchMode="false"
+                                android:hint="@string/str_fwxx_hint4" />
+
+                            <ImageView
+                                android:layout_width="@dimen/x12"
+                                android:layout_height="@dimen/x12"
+                                android:layout_alignParentRight="true"
+                                android:layout_centerVertical="true"
+                                android:layout_marginHorizontal="@dimen/x10"
+                                android:clickable="false"
+                                android:src="@mipmap/ic_click_down" />
+
+                        </RelativeLayout>
+
+                    </LinearLayout>
+
+
+                    <LinearLayout style="@style/FormLayoutStyle_C">
+
+                        <TextView
+                            style="@style/FormTitleStyle"
+                            android:text="@string/str_fwxx_item7" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/bg_edittext"
+                            android:gravity="left|center">
+
+                            <EditText
+                                android:id="@+id/et_item_zyl"
+                                style="@style/EditTextStyle3"
+                                android:layout_width="match_parent"
+                                android:layout_gravity="center"
+                                android:background="@null"
+                                android:inputType="numberDecimal"
+                                android:text="0" />
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+
+                <LinearLayout style="@style/FormLayoutStyle_P">
+
+                    <LinearLayout style="@style/FormLayoutStyle_C">
+
+                        <TextView
+                            style="@style/FormTitleStyle"
+                            android:text="@string/str_fwxx_item4" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/bg_edittext_disable"
+                            android:gravity="left|center">
+
+                            <EditText
+                                android:id="@+id/et_item_cfxxtybh"
+                                style="@style/EditTextStyle3"
+                                android:layout_width="match_parent"
+                                android:layout_gravity="center"
+                                android:background="@null"
+                                android:enabled="false"
+                                android:hint="自动回填" />
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+
+
+                    <LinearLayout style="@style/FormLayoutStyle_C">
+
+                        <TextView
+                            style="@style/FormTitleStyle"
+                            android:text="@string/str_fwxx_item5" />
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/bg_edittext"
+                            android:gravity="left|center">
+
+                            <EditText
+                                android:id="@+id/et_item_bzfs"
+                                style="@style/EditTextStyle3"
+                                android:layout_width="match_parent"
+                                android:layout_gravity="center"
+                                android:background="@null"
+                                android:focusableInTouchMode="false"
+                                android:hint="@string/str_fwxx_hint1" />
+
+                            <ImageView
+                                android:layout_width="@dimen/x12"
+                                android:layout_height="@dimen/x12"
+                                android:layout_alignParentRight="true"
+                                android:layout_centerVertical="true"
+                                android:layout_marginHorizontal="@dimen/x10"
+                                android:clickable="false"
+                                android:src="@mipmap/ic_click_down" />
+
+                        </RelativeLayout>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+
+                <LinearLayout style="@style/FormLayoutStyle_P">
+
+                    <LinearLayout style="@style/FormLayoutStyle_C">
+
+                        <TextView
+                            style="@style/FormTitleStyle"
+                            android:text="@string/str_fwxx_item6" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/bg_edittext"
+                            android:gravity="left|center">
+
+                            <EditText
+                                android:id="@+id/et_item_bzfsjs"
+                                style="@style/EditTextStyle3"
+                                android:layout_width="match_parent"
+                                android:layout_gravity="center"
+                                android:background="@null"
+                                android:hint="@string/common_input_tips" />
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+
+                </com.grkj.ytjqy_pad.utils.view.MyLinearLayout>
+
+
+                <LinearLayout style="@style/FormLayoutStyle_P"
+                    android:visibility="gone"
+                    android:id="@+id/ll_dbld"
+                    >
+
+                    <LinearLayout style="@style/FormLayoutStyle_C">
+
+                        <TextView
+                            style="@style/FormTitleStyle"
+                            android:text="@string/str_fwxx_item9" />
+
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/bg_edittext"
+                            android:gravity="left|center">
+
+                            <EditText
+                                android:id="@+id/et_item_clyj"
+                                style="@style/EditTextStyle3"
+                                android:layout_width="match_parent"
+                                android:layout_gravity="center"
+                                android:background="@null"
+                                android:focusableInTouchMode="false"
+                                android:hint="@string/str_fwxx_hint5" />
+
+                            <ImageView
+                                android:layout_width="@dimen/x12"
+                                android:layout_height="@dimen/x12"
+                                android:layout_alignParentRight="true"
+                                android:layout_centerVertical="true"
+                                android:layout_marginHorizontal="@dimen/x10"
+                                android:clickable="false"
+                                android:src="@mipmap/ic_click_down" />
+
+                        </RelativeLayout>
+
+                    </LinearLayout>
+
+                    <LinearLayout style="@style/FormLayoutStyle_C">
+
+                        <TextView
+                            style="@style/FormTitleStyle"
+                            android:text="@string/str_fwxx_item10" />
+
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/bg_edittext"
+                            android:gravity="left|center">
+
+                            <EditText
+                                android:id="@+id/et_item_sfczzdcy"
+                                style="@style/EditTextStyle3"
+                                android:layout_width="match_parent"
+                                android:layout_gravity="center"
+                                android:background="@null"
+                                android:focusableInTouchMode="false"
+                                android:hint="@string/common_select_tips" />
+
+                            <ImageView
+                                android:layout_width="@dimen/x12"
+                                android:layout_height="@dimen/x12"
+                                android:layout_alignParentRight="true"
+                                android:layout_centerVertical="true"
+                                android:layout_marginHorizontal="@dimen/x10"
+                                android:clickable="false"
+                                android:src="@mipmap/ic_click_down" />
+
+                        </RelativeLayout>
+
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+
+                <!-- 非虚拟标签展示 -->
+                <LinearLayout
+                    android:id="@+id/ll_not_xnbq"
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <!-- 转移批次号信息 -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/x10"
+                        android:gravity="center"
+                        android:orientation="horizontal">
+
+                        <View
+                            android:layout_width="@dimen/x5"
+                            android:layout_height="match_parent"
+                            android:layout_marginRight="@dimen/x10"
+                            android:background="@drawable/button_style_primary" />
+
+                        <TextView
+                            style="@style/Font15Style"
+                            android:layout_weight="1"
+                            android:padding="0dp"
+                            android:text="转移批次号信息" />
+
+                        <LinearLayout
+                            android:id="@+id/ll_add_pch"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/button_style2"
+                            android:gravity="center"
+                            android:orientation="horizontal">
+
+                            <ImageView
+                                android:layout_width="@dimen/x18"
+                                android:layout_height="@dimen/x18"
+                                android:src="@mipmap/ic_add" />
+
+                            <TextView
+                                style="@style/BtnFontStyle"
+                                android:layout_marginLeft="@dimen/x5"
+                                android:padding="0dp"
+                                android:text="添加批次号" />
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <!-- 转移批次号表头 -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/x10"
+                        android:background="@drawable/bg_edittext"
+                        android:gravity="center"
+                        android:orientation="horizontal"
+                        android:layout_marginBottom="@dimen/x2"
+                        android:paddingHorizontal="@dimen/x10"
+                        android:paddingVertical="@dimen/x5">
+
+
+                        <TextView
+                            style="@style/Font12Style"
+                            android:layout_width="0dp"
+                            android:layout_weight="1.5"
+                            android:gravity="center"
+                            android:text="转移数量" />
+
+                        <TextView
+                            style="@style/Font12Style"
+                            android:layout_width="0dp"
+                            android:layout_weight="1.5"
+                            android:gravity="center"
+                            android:text="接受数量" />
+
+                        <TextView
+                            style="@style/Font12Style"
+                            android:layout_width="0dp"
+                            android:layout_weight="0.8"
+                            android:gravity="center"
+                            android:visibility="gone"
+                            android:text="计量单位" />
+
+                        <TextView
+                            style="@style/Font12Style"
+                            android:layout_width="0dp"
+                            android:gravity="center"
+                            android:layout_weight="2.2"
+                            android:text="数字识别码" />
+
+                        <TextView
+                            style="@style/Font12Style"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:visibility="gone"
+                            android:text="数据来源" />
+
+                        <TextView
+                            style="@style/Font12Style"
+                            android:layout_width="0dp"
+                            android:layout_weight="0.8"
+                            android:gravity="center"
+                            android:text="操作" />
+
+                    </LinearLayout>
+
+                    <!-- 转移批次号列表 -->
+                    <LinearLayout
+                        android:id="@+id/ll_pch_list"
+                        android:layout_width="match_parent"
+                        android:minHeight="@dimen/x100"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical" />
+
+
+                </LinearLayout>
+
+
+
+
+            </LinearLayout>
+
+        </com.grkj.ytjqy_pad.utils.view.MyScrollView>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginVertical="@dimen/x10"
+            android:focusable="true"
+            android:gravity="center|bottom"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:id="@+id/ll_save"
+                style="@style/BottomBtnStyle"
+                android:layout_marginHorizontal="@dimen/x20"
+                android:background="@drawable/button_style2">
+
+                <ImageView
+                    style="@style/BtnImgStyle"
+                    android:src="@mipmap/ic_save_white" />
+
+                <TextView
+                    style="@style/BtnFontStyle"
+                    android:text="保存" />
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:id="@+id/ll_delete"
+                style="@style/BottomBtnStyle"
+                android:layout_marginHorizontal="@dimen/x20"
+                android:background="@drawable/button_style4"
+                android:visibility="gone">
+
+                <ImageView
+                    style="@style/BtnImgStyle"
+                    android:src="@mipmap/ic_cancel_white" />
+
+                <TextView
+                    style="@style/BtnFontStyle"
+                    android:text="删除" />
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+        
+        
+        <RelativeLayout
+            android:visibility="gone"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/x60"
+            android:background="@mipmap/bg_logo_bottom">
+
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:id="@+id/ll_back"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/x28"
+                    android:layout_marginRight="@dimen/x20"
+                    android:background="@drawable/button_style1"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="@dimen/x12"
+                        android:layout_height="@dimen/x12"
+                        android:src="@mipmap/ic_back_white" />
+
+                    <TextView
+                        style="@style/BtnFontStyle"
+                        android:layout_marginLeft="@dimen/x5"
+                        android:padding="0dp"
+                        android:text="返回" />
+
+                </LinearLayout>
+
+
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:focusable="true"
+                android:gravity="center|bottom"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/tv_company"
+                    style="@style/Font10Style"
+                    android:text="@string/str_support" />
+
+                <TextView
+                    android:id="@+id/mVersion"
+                    style="@style/Font10Style"
+                    android:layout_marginLeft="@dimen/x10"
+                    android:text="当前版本:V1.0.0" />
+
+            </LinearLayout>
+
+
+        </RelativeLayout>
+
+
+    </LinearLayout>
+
+</LinearLayout>

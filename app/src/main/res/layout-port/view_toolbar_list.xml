@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/toolbar"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:minHeight="@dimen/x60"
+    android:orientation="vertical">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/x220"
+        android:background="@mipmap/bg_top" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/x50"
+        android:layout_marginTop="@dimen/x30"
+        android:minHeight="@dimen/x60">
+
+
+        <LinearLayout
+            android:id="@+id/ll_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/iv_back"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/x10"
+                android:padding="@dimen/x10"
+                android:src="@mipmap/ic_back_white" />
+
+        </LinearLayout>
+
+
+        <TextView
+            android:id="@+id/tv_title"
+            style="@style/Size18TitleTextStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_marginLeft="@dimen/x10"
+            android:layout_marginRight="@dimen/x10"
+            android:ellipsize="end"
+            android:gravity="center"
+            android:maxLines="1"
+            android:text="@string/app_name"
+            android:textColor="@color/white"
+            android:textSize="@dimen/x20"
+            android:textStyle="bold" />
+
+
+    </RelativeLayout>
+
+
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/x40"
+        android:layout_marginTop="@dimen/x110"
+        app:cardCornerRadius="@dimen/x10">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@mipmap/bg_total_top"
+            android:orientation="vertical"
+            android:padding="@dimen/x20">
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center|left"
+                android:orientation="horizontal">
+
+
+                <ImageView
+                    android:id="@+id/iv_total_left"
+                    android:layout_width="@dimen/x40"
+                    android:layout_height="@dimen/x40"
+                    android:src="@mipmap/ic_total" />
+
+                <TextView
+                    android:id="@+id/tv_left_bottom2"
+                    style="@style/Font16Style"
+                    android:text="合计产废"
+                    android:textColor="@color/colorFontA"
+                    android:textStyle="bold" />
+
+
+                <TextView
+                    android:id="@+id/tv_title2"
+                    style="@style/Font12Style"
+                    android:text="只显示当天数据"
+                    android:textColor="@color/colorFontA" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center|left"
+                android:orientation="horizontal">
+
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content">
+
+                    <com.grkj.ytjqy_pad.utils.view.BoldTextView
+                        android:id="@+id/tv_left_bottom"
+                        style="@style/Font24Style"
+                        android:text="0.000"
+                        android:textColor="@color/colorFontGreen"
+                        android:textSize="@dimen/x40" />
+
+
+                    <TextView
+                        style="@style/Font12Style"
+                        android:text="吨"
+                        android:textColor="@color/colorFontA" />
+
+
+                </LinearLayout>
+
+
+                    <TextView
+                        android:id="@+id/tv_right_bottom2"
+                        style="@style/Font15Style"
+                        android:text="共0页，共0条"
+                        android:textColor="@color/colorFontA" />
+
+
+
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+
+    </android.support.v7.widget.CardView>
+
+
+</RelativeLayout>

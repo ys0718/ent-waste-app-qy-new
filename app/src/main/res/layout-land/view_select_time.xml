@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center"
+    android:id="@+id/mLayout"
+    android:orientation="horizontal">
+
+    <LinearLayout
+        android:id="@+id/ll_start_time"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:background="@mipmap/bg_edittext"
+        android:gravity="left|center">
+
+        <TextView
+            android:id="@+id/tv_start_time"
+            style="@style/EditTextStyle3"
+            android:layout_gravity="center"
+            android:background="@null"
+            android:duplicateParentState="true"
+            android:hint="开始时间" />
+
+        <ImageView
+            android:layout_width="@dimen/x12"
+            android:layout_height="@dimen/x12"
+            android:visibility="gone"
+            android:clickable="true"
+            android:id="@+id/iv_start_clear"
+            android:src="@mipmap/ic_clear" />
+
+        <ImageView
+            android:layout_width="@dimen/x18"
+            android:layout_height="@dimen/x18"
+            android:layout_marginHorizontal="@dimen/x10"
+            android:duplicateParentState="true"
+            android:src="@mipmap/ic_date" />
+
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/x10"
+        android:text="-"
+        android:textColor="@color/white" />
+
+    <LinearLayout
+        android:id="@+id/ll_end_time"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:background="@mipmap/bg_edittext"
+        android:gravity="left|center">
+
+        <TextView
+            android:id="@+id/tv_end_time"
+            style="@style/EditTextStyle3"
+            android:layout_gravity="center"
+            android:background="@null"
+            android:duplicateParentState="true"
+            android:hint="结束时间" />
+
+        <ImageView
+            android:layout_width="@dimen/x12"
+            android:layout_height="@dimen/x12"
+            android:visibility="gone"
+            android:clickable="true"
+            android:id="@+id/iv_end_clear"
+            android:src="@mipmap/ic_clear" />
+
+        <ImageView
+            android:layout_width="@dimen/x18"
+            android:layout_height="@dimen/x18"
+            android:layout_marginHorizontal="@dimen/x10"
+            android:duplicateParentState="true"
+            android:src="@mipmap/ic_date" />
+
+    </LinearLayout>
+
+
+</LinearLayout>

@@ -1,0 +1,20 @@
+{
+  "version": 3,
+  "artifactType": {
+    "type": "APK",
+    "kind": "Directory"
+  },
+  "applicationId": "com.grkj.ytjqy_pad",
+  "variantName": "release",
+  "elements": [
+    {
+      "type": "SINGLE",
+      "filters": [],
+      "attributes": [],
+      "versionCode": 17,
+      "versionName": "1.1.7.2",
+      "outputFile": "appqyV1.1.7.2_202605261048.apk"
+    }
+  ],
+  "elementType": "File"
+}

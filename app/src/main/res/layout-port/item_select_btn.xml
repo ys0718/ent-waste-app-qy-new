@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Button xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/tv_value"
+    style="@style/SelectBtnStyle"
+    android:layout_marginHorizontal="@dimen/x5"
+    android:background="@drawable/button_style6"
+    android:textColor="@color/color_gray_to_white"
+    android:text="全部" />

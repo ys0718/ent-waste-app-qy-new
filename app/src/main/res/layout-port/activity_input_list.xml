@@ -1,0 +1,323 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+    tools:ignore="MissingDefaultResource">
+
+    <include
+        layout="@layout/view_toolbar_list"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/x20"
+        android:orientation="horizontal"
+        android:paddingHorizontal="@dimen/x40">
+
+
+
+        <LinearLayout
+            android:id="@+id/ll_add"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginRight="@dimen/x5"
+            android:background="@drawable/button_green2"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/iv_right1"
+                android:layout_width="@dimen/x24"
+                android:layout_height="@dimen/x24"
+                android:src="@mipmap/ic_hand_white" />
+
+            <TextView
+                android:id="@+id/tv_right1"
+                style="@style/BtnFontStyle"
+                android:textSize="@dimen/x13"
+                android:layout_marginLeft="@dimen/x5"
+                android:padding="@dimen/x10"
+                android:text="手动入库" />
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/ll_add3"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/button_orange2"
+            android:layout_marginHorizontal="@dimen/x10"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/iv_right3"
+                android:layout_width="@dimen/x24"
+                android:layout_height="@dimen/x24"
+                android:src="@mipmap/ic_weight" />
+
+            <TextView
+                android:id="@+id/tv_right3"
+                style="@style/BtnFontStyle"
+                android:textSize="@dimen/x13"
+                android:layout_marginLeft="@dimen/x5"
+                android:padding="@dimen/x10"
+                android:text="蓝牙称重" />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_add2"
+            android:layout_width="0dp"
+            android:layout_marginLeft="@dimen/x5"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/button_purple"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/iv_right2"
+                android:layout_width="@dimen/x24"
+                android:layout_height="@dimen/x24"
+                android:src="@mipmap/ic_scan" />
+
+            <TextView
+                android:id="@+id/tv_right2"
+                style="@style/BtnFontStyle"
+                android:textSize="@dimen/x13"
+                android:layout_marginLeft="@dimen/x5"
+                android:padding="@dimen/x10"
+                android:text="扫码入库" />
+
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:layout_marginHorizontal="@dimen/x20"
+        android:paddingHorizontal="@dimen/x10">
+
+        <com.scwang.smartrefresh.layout.SmartRefreshLayout
+            android:id="@+id/refresh_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="@dimen/x10">
+
+
+            <com.grkj.ytjqy_pad.utils.view.GrRecyclerView
+                android:id="@+id/mRecyclerView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="@dimen/x10" />
+
+        </com.scwang.smartrefresh.layout.SmartRefreshLayout>
+
+
+    </LinearLayout>
+
+
+
+    <LinearLayout
+        android:visibility="gone"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <include
+            layout="@layout/view_toolbar_new"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:visibility="gone"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:visibility="gone"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:paddingHorizontal="@dimen/x20">
+
+                <View
+                    android:layout_width="@dimen/x5"
+                    android:layout_height="match_parent"
+                    android:layout_marginRight="@dimen/x10"
+                    android:background="@drawable/button_style_primary" />
+
+
+                <LinearLayout
+                    android:id="@+id/ll_home"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/x28"
+                    android:background="@drawable/button_style1"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:visibility="gone">
+
+                    <ImageView
+                        android:layout_width="@dimen/x12"
+                        android:layout_height="@dimen/x12"
+                        android:src="@mipmap/ic_home_white" />
+
+                    <TextView
+                        style="@style/BtnFontStyle"
+                        android:layout_marginLeft="@dimen/x5"
+                        android:padding="0dp"
+                        android:text="主页" />
+
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:visibility="gone"
+            android:layout_height="@dimen/x60"
+            android:background="@mipmap/bg_logo_bottom">
+
+
+            <LinearLayout
+                android:id="@+id/ll_right_bottom"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/x60"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentBottom="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="@dimen/x30"
+                android:layout_marginBottom="@dimen/x5"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tv_right_bottom1"
+                    style="@style/Font12Style"
+                    android:text="当前第一页"
+                    android:visibility="gone" />
+
+
+<!--                <TextView-->
+<!--                    android:id="@+id/tv_right_bottom2"-->
+<!--                    style="@style/Font12Style"-->
+<!--                    android:layout_gravity="center"-->
+<!--                    android:text="共1页，共0条" />-->
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="@dimen/x150"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+
+                <LinearLayout
+                    android:id="@+id/ll_left_bottom"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/x10"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+
+
+                    <TextView
+                        android:id="@+id/tv_left_bottom2"
+                        style="@style/Font10Style"
+                        android:text="合计产生(吨)" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/ll_left_bottom2"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/x10"
+                    android:layout_toRightOf="@+id/ll_left_bottom"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+                    <com.grkj.ytjqy_pad.utils.view.BoldTextView
+                        android:id="@+id/tv_left_bottom3"
+                        style="@style/Font24Style"
+                        android:text="0.000"
+                        android:textColor="@color/colorFontOrange" />
+
+
+                    <TextView
+                        android:id="@+id/tv_left_bottom4"
+                        style="@style/Font10Style"
+                        android:text="出库(吨)" />
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:focusable="true"
+                android:gravity="center|bottom"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/tv_company"
+                    style="@style/Font10Style"
+                    android:text="@string/str_support" />
+
+                <TextView
+                    android:id="@+id/mVersion"
+                    style="@style/Font10Style"
+                    android:layout_marginLeft="@dimen/x10"
+                    android:text="当前版本:V1.0.0" />
+
+            </LinearLayout>
+
+
+        </RelativeLayout>
+
+
+    </LinearLayout>
+
+
+
+
+</LinearLayout>

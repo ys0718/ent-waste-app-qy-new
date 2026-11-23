@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tool="http://schemas.android.com/tools"
+    package="com.grkj.module_hardware">
+
+    <uses-permission android:name="android.permission.BLUETOOTH" />
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
+    <uses-permission
+        android:name="android.permission.BLUETOOTH_PRIVILEGED"
+        tool:ignore="ProtectedPermissions" />
+<!--    <uses-permission android:name="android.permission.BLUETOOTH_SCAN" />-->
+    <uses-permission android:name="android.permission.BLUETOOTH_CONNECT" />
+
+    <uses-feature
+        android:name="android.hardware.usb.host"
+        android:required="true" />
+
+    <uses-permission android:name="android.hardware.usb.UsbAccessory" />
+
+    <application>
+        <service
+            android:name=".weight.UsbWeighService"
+            android:enabled="true" />
+
+    </application>
+
+</manifest>
