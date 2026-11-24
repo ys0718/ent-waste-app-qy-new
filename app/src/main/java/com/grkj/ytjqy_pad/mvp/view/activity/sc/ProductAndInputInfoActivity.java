@@ -382,7 +382,7 @@ public class ProductAndInputInfoActivity extends WeightBaseActivity<ProductAndIn
     @Override
     protected void initPortraitView() {
         super.initPortraitView();
-        initTopToolbar("产废入库");
+        initTopToolbar("产生并入库");
     }
 
     private void initView() {

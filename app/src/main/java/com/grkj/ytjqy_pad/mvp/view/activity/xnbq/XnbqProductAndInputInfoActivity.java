@@ -379,7 +379,7 @@ public class XnbqProductAndInputInfoActivity extends WeightBaseActivity<XnbqProd
     @Override
     protected void initPortraitView() {
         super.initPortraitView();
-        initTopToolbar("产废入库");
+        initTopToolbar("产生入库");
     }
 
     private void initView() {

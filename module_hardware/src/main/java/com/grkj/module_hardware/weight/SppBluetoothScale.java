@@ -31,7 +31,7 @@ import java.util.concurrent.atomic.AtomicBoolean;
  * 1. 连接 SPP 蓝牙设备，自动读取数据。
  * 2. 支持定时发送查询指令（主动查询模式）。
  * 3. 支持数据节流：无论设备推送频率多高，都可按固定间隔回调最新重量。
- * 4. 连接失败后自动重连（间隔 1 秒，无限重试，直至成功或外部主动断开）。
+ * 4. 有连接成功记录的设备，连接失败后自动重连（间隔 1 秒，最多重连 5 次）。
  * </p>
  *
  * @author YourName
@@ -82,6 +82,7 @@ public class SppBluetoothScale {
     private final Object reconnectLock = new Object();    // 重连任务同步锁
 
     private int reconnectCount = 0;
+    private volatile boolean hasConnectedOnce = false; // 是否有连接成功的记录（仅成功连接过才允许自动重连）
 
     public interface Callback {
         void onConnectionStateChange(boolean connected);
@@ -241,20 +242,21 @@ public class SppBluetoothScale {
 
             isConnected = true;
             isFirstData = true;
+            hasConnectedOnce = true;
             postConnectionState(true);
             startReadThread();
             reconnectCount = 0;
         } catch (IOException e) {
             Log.e(TAG, "连接失败", e);
 
-            if(reconnectCount<5 && callback!=null){ //重连5次
+            if(hasConnectedOnce && reconnectCount<5 && callback!=null){ //有成功连接记录时，重连5次
                 postError("连接失败，尝试重新连接...");
                 // 清理本次失败产生的资源（不通知断开，因为状态本来就是断开）
                 closeAndCleanup(false);
-                // 调度 3 秒后自动重连
+                // 调度 1 秒后自动重连
                 scheduleReconnect();
             }else {
-//                postError("连接失败，请检查是否打开蓝牙地磅！");
+                postError("连接失败，请检查是否打开蓝牙地磅！");
             }
             reconnectCount ++;
         }
@@ -316,6 +318,10 @@ public class SppBluetoothScale {
      * 调度 1 秒后执行重连
      */
     private void scheduleReconnect() {
+        // 没有连接成功的记录，不进行自动重连
+        if (!hasConnectedOnce) {
+            return;
+        }
         // 如果已经连接，不需要重连
         if (isConnected) {
             return;

@@ -63,6 +63,8 @@ public class Constants {
     public static final String KEY_YSDWMC = "ysdwmc";
 
     public static final String KEY_YSBMJBR = "ysbmjbr";
+
+    public static final String IS_MENU_V1 = "is_menu_v1";
     public static final String KEY_CKBMJBR = "ckbmjbr";
     public static final String IS_HN_MENU = "is_hn_menu";
     public static final String SELECT_DWID = "xwqyDwid";

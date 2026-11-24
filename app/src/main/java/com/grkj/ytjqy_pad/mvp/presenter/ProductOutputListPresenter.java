@@ -202,7 +202,7 @@ public class ProductOutputListPresenter extends RxPresenter<ProductOutputListPre
             public void onFailure(String msg) {
                 mView.showError(msg);
             }
-        }, mContext));
+        }, mContext,false));
     }
 
 

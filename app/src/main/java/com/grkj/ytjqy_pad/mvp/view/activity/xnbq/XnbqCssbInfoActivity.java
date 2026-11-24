@@ -749,6 +749,7 @@ public class XnbqCssbInfoActivity extends WeightBaseActivity<XnbqCssbInfoPresent
         allParamList = GsonUtil.JsonToList(json, ParamListBean.class);
         if (!isNew) {
 //            initView();
+            // TODO: 2026/11/23
             mPresenter.getRkInfo(mData.ckZxlyczXnbqId);
         }
     }
@@ -767,10 +768,6 @@ public class XnbqCssbInfoActivity extends WeightBaseActivity<XnbqCssbInfoPresent
         finish();
     }
 
-    @Override
-    public void getCshjInfoSuccess(Object bean) {
-
-    }
 
     @Override
     public void getRkInfoSuccess(Object bean) {

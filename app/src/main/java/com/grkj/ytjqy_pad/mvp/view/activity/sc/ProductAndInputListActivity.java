@@ -131,7 +131,7 @@ public class ProductAndInputListActivity extends BaseActivity<ProductInputListPr
             findViewById(R.id.ll_add2).setVisibility(View.GONE);
             findViewById(R.id.ll_add3).setVisibility(View.GONE);
         }
-        tv_title.setText("产废入库");
+        tv_title.setText("产生并入库");
         initRecycleView();
         refreshLayout.autoRefresh();
     }

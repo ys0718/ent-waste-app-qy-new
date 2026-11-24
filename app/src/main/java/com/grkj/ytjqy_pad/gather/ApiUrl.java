@@ -217,6 +217,12 @@ public class ApiUrl {
     //虚拟标签-根据id查询产生申报台账
     public static final String URL_XNBQ_CSSB_INFO = "/ent-waste-qy/ybqy/gfYbqyTzCkZxlyczXnbq/getYbqyTzCkZxlyczById";
 
+    //虚拟标签-根据id查询产生申报台账
+    public static final String URL_XNBQ_CSSB_INFO_BY_ID = "/ent-waste-qy/ybqy/gfYbqyTzNewCsXnbq/getCsXnbqById";
+
+    //虚拟标签-根据id查询产生申报-立产立处理
+    public static final String URL_XNBQ_CSSB_LCLCL = "/ent-waste-qy/ybqy/gfYbqyTzXnbqLclqLclzy/getByCsSbId";
+
     //保存-入库
     public static final String URL_PRODUCT_INPUT_SAVE = "/ent-waste-qy/ybqy/tzRk/save";
 

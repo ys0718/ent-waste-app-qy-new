@@ -70,7 +70,6 @@ import butterknife.BindView;
 
 public class HomeActivity extends BaseActivity<HomePresenter> implements HomePresenter.View {
 
-
     @BindView(R.id.mVersion)
     TextView mVersion;
 
@@ -523,9 +522,12 @@ public class HomeActivity extends BaseActivity<HomePresenter> implements HomePre
         ToastUtil.showToast(mContext, msg);
     }
 
+    private boolean isGetTotal = false;
+
     @Override
     public void getTotalInfoSuccess(Object bean) {
 
+        isGetTotal = true;
         if (!isLandscape) {
             refresh_layout.finishRefresh();
         }
@@ -626,7 +628,7 @@ public class HomeActivity extends BaseActivity<HomePresenter> implements HomePre
     @Override
     protected void onResume() {
         super.onResume();
-        if (!isLandscape) {
+        if (!isLandscape && !isGetTotal) {
             refresh_layout.autoRefresh();
         }
         //置空选中的dwid

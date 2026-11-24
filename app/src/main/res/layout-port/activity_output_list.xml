@@ -42,7 +42,7 @@
                 android:layout_marginLeft="@dimen/x5"
                 android:padding="@dimen/x10"
                 android:text="手动出库"
-                android:textSize="@dimen/x13" />
+                android:textSize="@dimen/x15" />
 
 
         </LinearLayout>
@@ -70,7 +70,7 @@
                 android:layout_marginLeft="@dimen/x5"
                 android:padding="@dimen/x10"
                 android:text="蓝牙称重"
-                android:textSize="@dimen/x13" />
+                android:textSize="@dimen/x15" />
 
 
         </LinearLayout>
@@ -107,7 +107,7 @@
                 android:layout_marginLeft="@dimen/x5"
                 android:padding="@dimen/x10"
                 android:text="扫码出库"
-                android:textSize="@dimen/x13" />
+                android:textSize="@dimen/x15" />
 
 
         </LinearLayout>
@@ -119,9 +119,9 @@
             android:layout_marginLeft="@dimen/x10"
             android:layout_weight="1"
             android:background="@drawable/button_style1"
-            android:visibility="gone"
             android:gravity="center"
-            android:orientation="horizontal">
+            android:orientation="horizontal"
+            android:visibility="gone">
 
             <ImageView
                 android:id="@+id/iv_right4"
@@ -135,7 +135,7 @@
                 android:layout_marginLeft="@dimen/x5"
                 android:padding="@dimen/x10"
                 android:text="批量出库"
-                android:textSize="@dimen/x13" />
+                android:textSize="@dimen/x15" />
 
         </LinearLayout>
 

@@ -166,30 +166,6 @@ public class XnbqCssbInfoPresenter extends RxPresenter<XnbqCssbInfoPresenter.Vie
     }
 
 
-    /**
-     * 获取产生环节信息
-     */
-    public void getCshjInfo(String id) {
-        if (TextUtils.isEmpty(id)) {
-            return;
-        }
-
-        Map<String, String> params = new HashMap<>();
-        params.put("id", id);
-        Observable<Object> observable = apiServer.CommonGet(token, ApiUrl.getHnUrl(ApiUrl. URL_GET_CSHJ_INFO), params).map(new HttpResultFunc<Object>());
-        addSubscription(observable, new SubscriberCallBack(new ApiCallback<Object>() {
-            @Override
-            public void onSuccess(Object result) {
-                mView.getCshjInfoSuccess(result);
-            }
-
-            @Override
-            public void onFailure(String msg) {
-                mView.showError(msg);
-            }
-        }, mContext));
-    }
-
 
     /**
      * 获取入库信息
@@ -470,7 +446,6 @@ public class XnbqCssbInfoPresenter extends RxPresenter<XnbqCssbInfoPresenter.Vie
 
         void sbgjRequestSuccess(String bean);
 
-        void getCshjInfoSuccess(Object bean);
 
         void getRkInfoSuccess(Object bean);
 

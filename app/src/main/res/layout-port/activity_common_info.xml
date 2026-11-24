@@ -703,6 +703,7 @@
 
                             <TextView
                                 style="@style/FormTitleStyle"
+                                android:layout_width="@dimen/x200"
                                 android:text="@string/str_record_item17" />
 
 

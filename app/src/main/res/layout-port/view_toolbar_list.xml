@@ -87,7 +87,7 @@
                 <TextView
                     android:id="@+id/tv_left_bottom2"
                     style="@style/Font16Style"
-                    android:text="合计产废"
+                    android:text="合计总量"
                     android:textColor="@color/colorFontA"
                     android:textStyle="bold" />
 

@@ -182,35 +182,6 @@ public class WeightUtils2 {
     }
 
 
-//    //初始化蓝牙秤
-//    public void initBltWeight() {
-//        BluetoothAdapter bluetoothAdapter = BluetoothAdapter.getDefaultAdapter();
-//        Set<BluetoothDevice> bondedDevices = bluetoothAdapter.getBondedDevices();
-//        String address = SPUtils.get(mContext, "blt_connected_address", "").toString();
-//        String xshqName = SPUtils.get(mContext, HexUtil.WEIGHT_NAME, "").toString();
-//        String xshqMac = SPUtils.get(mContext, HexUtil.WEIGHT_MAC, "").toString();
-//
-//        if (bondedDevices.size() > 0 && !TextUtils.isEmpty(address)) {
-//            for (BluetoothDevice device : bondedDevices) {
-//                if (address.equals(device.getAddress())) {
-//                    isFirstGetWeight = true;
-//                    _device = device;
-//                    btnConnect_Click(_device);
-//                } else {
-//                    if (!TextUtils.isEmpty(xshqName)) {
-//                        connectBlt(xshqMac);
-//                    } else {
-//                        scanBlt();
-//                    }
-//                }
-//            }
-//        } else if (!TextUtils.isEmpty(xshqName)) {
-//            connectBlt(xshqMac);
-//        } else {
-//            scanBlt();
-//        }
-//    }
-
     private SppBluetoothScale scaleHelper;
 
     //初始化蓝牙秤
@@ -413,7 +384,7 @@ public class WeightUtils2 {
         }
 
         if(scaleHelper!=null && !scaleHelper.isConnected()){
-            KLog.e("蓝牙称已连接");
+            KLog.e("点击连接蓝牙");
             scaleHelper.connect(device.getAddress());
         }
 

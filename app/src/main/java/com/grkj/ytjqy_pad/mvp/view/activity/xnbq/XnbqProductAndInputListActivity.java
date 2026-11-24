@@ -148,6 +148,7 @@ public class XnbqProductAndInputListActivity extends BaseActivity<XnbqProductInp
     @Override
     protected void initPortraitView(){
         super.initPortraitView();
+        findViewById(R.id.tv_title2).setVisibility(View.GONE);
         mRecyclerView.setLayoutManager(new LinearLayoutManager(mContext));
     }
 

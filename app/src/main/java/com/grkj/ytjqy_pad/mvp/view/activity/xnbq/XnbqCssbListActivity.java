@@ -117,6 +117,7 @@ public class XnbqCssbListActivity extends BaseActivity<XnbqCssbListPresenter> im
     @Override
     protected void initPortraitView(){
         super.initPortraitView();
+        findViewById(R.id.tv_title2).setVisibility(View.GONE);
         mRecyclerView.setLayoutManager(new LinearLayoutManager(mContext));
     }
 

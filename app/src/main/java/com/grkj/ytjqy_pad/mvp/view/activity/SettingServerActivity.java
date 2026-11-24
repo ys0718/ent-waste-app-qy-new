@@ -89,10 +89,19 @@ public class SettingServerActivity extends SimpleActivity {
     @BindView(R.id.iv_https)
     ImageView iv_https;
 
+    //菜单1.0
+    @BindView(R.id.iv_v1)
+    ImageView iv_v1;
+
+    //菜单2.0
+    @BindView(R.id.iv_v2)
+    ImageView iv_v2;
+
     private Animation netAni;
     private String successIp;
     private String successPort;
     private String contractName = "http://";
+    private boolean isMenuV1 = true;
 
     @Override
     protected int getLayout() {
@@ -121,6 +130,8 @@ public class SettingServerActivity extends SimpleActivity {
         String port = (String) SPUtils.get(mContext, "Port", "");
         contractName = (String) SPUtils.get(mContext, "CONTRACT_NAME", "http://");
 
+        isMenuV1 = (boolean) SPUtils.get(mContext,Constants.IS_MENU_V1,true);
+
         KLog.e("ip:" + ip);
         KLog.e("port:" + port);
 
@@ -144,6 +155,9 @@ public class SettingServerActivity extends SimpleActivity {
             iv_http.setImageResource(R.mipmap.ic_unselected);
             iv_https.setImageResource(R.mipmap.ic_selected);
         }
+
+        iv_v1.setImageResource(isMenuV1?R.mipmap.ic_selected:R.mipmap.ic_unselected);
+        iv_v2.setImageResource(!isMenuV1?R.mipmap.ic_selected:R.mipmap.ic_unselected);
 
         initBottom();
 //
@@ -198,7 +212,7 @@ public class SettingServerActivity extends SimpleActivity {
         }
     };
 
-    @OnClick({R.id.btn_save, R.id.btn_test,R.id.ll_back,R.id.ll_htttp,R.id.ll_htttps})
+    @OnClick({R.id.btn_save, R.id.btn_test,R.id.ll_back,R.id.ll_htttp,R.id.ll_htttps,R.id.ll_v1,R.id.ll_v2})
     public void onClick(View view) {
         switch (view.getId()) {
             // 保存配置
@@ -225,7 +239,18 @@ public class SettingServerActivity extends SimpleActivity {
             case R.id.ll_back:
                 finish();
                 break;
-            // http
+            // 菜单v1.0
+            case R.id.ll_v1:
+                isMenuV1 = true;
+                iv_v1.setImageResource(R.mipmap.ic_selected);
+                iv_v2.setImageResource(R.mipmap.ic_unselected);
+                break;
+            // 菜单v2.0
+            case R.id.ll_v2:
+                isMenuV1 = false;
+                iv_v2.setImageResource(R.mipmap.ic_selected);
+                iv_v1.setImageResource(R.mipmap.ic_unselected);
+                break;
             case R.id.ll_htttp:
                 iv_http.setImageResource(R.mipmap.ic_selected);
                 iv_https.setImageResource(R.mipmap.ic_unselected);
@@ -283,6 +308,8 @@ public class SettingServerActivity extends SimpleActivity {
         String url = contractName + et_ip.getText().toString() + ":" + et_port.getText().toString();
         //判断点击保存时的IP地址与测试时的IP地址是否一致
         if (ip.equals(successIp) && port.equals(successPort)) {
+
+            SPUtils.put(mContext,Constants.IS_MENU_V1,isMenuV1);
 
             SPUtils.put(mContext, "IP", successIp);
             SPUtils.put(mContext, "Port", successPort);

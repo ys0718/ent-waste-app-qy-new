@@ -427,7 +427,13 @@ public class LoginActivity extends BaseActivity<LoginPresenter> implements Login
 
     private void gotoHome() {
         ToastUtil.showToast(mContext, "登录成功！");
-        startActivity(new Intent(mContext, HomeActivity.class).putExtra(Constants.JUMP_KEY, menuBeanListStr));
+        boolean isMenuV1 = (boolean) SPUtils.get(mContext, Constants.IS_MENU_V1, true);
+
+        if (isMenuV1){
+            startActivity(new Intent(mContext, OldHomeActivity.class).putExtra(Constants.JUMP_KEY, menuBeanListStr));
+        }else {
+            startActivity(new Intent(mContext, HomeActivity.class).putExtra(Constants.JUMP_KEY, menuBeanListStr));
+        }
         finish();
     }
 
