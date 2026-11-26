@@ -23,6 +23,7 @@ import com.grkj.ytjqy_pad.mvp.presenter.SjOutputListPresenter;
 import com.grkj.ytjqy_pad.mvp.view.activity.czdw.OutputLargeScanActivity;
 import com.grkj.ytjqy_pad.mvp.view.activity.czdw.SjOutputLargeScanActivity;
 import com.grkj.ytjqy_pad.utils.common.GsonUtil;
+import com.grkj.ytjqy_pad.utils.common.NumberUtils;
 import com.grkj.ytjqy_pad.utils.common.ToastUtil;
 import com.scwang.smartrefresh.layout.SmartRefreshLayout;
 import com.socks.library.KLog;
@@ -305,13 +306,8 @@ public class SjOutputListActivity extends BaseActivity<SjOutputListPresenter> im
     }
 
     @Override
-    public void getTotalWeightSuccess(String model){
-        if (!TextUtils.isEmpty(model)) {
-            tv_left_bottom.setText(model);
-        } else {
-            tv_left_bottom.setText(getResources().getText(R.string.common_zero));
-        }
-
+    public void getTotalWeightSuccess(String total){
+        tv_left_bottom.setText(NumberUtils.formatNumber(total));
     }
 
     @Override

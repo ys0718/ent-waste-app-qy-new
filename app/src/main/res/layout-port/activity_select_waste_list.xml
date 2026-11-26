@@ -237,7 +237,7 @@
             android:id="@+id/ll_save"
             style="@style/BottomBtnStyle"
             android:layout_marginHorizontal="@dimen/x20"
-            android:background="@drawable/button_style2">
+            android:background="@drawable/button_style1">
 
             <ImageView
                 style="@style/BtnImgStyle"

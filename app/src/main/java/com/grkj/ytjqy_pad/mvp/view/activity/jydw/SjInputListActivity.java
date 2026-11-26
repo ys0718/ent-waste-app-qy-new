@@ -22,6 +22,7 @@ import com.grkj.ytjqy_pad.mvp.model.EnterpriseInfoBean;
 import com.grkj.ytjqy_pad.mvp.model.QyAccountInfoListBean;
 import com.grkj.ytjqy_pad.mvp.presenter.SjInputListPresenter;
 import com.grkj.ytjqy_pad.utils.common.GsonUtil;
+import com.grkj.ytjqy_pad.utils.common.NumberUtils;
 import com.scwang.smartrefresh.layout.SmartRefreshLayout;
 import com.zhy.adapter.recyclerview.CommonAdapter;
 import com.zhy.adapter.recyclerview.MultiItemTypeAdapter;
@@ -277,11 +278,7 @@ public class SjInputListActivity extends BaseActivity<SjInputListPresenter> impl
 
     @Override
     public void getTotalWeightSuccess(String total) {
-        if (!TextUtils.isEmpty(total)) {
-            tv_left_bottom.setText(total);
-        } else {
-            tv_left_bottom.setText(getResources().getText(R.string.common_zero));
-        }
+        tv_left_bottom.setText(NumberUtils.formatNumber(total));
 
     }
 

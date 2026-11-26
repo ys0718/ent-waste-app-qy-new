@@ -24,6 +24,7 @@ import com.grkj.ytjqy_pad.mvp.model.StatisticsInfoListBean;
 import com.grkj.ytjqy_pad.mvp.presenter.JytzInputListPresenter;
 import com.grkj.ytjqy_pad.mvp.view.activity.czdw.InputLargeScanActivity;
 import com.grkj.ytjqy_pad.utils.common.GsonUtil;
+import com.grkj.ytjqy_pad.utils.common.NumberUtils;
 import com.scwang.smartrefresh.layout.SmartRefreshLayout;
 import com.zhy.adapter.recyclerview.CommonAdapter;
 import com.zhy.adapter.recyclerview.MultiItemTypeAdapter;
@@ -119,7 +120,7 @@ public class JytzLyczListActivity extends BaseActivity<JytzInputListPresenter> i
             findViewById(R.id.ll_add2).setVisibility(View.GONE);
             findViewById(R.id.ll_add3).setVisibility(View.GONE);
         }
-        tv_title.setText("利用处置");
+        tv_title.setText("自行利用");
         initRecycleView();
         refreshLayout.autoRefresh();
 
@@ -287,13 +288,8 @@ public class JytzLyczListActivity extends BaseActivity<JytzInputListPresenter> i
     }
 
     @Override
-    public void getTotalWeightSuccess(String model) {
-        if (!TextUtils.isEmpty(model)) {
-            tv_left_bottom.setText(model);
-        } else {
-            tv_left_bottom.setText(getResources().getText(R.string.common_zero));
-        }
-
+    public void getTotalWeightSuccess(String total) {
+        tv_left_bottom.setText(NumberUtils.formatNumber(total));
     }
 
 

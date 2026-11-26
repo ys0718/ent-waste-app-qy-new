@@ -25,6 +25,7 @@ import com.grkj.ytjqy_pad.mvp.model.xnbq.GfYbqyTzCkZxlyczXnbq;
 import com.grkj.ytjqy_pad.mvp.view.activity.czdw.InputLargeScanActivity;
 import com.grkj.ytjqy_pad.mvp.presenter.XnbqCkzxlyczListPresenter;
 import com.grkj.ytjqy_pad.utils.common.GsonUtil;
+import com.grkj.ytjqy_pad.utils.common.NumberUtils;
 import com.scwang.smartrefresh.layout.SmartRefreshLayout;
 import com.zhy.adapter.recyclerview.CommonAdapter;
 import com.zhy.adapter.recyclerview.MultiItemTypeAdapter;
@@ -279,12 +280,7 @@ public class XnbqCkzxlyczListActivity extends BaseActivity<XnbqCkzxlyczListPrese
 
     @Override
     public void getTotalWeightSuccess(StatisticsInfoListBean model){
-        if (!TextUtils.isEmpty(model.CSL)) {
-            tv_left_bottom.setText(model.CSL);
-        } else {
-            tv_left_bottom.setText(getResources().getText(R.string.common_zero));
-        }
-
+        tv_left_bottom.setText(NumberUtils.formatNumber(model.CSL));
     }
 
     @Override

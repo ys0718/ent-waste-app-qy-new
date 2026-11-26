@@ -17,6 +17,7 @@ import com.grkj.ytjqy_pad.mvp.model.StockListBean;
 import com.grkj.ytjqy_pad.mvp.model.ZcssBean;
 import com.grkj.ytjqy_pad.mvp.presenter.StockListPresenter;
 import com.grkj.ytjqy_pad.utils.common.GsonUtil;
+import com.grkj.ytjqy_pad.utils.common.NumberUtils;
 import com.grkj.ytjqy_pad.utils.popwindow.SelectPopupWindow;
 import com.grkj.ytjqy_pad.utils.popwindow.SelectPopupWindowBean;
 import com.scwang.smartrefresh.layout.SmartRefreshLayout;
@@ -250,11 +251,7 @@ public class StockListActivity extends BaseActivity<StockListPresenter> implemen
 
     @Override
     public void getTotalWeightSuccess(String total){
-        if (!TextUtils.isEmpty(total)) {
-            tv_left_bottom.setText(total);
-        } else {
-            tv_left_bottom.setText(getResources().getString(R.string.common_zero));
-        }
+        tv_left_bottom.setText(NumberUtils.formatNumber(total));
     }
 
     @Override

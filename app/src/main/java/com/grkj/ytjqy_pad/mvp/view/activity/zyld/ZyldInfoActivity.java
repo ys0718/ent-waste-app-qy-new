@@ -251,7 +251,7 @@ public class ZyldInfoActivity extends BaseActivity<ZyldInfoPresenter> implements
     protected void initEventAndData() {
 
         String dataStr = getIntent().getStringExtra(Constants.JUMP_KEY);
-        isDbld = getIntent().getBooleanExtra("isDbld",false);
+        isDbld = getIntent().getBooleanExtra("isDbld", false);
         if (TextUtils.isEmpty(dataStr)) {//新增
             isNew = true;
             mData = new GfWxfwZyld();
@@ -272,7 +272,7 @@ public class ZyldInfoActivity extends BaseActivity<ZyldInfoPresenter> implements
 
         }
 
-        et_ycdw_search.setKey(Constants.KEY_YSDWMC,false);
+        et_ycdw_search.setKey(Constants.KEY_YSDWMC, false);
         et_item_ysbmjbr.setKey(Constants.KEY_YSBMJBR);
         et_item_ckbmjbr.setKey(Constants.KEY_CKBMJBR);
         Map<String, String> map = new HashMap<>();
@@ -283,7 +283,7 @@ public class ZyldInfoActivity extends BaseActivity<ZyldInfoPresenter> implements
 
     //视图回显
     private void initView() {
-        if (TextUtils.isEmpty(mData.gjldbh)){//国家联单编号为空时，可上报国家
+        if (TextUtils.isEmpty(mData.gjldbh)) {//国家联单编号为空时，可上报国家
             ll_upload.setVisibility(View.VISIBLE);
             ll_select_jsdw.setVisibility(View.VISIBLE);
             ll_delete.setVisibility(View.VISIBLE);
@@ -291,7 +291,7 @@ public class ZyldInfoActivity extends BaseActivity<ZyldInfoPresenter> implements
             ll_save.setVisibility(View.VISIBLE);
 
             editable = true;//可编辑
-        }else {
+        } else {
             ll_upload.setVisibility(View.GONE);
             ll_select_jsdw.setVisibility(View.GONE);
             ll_delete.setVisibility(View.GONE);
@@ -304,8 +304,7 @@ public class ZyldInfoActivity extends BaseActivity<ZyldInfoPresenter> implements
         }
 
 
-
-        if(isDbld){
+        if (isDbld) {
             ll_jsdwjbr.setVisibility(View.VISIBLE);
             ll_save.setVisibility(View.VISIBLE);
             ll_upload.setVisibility(View.VISIBLE);
@@ -446,7 +445,7 @@ public class ZyldInfoActivity extends BaseActivity<ZyldInfoPresenter> implements
             // 上报国家
             case R.id.ll_upload:
                 String url = ApiUrl.URL_ZYLD_SBGJ;
-                if (isDbld){
+                if (isDbld) {
                     url = ApiUrl.URL_ZYLD_SBGJ_TODO;
                 }
 
@@ -500,6 +499,7 @@ public class ZyldInfoActivity extends BaseActivity<ZyldInfoPresenter> implements
                 mPresenter.getFwList(mData.id);
                 break;
             case 10://运输单位信息
+                et_ycdw_search.clearFocus();
                 mPresenter.getYsqyInfoById(mData.id);
                 break;
             case 11://选择处置单位信息
@@ -528,7 +528,7 @@ public class ZyldInfoActivity extends BaseActivity<ZyldInfoPresenter> implements
     private void initYsdwView(GfWxfwZyldYsxx ysdwInfo) {
         zyldYsxx = ysdwInfo;
         ll_search_ysdw.setVisibility(View.GONE);
-        if (editable){
+        if (editable) {
             iv_delete_ysdw.setVisibility(View.VISIBLE);
         }
         et_item_ysdwmc.setText(ysdwInfo.ysdwmc);
@@ -544,7 +544,9 @@ public class ZyldInfoActivity extends BaseActivity<ZyldInfoPresenter> implements
      * 判空处理
      * */
     private String checkEmpty() {
-        if (TextUtils.isEmpty(mData.jsdwqyid)) {
+        if (TextUtils.isEmpty(mData.zylx)) {
+            return "请选择转移类型！";
+        } else if (TextUtils.isEmpty(mData.jsdwqyid)) {
             return "请选择接收单位！";
         } else {
             return "";

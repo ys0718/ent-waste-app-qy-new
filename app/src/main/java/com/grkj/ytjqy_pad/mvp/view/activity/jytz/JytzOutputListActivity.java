@@ -23,6 +23,7 @@ import com.grkj.ytjqy_pad.mvp.model.StatisticsInfoListBean;
 import com.grkj.ytjqy_pad.mvp.presenter.JytzOutputListPresenter;
 import com.grkj.ytjqy_pad.mvp.view.activity.czdw.OutputLargeScanActivity;
 import com.grkj.ytjqy_pad.utils.common.GsonUtil;
+import com.grkj.ytjqy_pad.utils.common.NumberUtils;
 import com.grkj.ytjqy_pad.utils.common.ToastUtil;
 import com.scwang.smartrefresh.layout.SmartRefreshLayout;
 import com.socks.library.KLog;
@@ -140,7 +141,7 @@ public class JytzOutputListActivity extends BaseActivity<JytzOutputListPresenter
             findViewById(R.id.ll_add2).setVisibility(View.GONE);
             findViewById(R.id.ll_add3).setVisibility(View.GONE);
         }
-        tv_title.setText("出库登记");
+        tv_title.setText("经营出库");
         initRecycleView();
         refreshLayout.autoRefresh();
 //        mPresenter.getButtonList();
@@ -309,13 +310,8 @@ public class JytzOutputListActivity extends BaseActivity<JytzOutputListPresenter
     }
 
     @Override
-    public void getTotalWeightSuccess(String model){
-        if (!TextUtils.isEmpty(model)) {
-            tv_left_bottom.setText(model);
-        } else {
-            tv_left_bottom.setText(getResources().getText(R.string.common_zero));
-        }
-
+    public void getTotalWeightSuccess(String total){
+        tv_left_bottom.setText(NumberUtils.formatNumber(total));
     }
 
 

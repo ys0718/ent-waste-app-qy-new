@@ -24,6 +24,7 @@ import com.grkj.ytjqy_pad.mvp.model.StatisticsInfoListBean;
 import com.grkj.ytjqy_pad.mvp.presenter.ProductOutputListPresenter;
 import com.grkj.ytjqy_pad.mvp.view.activity.czdw.OutputLargeScanActivity;
 import com.grkj.ytjqy_pad.utils.common.GsonUtil;
+import com.grkj.ytjqy_pad.utils.common.NumberUtils;
 import com.grkj.ytjqy_pad.utils.common.SPUtils;
 import com.grkj.ytjqy_pad.utils.common.ToastUtil;
 import com.scwang.smartrefresh.layout.SmartRefreshLayout;
@@ -309,11 +310,7 @@ public class ProductOutputListActivity extends BaseActivity<ProductOutputListPre
 
     @Override
     public void getTotalWeightSuccess(StatisticsInfoListBean model){
-        if (!TextUtils.isEmpty(model.ckl_day)) {
-            tv_left_bottom.setText(model.ckl_day);
-        } else {
-            tv_left_bottom.setText(getResources().getText(R.string.common_zero));
-        }
+        tv_left_bottom.setText(NumberUtils.formatNumber(model.ckl_day));
 
     }
 

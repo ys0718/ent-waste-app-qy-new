@@ -21,6 +21,7 @@ import com.grkj.ytjqy_pad.mvp.model.QyAccountInfoListBean;
 import com.grkj.ytjqy_pad.mvp.presenter.WasteOutputListPresenter;
 import com.grkj.ytjqy_pad.utils.common.DateTimeUtil;
 import com.grkj.ytjqy_pad.utils.common.GsonUtil;
+import com.grkj.ytjqy_pad.utils.common.NumberUtils;
 import com.scwang.smartrefresh.layout.SmartRefreshLayout;
 import com.zhy.adapter.recyclerview.CommonAdapter;
 import com.zhy.adapter.recyclerview.MultiItemTypeAdapter;
@@ -250,12 +251,8 @@ public class WasteOutputListActivity extends BaseActivity<WasteOutputListPresent
     }
 
     @Override
-    public void getTotalWeightSuccess(String result) {
-        if (!TextUtils.isEmpty(result)) {
-            tv_left_bottom.setText(result);
-        } else {
-            tv_left_bottom.setText(getResources().getText(R.string.common_zero));
-        }
+    public void getTotalWeightSuccess(String total) {
+        tv_left_bottom.setText(NumberUtils.formatNumber(total));
     }
 
     private Subscription rxSubscription;

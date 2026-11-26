@@ -20,6 +20,7 @@ import com.grkj.ytjqy_pad.gather.RxBus;
 import com.grkj.ytjqy_pad.mvp.model.WwlyListBean;
 import com.grkj.ytjqy_pad.mvp.presenter.ProductWwlyListPresenter;
 import com.grkj.ytjqy_pad.utils.common.GsonUtil;
+import com.grkj.ytjqy_pad.utils.common.NumberUtils;
 import com.grkj.ytjqy_pad.utils.common.ToastUtil;
 import com.scwang.smartrefresh.layout.SmartRefreshLayout;
 import com.zhy.adapter.recyclerview.CommonAdapter;
@@ -274,7 +275,7 @@ public class ProductWwlyListActivity extends BaseActivity<ProductWwlyListPresent
 
     @Override
     public void getTotalWeightSuccess(String total) {
-        tv_left_bottom.setText(total);
+        tv_left_bottom.setText(NumberUtils.formatNumber(total));
     }
 
     @Override

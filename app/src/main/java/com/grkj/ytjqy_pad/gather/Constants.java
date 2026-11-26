@@ -144,7 +144,6 @@ public class Constants {
     public static final String PRINTER_NAME = "printer_name";
     public static final String PRINTER_MAC = "printer_mac";
 
-
     public static final String LAST_ZCSS = "last_zcss";
 
 

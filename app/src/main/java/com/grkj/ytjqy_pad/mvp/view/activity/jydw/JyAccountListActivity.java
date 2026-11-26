@@ -25,6 +25,7 @@ import com.grkj.ytjqy_pad.mvp.view.activity.ProductInputListActivity;
 import com.grkj.ytjqy_pad.mvp.view.activity.ProductOutputListActivity;
 import com.grkj.ytjqy_pad.mvp.view.activity.ProductRecordListActivity;
 import com.grkj.ytjqy_pad.utils.common.GsonUtil;
+import com.grkj.ytjqy_pad.utils.common.NumberUtils;
 import com.grkj.ytjqy_pad.utils.common.SPUtils;
 import com.grkj.ytjqy_pad.utils.popwindow.SelectPopupWindowBean;
 import com.grkj.ytjqy_pad.utils.popwindow.model.Select;
@@ -439,17 +440,9 @@ public class JyAccountListActivity extends BaseActivity<JyAccountListPresenter> 
     }
 
     @Override
-    public void getTotalWeightSuccess(StatisticsInfoListBean total){
-        if (!TextUtils.isEmpty(total.rkl)) {
-            tv_left_bottom.setText(total.rkl);
-        } else {
-            tv_left_bottom.setText(getResources().getText(R.string.common_zero));
-        }
-        if (!TextUtils.isEmpty(total.ckl)) {
-            tv_left_bottom3.setText(total.ckl);
-        } else {
-            tv_left_bottom3.setText(getResources().getText(R.string.common_zero));
-        }
+    public void getTotalWeightSuccess(StatisticsInfoListBean model){
+        tv_left_bottom.setText(NumberUtils.formatNumber(model.rkl));
+        tv_left_bottom3.setText(NumberUtils.formatNumber(model.ckl));
     }
 
 

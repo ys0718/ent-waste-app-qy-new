@@ -469,7 +469,7 @@
     <string name="str_zyld_item2">国家联单编号：%1$s</string>
     <string name="str_zyld_item3">接收单位名称：%1$s</string>
     <string name="str_zyld_item4">转移类型：%1$s</string>
-    <string name="str_zyld_item5">转移类型：</string>
+    <string name="str_zyld_item5"><font color="#e51e5f">*</font>转移类型：</string>
     <string name="str_zyld_item6">国家联单编号：</string>
     <string name="str_zyld_item7">精细化联单编号：</string>
     <string name="str_zyld_item8">移出单位联系人：</string>
