@@ -256,7 +256,7 @@ public class SppBluetoothScale {
                 // 调度 1 秒后自动重连
                 scheduleReconnect();
             }else {
-                postError("连接失败，请检查是否打开蓝牙地磅！");
+//                postError("连接失败，请检查是否打开蓝牙地磅！");
             }
             reconnectCount ++;
         }

@@ -252,7 +252,7 @@ public class LoginActivity extends BaseActivity<LoginPresenter> implements Login
         SPUtils.put(mContext, Constants.DEVICE_CODE, deviceCode);
 
 
-        initBugly();
+//        initBugly();
 //        tv_device.setText(getString(R.string.str_device, deviceCode)+(Constants.IS_DEBUG?"(调试模式)":""));
         tv_device.setText(getString(R.string.str_device, deviceCode) + (BuildConfig.DEBUG ? "(调试模式)" : ""));
 //        tv_device.setText(dm.heightPixels + "x" + dm.widthPixels + "x" + dm.densityDpi);

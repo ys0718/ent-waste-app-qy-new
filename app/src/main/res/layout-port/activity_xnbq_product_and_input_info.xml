@@ -208,7 +208,6 @@
 
                         </LinearLayout>
 
-                        <LinearLayout style="@style/FormLayoutStyle_C" />
 
 
                     </LinearLayout>

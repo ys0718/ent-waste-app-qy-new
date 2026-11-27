@@ -366,7 +366,7 @@ public class BasePrintLabelActivity extends SimpleActivity {
     //打印德佟标签
     private String printDp12370Label() {
         boolean isPrintSuccess;
-        int orientation = 180;
+        int orientation = 0;
         Bitmap bmp = LabelBitmapGenerator.createLabelBitmap(mContext, mData, labelType);
         // 获取打印数据并进行打印
         if (bmp != null) {
@@ -975,6 +975,11 @@ public class BasePrintLabelActivity extends SimpleActivity {
                 });
                 unbindService(conn);
             }
+
+            if (dp12370Api != null) {
+                dp12370Api.quit();
+            }
+
 
             if (mPrintLib != null) {
                 if (mPrintLib.isConnected()) {

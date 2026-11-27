@@ -11,6 +11,7 @@ import android.text.TextUtils;
 
 import com.dascom.print.Utils.CanvasUtils;
 import com.dascom.print.Utils.HalfTone;
+import com.grkj.module_hardware.R;
 import com.grkj.module_hardware.qrcode.QrCodeUtils;
 
 import java.util.ArrayList;
@@ -57,6 +58,29 @@ public class LabelBitmapGenerator {
      * 生成白底内容位图（白色 = 预印模板上不打印的区域），按规格分发
      */
     public static Bitmap createLabelBitmap(Context context, LabelInfoBeanV3 bean, int type) {
+
+        if (!TextUtils.isEmpty(bean.FWTX)) {
+            String[] fwtxArr = bean.FWTX.split(",");
+
+            for (int i = 0; i < fwtxArr.length; i++) {
+                switch (fwtxArr[i]) {
+                    case "毒性":
+                        bean.WXCF_DX = "1";
+                        break;
+                    case "反应性":
+                        bean.WXCF_FYX = "1";
+                        break;
+                    case "易燃性":
+                        bean.WXCF_YRX = "1";
+                        break;
+                    case "腐蚀性":
+                        bean.WXCF_FSX = "1";
+                        break;
+                }
+            }
+        }
+
+
         switch (type) {
             case TYPE_15:
                 return create15x15(bean);

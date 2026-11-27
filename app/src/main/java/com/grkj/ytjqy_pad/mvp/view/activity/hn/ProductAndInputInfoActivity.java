@@ -280,7 +280,7 @@ public class ProductAndInputInfoActivity extends WeightBaseActivity<ProductAndIn
             et_item17.setText(mData.jldw);
             add_plsl.setMaxNum(80);
             add_plsl.setMinNum(2);
-            add_plsl.setEnable(false);
+            add_plsl.setEnable(true);
             switch_plrk.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
                 @Override
                 public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {

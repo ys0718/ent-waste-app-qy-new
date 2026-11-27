@@ -860,10 +860,6 @@
                                 style="@style/FormTitleStyle"
                                 android:text="@string/str_input_item25" />
 
-                            <RelativeLayout
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:background="@drawable/bg_edittext">
 
                                 <com.grkj.ytjqy_pad.utils.view.AddNumberView
                                     android:id="@+id/add_plsl"
@@ -874,7 +870,6 @@
                                     android:layout_gravity="center"
                                     android:gravity="center" />
 
-                            </RelativeLayout>
 
                         </LinearLayout>
 

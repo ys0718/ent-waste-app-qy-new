@@ -116,7 +116,10 @@
                     <com.grkj.ytjqy_pad.utils.view.BoldTextView
                         android:id="@+id/tv_left_bottom"
                         style="@style/Font24Style"
+                        android:maxWidth="@dimen/x260"
                         android:text="0.000"
+                        android:ellipsize="end"
+                        android:maxLines="1"
                         android:textColor="@color/colorFontGreen"
                         android:textSize="@dimen/x40" />
 

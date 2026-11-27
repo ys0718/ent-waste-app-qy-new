@@ -103,7 +103,7 @@ public class XnbqCkzxlyczListActivity extends BaseActivity<XnbqCkzxlyczListPrese
         registerRxBus();
 
         findViewById(R.id.ll_add2).setVisibility(View.GONE);
-        findViewById(R.id.ll_add3).setVisibility(View.GONE);
+//        findViewById(R.id.ll_add3).setVisibility(View.GONE);
         tv_title.setText("出库自行利用处置");
         ((TextView)findViewById(R.id.tv_right1)).setText("新增");
 

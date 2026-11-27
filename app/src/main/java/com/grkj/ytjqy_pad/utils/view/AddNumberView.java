@@ -87,6 +87,11 @@ public class AddNumberView extends LinearLayout {
             }
         }
 
+        iv_add.setEnabled(isEnabled);
+        tv_num.setEnabled(isEnabled);
+        iv_divide.setEnabled(isEnabled);
+
+
         iv_divide.setOnClickListener(new OnClickListener() {
             @Override
             public void onClick(View v) {

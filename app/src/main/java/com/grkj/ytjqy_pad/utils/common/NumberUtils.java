@@ -1,5 +1,7 @@
 package com.grkj.ytjqy_pad.utils.common;
 
+import android.text.TextUtils;
+
 import java.math.BigDecimal;
 import java.math.RoundingMode;
 
@@ -28,6 +30,11 @@ public class NumberUtils {
             return ZERO;
         }
         String s = value.trim();
+
+        if (s.contains("吨") || s.contains("千克")){
+            s = s.replace("吨", "").replace("千克", "");
+        }
+
         try {
             BigDecimal bd = new BigDecimal(s).setScale(SCALE, RoundingMode.HALF_UP);
             // 处理 -0.000 这类情况，统一返回 "0.000"
